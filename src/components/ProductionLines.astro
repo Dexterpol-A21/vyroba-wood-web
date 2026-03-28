@@ -1,0 +1,55 @@
+---
+import { ArrowRight } from 'lucide-react';
+
+const products = [
+  {
+    title: "Cocinas Integrales",
+    description: "Diseño ergonómico y ensamblaje de precisión para altas densidades de unidades. Herrajes de grado industrial y tableros hidrófugos de alta resistencia.",
+    features: ["Módulos pre-ensamblados", "Cantos PUR", "Resistencia extrema"]
+  },
+  {
+    title: "Sistemas de Clósets",
+    description: "Modulación inteligente que optimiza metros cuadrados del desarrollo sin sacrificar la percepción premium de amplitud para el comprador final.",
+    features: ["Herrajes ocultos", "Acabados texturizados", "Modulación flexible"]
+  },
+  {
+    title: "Puertas y Paso",
+    description: "Puertas semi-sólidas y sólidas con marcos de rápida instalación para ajustar al avance crítico de la obra blanca.",
+    features: ["Ajuste telescópico", "Aislamiento acústico", "Tiempos récord"]
+  }
+];
+---
+
+<section id="soluciones" class="py-24 bg-vyroba-steel">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="mb-16">
+      <h2 class="text-4xl font-bold mb-4 tracking-tight">Líneas de Producción</h2>
+      <p class="text-vyroba-metal text-lg max-w-2xl">Especialización sectorizada para abarcar los 3 elementos críticos de carpintería fija en desarrollos verticales y horizontales.</p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-6">
+      {products.map((product) => (
+        <div class="bg-vyroba-coal border border-white/5 hover:border-vyroba-oak/50 transition-colors group p-8 rounded-sm flex flex-col h-full">
+          <h3 class="text-2xl font-semibold mb-4 text-white group-hover:text-vyroba-oak transition-colors">{product.title}</h3>
+          <p class="text-vyroba-metal mb-8 flex-grow">{product.description}</p>
+          
+          <ul class="space-y-3 mb-8">
+            {product.features.map(feature => (
+              <li class="flex items-center text-sm text-gray-300">
+                <div class="w-1.5 h-1.5 rounded-full bg-vyroba-oak mr-3"></div>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          
+          <button class="flex items-center text-sm font-medium text-white hover:text-vyroba-oak transition-colors mt-auto w-fit">
+            Ver especificaciones
+            <ArrowRight className="w-4 h-4 ml-1" />
+          </button>
+        </div>
+      ))}
+    </div>
+    
+  </div>
+</section>

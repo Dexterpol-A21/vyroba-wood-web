@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Hero from '../components/Hero.astro';
+import AboutValue from '../components/AboutValue.astro';
+import ProductionLines from '../components/ProductionLines.astro';
+import ContactForm from '../components/ContactForm.astro';
 ---
 
 <Layout>
-	<Welcome />
+    <main>
+        <Hero />
+        <AboutValue />
+        <ProductionLines />
+        <ContactForm />
+    </main>
+    
+    <footer class="bg-[#0b0f19] border-t border-white/5 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <span class="text-xl font-bold tracking-tighter text-white">VYROBA<span class="text-vyroba-oak">WOOD</span></span>
+                <p class="text-sm text-vyroba-metal mt-2">La división de fabricación industrial de carpintería de Vyroba.</p>
+            </div>
+            <div class="text-sm text-vyroba-metal/50 text-center md:text-right">
+                &copy; {new Date().getFullYear()} Vyroba. Todos los derechos reservados.<br/>
+                Diseñado para precisión industrial.
+            </div>
+        </div>
+    </footer>
 </Layout>
