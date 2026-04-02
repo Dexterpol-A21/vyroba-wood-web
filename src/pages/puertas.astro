@@ -158,9 +158,17 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           <!-- Image Placeholder 1 (BENTO LARGE - Middle Bottom) -->
           <div class="md:col-span-2 md:row-span-2 relative group border-r border-b border-outline-variant/20 bg-white overflow-hidden cursor-crosshair min-h-[400px] md:min-h-0">
             <!-- Default State: The Blueprint/Diagram -->
-            <img src="/images/door/diagramDoor.png" alt="Puertas Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+            <picture class="contents">
+  <source srcset="/images/door/diagramDoor.avif" type="image/avif" />
+  <source srcset="/images/door/diagramDoor.webp" type="image/webp" />
+  <img src="/images/door/diagramDoor.png" alt="Puertas Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+</picture>
             <!-- Hover State: The Real Render -->
-            <img src="/images/door/doorRender.png" alt="Puertas Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+            <picture class="contents">
+  <source srcset="/images/door/doorRender.avif" type="image/avif" />
+  <source srcset="/images/door/doorRender.webp" type="image/webp" />
+  <img src="/images/door/doorRender.png" alt="Puertas Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+</picture>
             <!-- Technical label -->
             <div class="absolute top-4 left-4 font-mono text-xs text-primary/70 bg-white/80 px-2 py-1 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300">FIG 01 // ESQUEMA Y RENDER</div>
           </div>
@@ -169,45 +177,85 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/door/renderDoor1.png" alt="Nordic Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/renderDoor1.avif" type="image/avif" />
+  <source srcset="/images/door/renderDoor1.webp" type="image/webp" />
+  <img src="/images/door/renderDoor1.png" alt="Nordic Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/door/doorRender1B.png" alt="Nordic Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/doorRender1B.avif" type="image/avif" />
+  <source srcset="/images/door/doorRender1B.webp" type="image/webp" />
+  <img src="/images/door/doorRender1B.png" alt="Nordic Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 2 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/door/doorRender2.png" alt="Brutalism Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/doorRender2.avif" type="image/avif" />
+  <source srcset="/images/door/doorRender2.webp" type="image/webp" />
+  <img src="/images/door/doorRender2.png" alt="Brutalism Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/door/renderDoor2B.png" alt="Brutalism Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/renderDoor2B.avif" type="image/avif" />
+  <source srcset="/images/door/renderDoor2B.webp" type="image/webp" />
+  <img src="/images/door/renderDoor2B.png" alt="Brutalism Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 3 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/door/renderDoor3.png" alt="Monolith Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/renderDoor3.avif" type="image/avif" />
+  <source srcset="/images/door/renderDoor3.webp" type="image/webp" />
+  <img src="/images/door/renderDoor3.png" alt="Monolith Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/door/renderDoor3B.png" alt="Monolith Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/renderDoor3B.avif" type="image/avif" />
+  <source srcset="/images/door/renderDoor3B.webp" type="image/webp" />
+  <img src="/images/door/renderDoor3B.png" alt="Monolith Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 4 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/door/renderDoor4.png" alt="Warm Nat Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/renderDoor4.avif" type="image/avif" />
+  <source srcset="/images/door/renderDoor4.webp" type="image/webp" />
+  <img src="/images/door/renderDoor4.png" alt="Warm Nat Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/door/renderDoor4B.png" alt="Warm Nat Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/renderDoor4B.avif" type="image/avif" />
+  <source srcset="/images/door/renderDoor4B.webp" type="image/webp" />
+  <img src="/images/door/renderDoor4B.png" alt="Warm Nat Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 5 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/door/renderDoor5.png" alt="Gallery Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/renderDoor5.avif" type="image/avif" />
+  <source srcset="/images/door/renderDoor5.webp" type="image/webp" />
+  <img src="/images/door/renderDoor5.png" alt="Gallery Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/door/renderDoor5B.png" alt="Gallery Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/door/renderDoor5B.avif" type="image/avif" />
+  <source srcset="/images/door/renderDoor5B.webp" type="image/webp" />
+  <img src="/images/door/renderDoor5B.png" alt="Gallery Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
     </section>
 
     <script is:inline>

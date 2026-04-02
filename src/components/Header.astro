@@ -6,7 +6,11 @@
     <!-- LOGO (Fondo sólido Primario con Logo de Imagen) -->
     <div class="flex-1 flex justify-start h-full">
       <a href="/" class="flex flex-row items-center justify-center bg-primary px-8 h-[72px] hover:bg-primary-container transition-colors group border-r border-outline-variant/10">
-        <img src="/images/brand/vyrobaWhite.png" alt="Vyroba" class="h-14 w-auto object-contain" />
+        <picture class="contents">
+  <source srcset="/images/brand/vyrobaWhite.avif" type="image/avif" />
+  <source srcset="/images/brand/vyrobaWhite.webp" type="image/webp" />
+  <img src="/images/brand/vyrobaWhite.png" alt="Vyroba" class="h-14 w-auto object-contain" />
+</picture>
       </a>
     </div>
 

@@ -4,7 +4,11 @@ import { ArrowRight, RulerLine, Factory, CheckCircle2 } from "lucide-react";
 ---
 
 <section class="relative min-h-[100svh] flex items-center justify-center overflow-hidden border-b border-primary/10 bg-surface">
-    <img src="/images/brand/vyrobaWhite.png" alt="Vyroba Logo" class="h-10 mix-blend-difference opacity-90" />
+    <picture class="contents">
+  <source srcset="/images/brand/vyrobaWhite.avif" type="image/avif" />
+  <source srcset="/images/brand/vyrobaWhite.webp" type="image/webp" />
+  <img src="/images/brand/vyrobaWhite.png" alt="Vyroba Logo" class="h-10 mix-blend-difference opacity-90" />
+</picture>
   </div>
 
   <!-- Hero Content -->
@@ -15,7 +19,11 @@ import { ArrowRight, RulerLine, Factory, CheckCircle2 } from "lucide-react";
       <div class="lg:col-span-8 flex flex-col gap-8 lg:gap-12">
         <!-- Logo Solo en Home para Móvil (Dentro de la página) -->
         <div class="lg:hidden mb-2">
-          <img src="/images/brand/vyrobaWhite.png" alt="Vyroba Logo" class="h-10 mix-blend-difference opacity-90 object-contain origin-left" />
+          <picture class="contents">
+  <source srcset="/images/brand/vyrobaWhite.avif" type="image/avif" />
+  <source srcset="/images/brand/vyrobaWhite.webp" type="image/webp" />
+  <img src="/images/brand/vyrobaWhite.png" alt="Vyroba Logo" class="h-10 mix-blend-difference opacity-90 object-contain origin-left" />
+</picture>
         </div>
 
         <!-- "The Spec Tag" Industrial -->

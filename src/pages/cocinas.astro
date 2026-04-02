@@ -216,9 +216,17 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           <!-- Image Placeholder 1 (BENTO LARGE - Diagram to Render) -->
           <div class="md:col-span-2 md:row-span-2 relative group border-r border-b border-outline-variant/20 bg-white overflow-hidden cursor-crosshair min-h-[400px] md:min-h-0">
             <!-- Default State: The Blueprint/Diagram -->
-            <img src="/images/kitchen/diagramRender.png" alt="Cocina Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/diagramRender.avif" type="image/avif" />
+  <source srcset="/images/kitchen/diagramRender.webp" type="image/webp" />
+  <img src="/images/kitchen/diagramRender.png" alt="Cocina Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+</picture>
             <!-- Hover State: The Real Render -->
-            <img src="/images/kitchen/kitchenRender.png" alt="Cocina Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/kitchenRender.avif" type="image/avif" />
+  <source srcset="/images/kitchen/kitchenRender.webp" type="image/webp" />
+  <img src="/images/kitchen/kitchenRender.png" alt="Cocina Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+</picture>
             <!-- Technical label (disappears on hover) -->
             <div class="absolute bottom-4 right-4 font-mono text-xs text-primary/70 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300 bg-white/80 px-2 py-1">FIG 01 // ESQUEMA Y RENDER</div>
           </div>
@@ -227,45 +235,85 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/kitchen/renderkitchen1.png" alt="Nordic Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderkitchen1.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderkitchen1.webp" type="image/webp" />
+  <img src="/images/kitchen/renderkitchen1.png" alt="Nordic Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/kitchen/renderkitchen1B.png" alt="Nordic Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderkitchen1B.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderkitchen1B.webp" type="image/webp" />
+  <img src="/images/kitchen/renderkitchen1B.png" alt="Nordic Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 2 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/kitchen/renderKitchen2.png" alt="Brutalism Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderKitchen2.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderKitchen2.webp" type="image/webp" />
+  <img src="/images/kitchen/renderKitchen2.png" alt="Brutalism Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/kitchen/renderkitchen2B.png" alt="Brutalism Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderkitchen2B.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderkitchen2B.webp" type="image/webp" />
+  <img src="/images/kitchen/renderkitchen2B.png" alt="Brutalism Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 3 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/kitchen/renderKitchen3.png" alt="Monolith Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderKitchen3.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderKitchen3.webp" type="image/webp" />
+  <img src="/images/kitchen/renderKitchen3.png" alt="Monolith Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/kitchen/renderKitchen3B.png" alt="Monolith Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderKitchen3B.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderKitchen3B.webp" type="image/webp" />
+  <img src="/images/kitchen/renderKitchen3B.png" alt="Monolith Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 4 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/kitchen/renderKitchen4.png" alt="Warm Nat Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderKitchen4.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderKitchen4.webp" type="image/webp" />
+  <img src="/images/kitchen/renderKitchen4.png" alt="Warm Nat Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/kitchen/renderKitchen4B.png" alt="Warm Nat Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderKitchen4B.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderKitchen4B.webp" type="image/webp" />
+  <img src="/images/kitchen/renderKitchen4B.png" alt="Warm Nat Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 5 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/kitchen/renderKitchen5.png" alt="Gallery Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderKitchen5.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderKitchen5.webp" type="image/webp" />
+  <img src="/images/kitchen/renderKitchen5.png" alt="Gallery Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/kitchen/renderKitchen5B.png" alt="Gallery Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/kitchen/renderKitchen5B.avif" type="image/avif" />
+  <source srcset="/images/kitchen/renderKitchen5B.webp" type="image/webp" />
+  <img src="/images/kitchen/renderKitchen5B.png" alt="Gallery Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
     </section>
 
     <script is:inline>

@@ -22,8 +22,8 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 </h1>
             </div>
             
-            <div class="border border-primary bg-surface p-8 md:p-12 shadow-[8px_8px_0_0_#162839] lg:max-w-2xl w-full relative z-10 flex flex-col justify-center">
-                <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary mb-6 block">Enfoque Técnico</span>
+            <div class="border border-primary bg-surface px-8 py-6 md:px-12 md:py-8 shadow-[8px_8px_0_0_#162839] w-fit max-w-3xl relative z-10 flex flex-col justify-center hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#162839] transition-all duration-300">
+                <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary mb-4 block">Enfoque Técnico</span>
                 <p class="text-lg md:text-2xl font-satoshi text-on-surface-variant font-medium leading-[1.4]">
                     No seleccionamos colores; prescribimos soluciones de ingeniería. Nuestro inventario de sustratos y recubrimientos está clasificado por densidad, tensión estructural y resistencia a factores físicos.
                 </p>
@@ -35,21 +35,19 @@ import DraftingGrid from '../components/grids/DraftingGrid';
             <h2 class="text-2xl font-bold font-cabinet uppercase tracking-widest text-primary border-b-2 border-primary/20 pb-4 mb-12 flex justify-between items-end">
                 <span>01. Sustratos y Núcleos</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <!-- Item 1: Sustrato MDF -->
                 <article class="border border-primary bg-surface hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#162839] transition-all duration-300 flex flex-col h-full group">
-                    <div class="h-64 bg-primary/5 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
+                    <div class="aspect-square bg-primary/5 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
                         <span class="text-primary/10 font-black text-6xl uppercase tracking-tighter group-hover:scale-110 transition-transform duration-500">MDF-RH</span>
                         <div class="absolute top-4 right-4 bg-primary text-surface px-2 py-1 text-[0.6rem] font-mono uppercase tracking-widest shadow-[2px_2px_0_0_#8a501c]">
                             NÚCLEO
                         </div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h3 class="text-3xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">MD / RH Alta Densidad</h3>
-                        <p class="text-sm font-satoshi text-on-surface-variant mb-8 flex-1">
-                            Tablero de fibras de madera impregnado con resinas melamínicas antihumedad. Retarda la absorción y el hinchamiento en ambientes hostiles.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4">
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">MD / RH Alta Densidad</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4 flex-1">
                             <div>
                                 <span class="block text-[0.6rem] uppercase tracking-widest text-primary/50 font-bold mb-1">DENSIDAD (NOM)</span>
                                 <span class="font-mono text-primary font-bold text-sm">720 KG/M³</span>
@@ -64,18 +62,16 @@ import DraftingGrid from '../components/grids/DraftingGrid';
 
                 <!-- Item 2: MDP -->
                 <article class="border border-primary bg-surface hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#162839] transition-all duration-300 flex flex-col h-full group">
-                    <div class="h-64 bg-primary/5 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
+                    <div class="aspect-square bg-primary/5 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
                         <span class="text-primary/10 font-black text-6xl uppercase tracking-tighter group-hover:scale-110 transition-transform duration-500">MDP</span>
                         <div class="absolute top-4 right-4 bg-primary text-surface px-2 py-1 text-[0.6rem] font-mono uppercase tracking-widest shadow-[2px_2px_0_0_#8a501c]">
                             NÚCLEO
                         </div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h3 class="text-3xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">MDP Estructural</h3>
-                        <p class="text-sm font-satoshi text-on-surface-variant mb-8 flex-1">
-                            Partículas de geometría controlada. Soporta tensiones mecánicas severas y una extracción de tornillo inigualable. Uso en módulos pesados.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4">
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">MDP Estructural</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4 flex-1">
                             <div>
                                 <span class="block text-[0.6rem] uppercase tracking-widest text-primary/50 font-bold mb-1">DENSIDAD (NOM)</span>
                                 <span class="font-mono text-primary font-bold text-sm">680 KG/M³</span>
@@ -90,18 +86,16 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 
                 <!-- Item 3: Plywood -->
                 <article class="border border-primary bg-surface hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#162839] transition-all duration-300 flex flex-col h-full group">
-                    <div class="h-64 bg-primary/5 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
+                    <div class="aspect-square bg-primary/5 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
                         <span class="text-primary/10 font-black text-6xl uppercase tracking-tighter group-hover:scale-110 transition-transform duration-500">PLY</span>
                         <div class="absolute top-4 right-4 bg-primary text-surface px-2 py-1 text-[0.6rem] font-mono uppercase tracking-widest shadow-[2px_2px_0_0_#8a501c]">
                             NÚCLEO
                         </div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h3 class="text-3xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">Plywood Marino</h3>
-                        <p class="text-sm font-satoshi text-on-surface-variant mb-8 flex-1">
-                            Láminas entrecruzadas a 90 grados. Rigidez dimensional máxima bajo inmersión o cambios agresivos térmicos.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4">
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">Plywood Marino</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4 flex-1">
                             <div>
                                 <span class="block text-[0.6rem] uppercase tracking-widest text-primary/50 font-bold mb-1">ADHESIVO</span>
                                 <span class="font-mono text-primary font-bold text-sm">FENÓLICO WBP</span>
@@ -121,24 +115,21 @@ import DraftingGrid from '../components/grids/DraftingGrid';
             <h2 class="text-2xl font-bold font-cabinet uppercase tracking-widest text-primary border-b-2 border-primary/20 pb-4 mb-12 flex justify-between items-end">
                 <span>02. Recubrimientos Visibles</span>
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 <!-- Item 1: Recubrimiento PET -->
                 <article class="border border-primary bg-surface hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#162839] transition-all duration-300 flex flex-col h-full group">
-                    <div class="h-64 bg-primary/10 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
+                    <div class="aspect-square bg-primary/10 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
                         <span class="text-primary/10 font-black text-6xl uppercase tracking-tighter group-hover:scale-110 transition-transform duration-500">PET</span>
                         <div class="absolute top-4 right-4 bg-secondary text-primary px-2 py-1 text-[0.6rem] font-mono uppercase tracking-widest shadow-[2px_2px_0_0_#162839]">
                             SUPERFICIE
                         </div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h3 class="text-3xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">PET Supermate</h3>
-                        <p class="text-sm font-satoshi text-on-surface-variant mb-8 flex-1">
-                            Foil polimérico termoplástico anti-huella. Provee un acabado de opacidad absoluta (Zero-Gloss) altamente resistente a impactos y rayos UV.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4">
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">PET Supermate</h3>
+                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4 flex-1">
                             <div>
                                 <span class="block text-[0.6rem] uppercase tracking-widest text-primary/50 font-bold mb-1">REFLECTANCIA</span>
-                                <span class="font-mono text-primary font-bold text-sm">&lt; 3 GLOSS</span>
+                                <span class="font-mono text-primary font-bold text-sm">< 3 GLOSS</span>
                             </div>
                             <div>
                                 <span class="block text-[0.6rem] uppercase tracking-widest text-primary/50 font-bold mb-1">UNIÓN CANTO</span>
@@ -150,18 +141,15 @@ import DraftingGrid from '../components/grids/DraftingGrid';
 
                 <!-- Item 2: Superficies Sólidas / Piedra -->
                 <article class="border border-primary bg-surface hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#162839] transition-all duration-300 flex flex-col h-full group">
-                    <div class="h-64 bg-primary/10 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
+                    <div class="aspect-square bg-primary/10 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
                         <span class="text-primary/10 font-black text-6xl uppercase tracking-tighter group-hover:scale-110 transition-transform duration-500">QZ</span>
                         <div class="absolute top-4 right-4 bg-secondary text-primary px-2 py-1 text-[0.6rem] font-mono uppercase tracking-widest shadow-[2px_2px_0_0_#162839]">
                             CUBIERTA TÉCNICA
                         </div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h3 class="text-3xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">Cuarzo Sinterizado</h3>
-                        <p class="text-sm font-satoshi text-on-surface-variant mb-8 flex-1">
-                            Mezcla de minerales naturales presurizada a altas temperaturas. Porosidad nula. Antibacteriano, soporta cortes directos y ácidos fuertes.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4">
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">Cuarzo Sinterizado</h3>
+                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4 flex-1">
                             <div>
                                 <span class="block text-[0.6rem] uppercase tracking-widest text-primary/50 font-bold mb-1">DUREZA MOHS</span>
                                 <span class="font-mono text-primary font-bold text-sm">7 / 10</span>
@@ -176,18 +164,15 @@ import DraftingGrid from '../components/grids/DraftingGrid';
 
                 <!-- Item 3: Detalles y Acentos Metal -->
                 <article class="border border-primary bg-surface hover:-translate-y-2 hover:shadow-[12px_12px_0_0_#162839] transition-all duration-300 flex flex-col h-full group">
-                    <div class="h-64 bg-primary/10 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
+                    <div class="aspect-square bg-primary/10 w-full border-b border-primary relative overflow-hidden flex items-center justify-center">
                         <span class="text-primary/10 font-black text-6xl uppercase tracking-tighter group-hover:scale-110 transition-transform duration-500">AL</span>
                         <div class="absolute top-4 right-4 bg-secondary text-primary px-2 py-1 text-[0.6rem] font-mono uppercase tracking-widest shadow-[2px_2px_0_0_#162839]">
                             ACENTO
                         </div>
                     </div>
-                    <div class="p-8 flex-1 flex flex-col">
-                        <h3 class="text-3xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">Aluminio Anodizado</h3>
-                        <p class="text-sm font-satoshi text-on-surface-variant mb-8 flex-1">
-                            Perfiles metálicos extruidos usados en golas, vitrinas y zoclos. Inoxidable y rígido. El contraste técnico perfecto contra sustratos de madera.
-                        </p>
-                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4">
+                    <div class="p-5 flex-1 flex flex-col">
+                        <h3 class="text-xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4">Aluminio Anodizado</h3>
+                        <div class="grid grid-cols-2 gap-4 border-t border-primary/10 pt-4 flex-1">
                             <div>
                                 <span class="block text-[0.6rem] uppercase tracking-widest text-primary/50 font-bold mb-1">ALEACIÓN</span>
                                 <span class="font-mono text-primary font-bold text-sm">6063 T5</span>

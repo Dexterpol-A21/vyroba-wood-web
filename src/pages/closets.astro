@@ -189,9 +189,17 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           <!-- Image Placeholder 1 (BENTO LARGE - Diagram to Render) -->
           <div class="md:col-span-2 md:row-span-2 relative group border-r border-b border-outline-variant/20 bg-white overflow-hidden cursor-crosshair min-h-[400px] md:min-h-0">
             <!-- Default State: The Blueprint/Diagram -->
-            <img src="/images/closet/closetDiagram.png" alt="Closet Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/closetDiagram.avif" type="image/avif" />
+  <source srcset="/images/closet/closetDiagram.webp" type="image/webp" />
+  <img src="/images/closet/closetDiagram.png" alt="Closet Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+</picture>
             <!-- Hover State: The Real Render -->
-            <img src="/images/closet/closetRender.png" alt="Closet Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+            <picture class="contents">
+  <source srcset="/images/closet/closetRender.avif" type="image/avif" />
+  <source srcset="/images/closet/closetRender.webp" type="image/webp" />
+  <img src="/images/closet/closetRender.png" alt="Closet Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+</picture>
             <!-- Technical label (disappears on hover) -->
             <div class="absolute bottom-4 left-4 font-mono text-xs text-primary/70 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300">FIG 01 // ESQUEMA Y RENDER</div>
           </div>
@@ -200,45 +208,85 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/closet/renderCloset1.png" alt="Nordic Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset1.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset1.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset1.png" alt="Nordic Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/closet/renderCloset1B.png" alt="Nordic Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset1B.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset1B.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset1B.png" alt="Nordic Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 2 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/closet/renderCloset2.png" alt="Brutalism Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset2.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset2.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset2.png" alt="Brutalism Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/closet/renderCloset2B.png" alt="Brutalism Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset2B.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset2B.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset2B.png" alt="Brutalism Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 3 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/closet/renderCloset3.png" alt="Monolith Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset3.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset3.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset3.png" alt="Monolith Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/closet/renderCloset3B.png" alt="Monolith Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset3B.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset3B.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset3B.png" alt="Monolith Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 4 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/closet/renderCloset4.png" alt="Warm Nat Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset4.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset4.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset4.png" alt="Warm Nat Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/closet/renderCloset4B.png" alt="Warm Nat Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset4B.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset4B.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset4B.png" alt="Warm Nat Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
           </div>
 
           <!-- PROMPT 5 -->
           <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
             <!-- BASE IMAGE -->
-            <img src="/images/closet/renderCloset5.png" alt="Gallery Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset5.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset5.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset5.png" alt="Gallery Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+</picture>
             <!-- HOVER IMAGE -->
-            <img src="/images/closet/renderCloset5B.png" alt="Gallery Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+            <picture class="contents">
+  <source srcset="/images/closet/renderCloset5B.avif" type="image/avif" />
+  <source srcset="/images/closet/renderCloset5B.webp" type="image/webp" />
+  <img src="/images/closet/renderCloset5B.png" alt="Gallery Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+</picture>
         </div>
       </div>
     </section>

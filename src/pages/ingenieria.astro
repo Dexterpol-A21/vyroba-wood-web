@@ -26,11 +26,6 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                     Sincronización total entre tu avance de obra civil y nuestra línea de producción. Capacidad industrial instalada de más de +500 unidades simultáneas.
                 </p>
             </div>
-            <div class="mt-12 lg:mt-0 font-mono text-xs text-primary/60 max-w-xs text-left lg:text-right tracking-widest uppercase leading-loose border-l lg:border-r lg:border-l-0 border-primary/20 pl-6 lg:pr-6">
-                <p class="flex justify-between lg:justify-end gap-8 mb-2"><span>PLANT STATUS:</span> <strong class="text-primary">ONLINE</strong></p>
-                <p class="flex justify-between lg:justify-end gap-8 mb-2"><span>TOL. CORTE:</span> <strong class="text-primary">0.05MM</strong></p>
-                <p class="flex justify-between lg:justify-end gap-8"><span>CICLO VOL.:</span> <strong class="text-primary">ALTO</strong></p>
-            </div>
         </section>
 
         <!-- Pipeline Operativo -->
@@ -43,39 +38,39 @@ import DraftingGrid from '../components/grids/DraftingGrid';
             </div>
 
             <!-- FASES GRID -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 mt-12 gap-8 lg:gap-0 lg:border-t-2 border-primary/20">
+            <div class="grid grid-cols-1 lg:grid-cols-3 mt-12 gap-8 lg:gap-0 lg:border-t-2 border-primary/20 bg-surface">
                 
                 <!-- FASE 01 -->
-                <div class="lg:border-r-2 border-b-2 lg:border-b-0 border-primary/20 pt-8 lg:pr-12 relative group hover:-translate-y-2 transition-transform duration-300">
+                <div class="lg:border-r-2 border-b-2 lg:border-b-0 border-primary/20 pt-8 lg:pr-12 relative group hover:-translate-y-2 transition-transform duration-300 px-6 lg:px-0 lg:pl-6 pb-6">
                     <span class="text-[5rem] font-black text-primary/10 absolute top-4 left-0 leading-none group-hover:text-primary/20 transition-colors">01</span>
-                    <h3 class="text-2xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4 relative z-10">Ingesta Planos / BIM</h3>
+                    <h3 class="text-2xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4 relative z-10">Revisión de Proyecto</h3>
                     <p class="text-sm font-satoshi text-on-surface-variant font-medium leading-relaxed relative z-10 mb-6">
-                        Auditoría geométrica de los planos arquitectónicos del desarrollador. Nuestros ingenieros introducen las cuotas exactas a nuestro software CAD/CAM nativo para asegurar colisiones cero con muretes.
+                        Analizamos la idea de tu desarrollo. Nuestro equipo toma tus referencias y requisitos para transformarlos en un proyecto de mobiliario costeable y listo para producirse sin complicaciones.
                     </p>
                     <div class="h-px w-16 bg-secondary mb-4"></div>
-                    <span class="font-mono text-[0.65rem] uppercase text-primary/60 tracking-widest font-bold">» PARÁMETROS FIJADOS</span>
+                    <span class="font-mono text-[0.65rem] uppercase text-primary/60 tracking-widest font-bold">» DISEÑO Y ASESORÍA</span>
                 </div>
 
                 <!-- FASE 02 -->
-                <div class="lg:border-r-2 border-b-2 lg:border-b-0 border-primary/20 pt-8 lg:px-12 relative group hover:-translate-y-2 transition-transform duration-300">
+                <div class="lg:border-r-2 border-b-2 lg:border-b-0 border-primary/20 pt-8 lg:px-12 relative group hover:-translate-y-2 transition-transform duration-300 px-6 pb-6">
                     <span class="text-[5rem] font-black text-primary/10 absolute top-4 left-6 lg:left-12 leading-none group-hover:text-primary/20 transition-colors">02</span>
-                    <h3 class="text-2xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4 relative z-10">Maquinado Constante</h3>
+                    <h3 class="text-2xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4 relative z-10">Fabricación en Volumen</h3>
                     <p class="text-sm font-satoshi text-on-surface-variant font-medium leading-relaxed relative z-10 mb-6">
-                        El código de diseño (G-Code) viaja de los servidores directo a las sierras de panel seccionadoras y centros de ruteo europeos de 5 ejes, abatiendo fallas de intervención humana. Perforación system 32 a milímetro.
+                        Tus diseños entran a nuestras líneas de ensamble donde producimos a gran escala. Garantizamos que cada unidad será exactamente igual a la anterior con la calidad que prometemos.
                     </p>
                     <div class="h-px w-16 bg-secondary mb-4"></div>
-                    <span class="font-mono text-[0.65rem] uppercase text-primary/60 tracking-widest font-bold">» CORTES EN CADENA</span>
+                    <span class="font-mono text-[0.65rem] uppercase text-primary/60 tracking-widest font-bold">» PRODUCCIÓN EN SERIE</span>
                 </div>
 
                 <!-- FASE 03 -->
-                <div class="pt-8 lg:pl-12 relative group hover:-translate-y-2 transition-transform duration-300">
+                <div class="pt-8 lg:pl-12 relative group hover:-translate-y-2 transition-transform duration-300 px-6 lg:px-0 lg:pr-6 pb-6">
                     <span class="text-[5rem] font-black text-primary/10 absolute top-4 left-6 lg:left-12 leading-none group-hover:text-secondary/20 transition-colors">03</span>
-                    <h3 class="text-2xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4 relative z-10">Canteado y Flat-Pack</h3>
+                    <h3 class="text-2xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4 relative z-10">Logística de Entrega</h3>
                     <p class="text-sm font-satoshi text-on-surface-variant font-medium leading-relaxed relative z-10 mb-6">
-                        Recubrimiento de testas mediante extrusión de poliuretano (PUR). Inmediatamente los paneles pasan a estación de logística: Etiquetado individual de partes para despiece RTA (Ready-to-Assemble) y paletizado térmico por zona de obra.
+                        Empacamos todo de manera organizada. Mandamos los muebles directos a tu Torre o Desarrollo listos para que la instalación por espacio sea sumamente veloz y sin contratiempos.
                     </p>
                     <div class="h-px w-16 bg-secondary mb-4"></div>
-                    <span class="font-mono text-[0.65rem] uppercase text-primary/60 tracking-widest font-bold">» DESPACHO A TORRE</span>
+                    <span class="font-mono text-[0.65rem] uppercase text-primary/60 tracking-widest font-bold">» ENVÍO A OBRA</span>
                 </div>
 
             </div>
@@ -202,7 +197,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 </p>
 
                 <a href="mailto:info@vyroba.com.mx" class="cursor-pointer bg-secondary border border-secondary text-primary px-10 py-6 font-black uppercase tracking-[0.2em] text-[0.8rem] md:text-sm shadow-[8px_8px_0_0_#1a1c1c] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#1a1c1c] hover:bg-primary-container hover:text-surface hover:border-primary-container active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all duration-150 inline-flex items-center justify-center">
-                    <span>Enviar Planos de Ingeniería</span>
+                    <span>Enviar Planos</span>
                 </a>
 
                 <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/40 uppercase">
