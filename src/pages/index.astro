@@ -1,29 +1,749 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import AboutValue from '../components/AboutValue.astro';
-import ProductionLines from '../components/ProductionLines.astro';
-import ContactForm from '../components/ContactForm.astro';
+import DraftingGrid from '../components/grids/DraftingGrid';
+import CNCGrid from '../components/grids/CNCGrid';
+import BlueprintGrid from '../components/grids/BlueprintGrid';
 ---
 
-<Layout>
-    <main>
-        <Hero />
-        <AboutValue />
-        <ProductionLines />
-        <ContactForm />
-    </main>
-    
-    <footer class="bg-[#0b0f19] border-t border-white/5 py-12">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
-                <span class="text-xl font-bold tracking-tighter text-white">VYROBA<span class="text-vyroba-oak">WOOD</span></span>
-                <p class="text-sm text-vyroba-metal mt-2">La división de fabricación industrial de carpintería de Vyroba.</p>
-            </div>
-            <div class="text-sm text-vyroba-metal/50 text-center md:text-right">
-                &copy; {new Date().getFullYear()} Vyroba. Todos los derechos reservados.<br/>
-                Diseñado para precisión industrial.
+<Layout 
+	title="Vyroba Wood | Diseño y Calidad"
+	description="Fabricación de cocinas, clósets y puertas con precisión de ingeniería. Fusionamos la tradición del trabajo en madera con tecnología de manufactura avanzada B2B."
+	keywords="vyroba wood, mobiliario a escala industrial, carpintería b2b, manufactura en madera, cocinas integrales, closets a medida, diseño industrial"
+>
+  <main class="relative">
+    <!-- Logo Móvil Superior (No fijo, fondo azul) -->
+    <div class="block lg:hidden w-full h-[80px] bg-primary z-[90] px-6 flex items-center justify-start">
+      <a href="/" aria-label="Vyroba Wood Inicio" class="flex items-center">
+        <img src="/images/brand/vyrobaWhite.png" alt="Vyroba Wood" class="h-12 w-auto object-contain" />
+      </a>
+    </div>
+
+    <!-- Grid Global Fijo -->
+    <DraftingGrid client:load />
+
+
+<!-- Hero: THE ENGINEERED ORGANIC -->
+<section class="relative min-h-[calc(100vh-80px)] lg:min-h-screen pt-4 lg:pt-[130px] pb-32 lg:pb-12 px-6 md:px-12 flex flex-col justify-between overflow-hidden border-b border-outline-variant/20 w-full mb-0">
+
+<div class="relative w-full z-10 pointer-events-auto flex flex-col justify-center h-full flex-grow pt-4 lg:pt-0">
+        <div class="flex flex-col items-start w-full lg:w-7/12 mt-auto">
+            <span class="font-bold tracking-[0.2em] text-xs text-secondary uppercase block mb-6">Vyroba Wood // Diseño y Calidad en Cada Mueble</span>
+
+            <h1 class="text-[clamp(3.5rem,7.5vw,10rem)] font-black leading-[0.80] tracking-tighter text-primary uppercase font-cabinet w-full text-left break-words m-0 p-0 transform -translate-y-2 mb-8 xl:mb-10">
+                MOBILIARIO<br/>
+                ÚNICO Y<br/>
+                FUNCIONAL
+            </h1>
+
+            <p class="text-lg lg:text-[1.3rem] text-on-surface-variant font-medium leading-[1.35] text-left max-w-[55ch] mb-10 lg:mb-12">
+                <strong>Transformamos ideas.</strong> Combinamos artesanía tradicional y técnicas innovadoras para ofrecer muebles personalizados de la más alta calidad. Desde mobiliario para el hogar hasta soluciones comerciales, cada pieza refleja dedicación al diseño empleando <strong class="text-primary font-black">materiales seleccionados y tecnología avanzada.</strong>
+            </p>
+
+            <!-- Space Filler: Key Metrics (Architectural Minimalist) -->
+            <div class="hidden lg:flex flex-wrap items-center gap-4 xl:gap-6">
+                <div class="flex flex-col">
+                    <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary mb-1">01 // Enfoque</span>
+                    <span class="text-[0.85rem] text-primary font-bold tracking-wide">Muebles Hechos a Medida</span>
+                </div>
+                <div class="w-[1px] h-8 bg-primary/20"></div>
+                <div class="flex flex-col">
+                    <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary mb-1">02 // Metodología</span>
+                    <span class="text-[0.85rem] text-primary font-bold tracking-wide">Artesanía & Innovación</span>
+                </div>
+                <div class="w-[1px] h-8 bg-primary/20"></div>
+                <div class="flex flex-col">
+                    <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary mb-1">03 // Cumplimiento</span>
+                    <span class="text-[0.85rem] text-primary font-bold tracking-wide">Entregas Just-in-Time</span>
+                </div>
             </div>
         </div>
-    </footer>
+
+        <!-- Right Column: Image and Buttons -->
+        <div class="flex flex-col items-start lg:items-center w-full lg:w-7/12 mt-12 lg:mt-0 relative z-20 justify-center">
+            
+            <!-- Floating Image Box with Slow Gallery CSS -->
+            <style>
+                /* Drag & Swipe Slider Styles */
+                .gallery-slider {
+                    display: block;
+                    position: relative;
+                }
+                
+                .gallery-card {
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+                    user-select: none;
+                    transform-origin: bottom center;
+                    backface-visibility: hidden;
+                    box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+                    will-change: transform, opacity;
+                }
+
+                .gallery-img-sw {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    filter: grayscale(1) contrast(1.25);
+                    transition: transform 0.8s ease-out, filter 0.8s ease-out;  
+                    pointer-events: none; /* Helps with dragging */
+                }
+
+                .hero-image-box {
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                .hero-image-box:hover {
+                    /* Sale un poco (levanta) antes de hacer click */
+                    transform: translate(-4px, -4px);
+                    box-shadow: 16px 16px 0 0 #162839 !important;
+                }
+
+                .hero-image-box:active {
+                    /* Se hunde completamente como interruptor pesado */
+                    transform: translate(12px, 12px);
+                    box-shadow: 0px 0px 0 0 #162839 !important;
+                }
+
+                .hero-image-box:hover .gallery-img-sw {
+                    filter: grayscale(0) contrast(1.1);
+                    transform: scale(1.05);
+                }
+
+                .gallery-label {
+                    position: absolute;
+                    bottom: -1rem;
+                    left: -1rem;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                    z-index: 30;
+                    pointer-events: none;
+                }
+                .gallery-label.active {
+                    opacity: 1;
+                }
+
+                /* Active Grabbing state cursor */
+                .gallery-slider.grabbing {
+                    cursor: grabbing;
+                    scroll-snap-type: none; /* Remove snap behavior while dragging */
+                    scroll-behavior: auto; /* Remove smooth scroll while dragging */
+                }
+                .gallery-slider.grabbing .gallery-img-sw {
+                    transform: scale(1); /* remove scale when dragging */
+                }
+            </style>
+
+            <div class="w-full max-w-[550px] xl:max-w-[750px] aspect-[4/3] xl:aspect-[16/9] border border-primary relative shadow-[12px_12px_0_0_#162839] bg-primary mb-8 hero-image-box cursor-grab overflow-visible" id="hero-slider-wrap" style="perspective: 1200px;">
+
+                <!-- Inner container to mask overflowing gallery images -->     
+                <div class="absolute inset-0 w-full h-full" style="transform-style: preserve-3d;">    
+                    <!-- Overlay Grid lines for blueprint effect -->
+                    <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.1)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none z-20 mix-blend-multiply"></div>
+
+                    <!-- Draggable / Scrollable Gallery Images -->
+                    <div class="gallery-slider w-full h-full" id="hero-slider">
+                        <div class="gallery-card"><img src="/images/Hero5full%20kitchen%20.png" alt="Cocina Residencial Final" class="gallery-img-sw" /></div>
+                        <div class="gallery-card"><img src="/images/Hero1Madera.png" alt="Detalle Arquitectónico Madera" class="gallery-img-sw" /></div>
+                        <div class="gallery-card"><img src="/images/Hero2CNC%20.png" alt="Maquinaria Industrial" class="gallery-img-sw" /></div>
+                        <div class="gallery-card"><img src="/images/Hero3VOLUMEN%20.png" alt="Escala de Producción Arquitectónica" class="gallery-img-sw" /></div>
+                        <div class="gallery-card"><img src="/images/Hero4Cocinacost.png" alt="Control de Costos Producción" class="gallery-img-sw" /></div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Tech spec labels pinned to image -->
+                <div class="gallery-label label-track active bg-surface border border-primary px-4 py-2 text-primary text-[0.65rem] font-bold tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                    FIG. 01 // PROYECTO INTEGRAL
+                </div>
+                <div class="gallery-label label-track bg-surface border border-primary px-4 py-2 text-primary text-[0.65rem] font-bold tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                    FIG. 02 // TEXTURA DE MATERIAL
+                </div>
+                <div class="gallery-label label-track bg-surface border border-primary px-4 py-2 text-primary text-[0.65rem] font-bold tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                    FIG. 03 // MECANIZADO INDUSTRIAL
+                </div>
+                <div class="gallery-label label-track bg-surface border border-primary px-4 py-2 text-primary text-[0.65rem] font-bold tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                    FIG. 04 // ALTO VOLUMEN
+                </div>
+                <div class="gallery-label label-track bg-surface border border-primary px-4 py-2 text-primary text-[0.65rem] font-bold tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                    FIG. 05 // CONTROL DE COSTOS
+                </div>
+            </div>
+
+            <!-- CTA Buttons Box -->
+            <div class="w-full max-w-[550px] xl:max-w-[750px] flex flex-col sm:flex-row gap-4 mt-6">
+                <!-- Action Button 1 -->
+                <a href="#contacto" class="cursor-pointer bg-secondary border border-secondary text-surface px-6 py-5 font-black uppercase tracking-widest text-[0.70rem] shadow-[4px_4px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#1a1c1c] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 inline-flex items-center justify-center w-full whitespace-nowrap truncate">
+                    Cotizar Desarrollo
+                </a>
+                <!-- Action Button 2 -->
+                <a href="#lineas-de-produccion" class="cursor-pointer bg-surface border border-primary text-primary px-6 py-5 font-black uppercase tracking-widest text-[0.70rem] shadow-[4px_4px_0_0_#162839] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#162839] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 inline-flex items-center justify-center w-full whitespace-nowrap truncate">
+                    Explorar Proceso
+                </a>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const stackWrap = document.getElementById('hero-slider-wrap');
+                    let cards = Array.from(document.querySelectorAll('.gallery-card'));
+                    const labels = document.querySelectorAll('.label-track');
+                    
+                    let currentIndex = 0;
+                    
+                    function updateStack() {
+                        cards.forEach((card, index) => {
+                            if (index === 0) {
+                                card.style.zIndex = 50;
+                                card.style.transform = `translate(0px, 0px)`;
+                                card.style.opacity = 1;
+                            } else {
+                                card.style.zIndex = 50 - index;
+                                // Brutalist corner offset
+                                card.style.transform = `translate(${index * 8}px, ${index * 8}px)`;
+                                card.style.opacity = 1;
+                            }
+                        });
+                        
+                        labels.forEach((l, i) => {
+                            if(i === currentIndex) l.classList.add('active');
+                            else l.classList.remove('active');
+                        });
+                    }
+
+                    function swipeOutTopCard(direction) {
+                        const topCard = cards.shift();
+                        const dirMult = direction === 'right' ? 1 : -1;
+                        
+                        topCard.style.transition = 'transform 0.4s ease-in, opacity 0.4s ease-in';
+                        topCard.style.transform = `translateX(${dirMult * 120}%) rotate(${dirMult * 15}deg)`;
+                        topCard.style.opacity = 0;
+                        
+                        currentIndex = (currentIndex + 1) % labels.length;
+                        
+                        setTimeout(() => {
+                            topCard.style.transition = 'none';
+                            cards.push(topCard);
+                            updateStack();
+                            setTimeout(() => {
+                                topCard.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+                            }, 50);
+                        }, 400);
+                        
+                        updateStack();
+                    }
+
+                    function swipeInBottomCard() {
+                        const bottomCard = cards.pop();
+                        bottomCard.style.transition = 'none';
+                        bottomCard.style.transform = 'translateX(-120%) rotate(-15deg)';
+                        bottomCard.style.opacity = 0;
+                        cards.unshift(bottomCard);
+                        
+                        currentIndex = (currentIndex - 1 + labels.length) % labels.length;
+                        
+                        // Force reflow
+                        void bottomCard.offsetWidth;
+                        
+                        bottomCard.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+                        updateStack();
+                    }
+
+                    // Drag Logic
+                    let startX = 0;
+                    let isDragging = false;
+                    let topCardNode = null;
+
+                    stackWrap.addEventListener('mousedown', (e) => {
+                        isDragging = true;
+                        startX = e.pageX;
+                        topCardNode = cards[0];
+                        topCardNode.style.transition = 'none';
+                        stackWrap.style.cursor = 'grabbing';
+                    });
+                    
+                    window.addEventListener('mousemove', (e) => {
+                        if(!isDragging || !topCardNode) return;
+                        e.preventDefault();
+                        const x = e.pageX - startX;
+                        const rotate = x * 0.05;
+                        topCardNode.style.transform = `translateX(${x}px) rotate(${rotate}deg)`;
+                    });
+
+                    window.addEventListener('mouseup', (e) => {
+                        if(!isDragging || !topCardNode) return;
+                        isDragging = false;
+                        stackWrap.style.cursor = 'grab';
+                        
+                        const diffX = e.pageX - startX;
+                        if(diffX < -60) {
+                            swipeOutTopCard('left');
+                        } else if(diffX > 60) {
+                            swipeOutTopCard('right');
+                        } else {
+                            topCardNode.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+                            updateStack();
+                        }
+                        topCardNode = null;
+                    });
+                    
+                    window.addEventListener('mouseleave', () => {
+                        if(isDragging && topCardNode) {
+                            isDragging = false;
+                            stackWrap.style.cursor = 'grab';
+                            topCardNode.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
+                            updateStack();
+                            topCardNode = null;
+                        }
+                    });
+
+                    // Auto-play Logic
+                    let autoPlayTimer;
+                    const AUTO_PLAY_INTERVAL = 8000; // 8 segundos para que cambien más lento
+
+                    function startAutoPlay() {
+                        stopAutoPlay();
+                        autoPlayTimer = setInterval(() => {
+                            if (!isDragging) {
+                                swipeOutTopCard('right');
+                            }
+                        }, AUTO_PLAY_INTERVAL);
+                    }
+
+                    function stopAutoPlay() {
+                        if (autoPlayTimer) clearInterval(autoPlayTimer);
+                    }
+
+                    // Pausar automático si el usuario pone el mouse encima
+                    stackWrap.addEventListener('mouseenter', stopAutoPlay);
+                    stackWrap.addEventListener('mouseleave', startAutoPlay);
+
+                    // Initialize
+                    updateStack();
+                    startAutoPlay();
+                });                </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEGUNDA SECCION: MÓDULOS & DEPARTAMENTO -->
+<section id="lineas-de-produccion" class="w-full relative min-h-screen pt-40 md:pt-48 bg-surface border-t border-surface-dim">
+    <div class="px-6 md:px-12 w-full">
+        <!-- Título -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end mb-16 md:mb-32">
+            <div class="col-span-1 md:col-span-6">
+                <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-8 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839] whitespace-nowrap">
+                    01 // ESTRUCTURAS MODULARES
+                </span>
+                <h3 class="text-5xl md:text-[5vw] font-black uppercase tracking-tighter leading-[0.9] text-primary font-cabinet">
+                    Equipamiento<br/>para Desarrollos
+                </h3>
+            </div>
+            <div class="col-span-1 md:col-span-6">
+                <p class="text-xl md:text-2xl text-on-surface-variant font-medium leading-[1.3]">
+                    Manufacturamos y ensamblamos mobiliario fijo a gran escala para equipar torres residenciales, hotelería y complejos corporativos. Un solo proveedor, calidad estandarizada en cientos de unidades.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full pt-8 p-[0.4em]">
+            <!-- Line 1: Cocinas -->
+            <div class="w-full rounded-sm transform transition-all duration-1000 ease-out reveal-card translate-y-32 opacity-0">
+                <a href="/cocinas" data-shadow="shadow-[0_0.4em_0.1em_0.019em_#8a501c]" class="dynamic-card relative top-0 block h-full bg-[#8a501c]/5 hover:bg-[#8a501c]/10 p-10 border border-outline-variant/30 shadow-none transition-all duration-[500ms] group cursor-pointer flex flex-col justify-between hover:translate-y-[0.4em] hover:shadow-none hover:border-[#8a501c]/50">
+                    <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-5xl font-black text-outline/30 group-hover:text-[#8a501c] transition-colors block">01</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-10 h-10 text-outline/40 group-hover:text-[#8a501c] transition-colors">
+                            <!-- Gabinetes superiores (Alacenas) -->
+                            <rect x="4" y="3" width="16" height="7"></rect>
+                            <line x1="12" y1="3" x2="12" y2="10"></line>
+                            <!-- Tiradores superiores -->
+                            <line x1="10" y1="8" x2="10" y2="9"></line>
+                            <line x1="14" y1="8" x2="14" y2="9"></line>
+                            
+                            <!-- Cubierta / Encimera que sobresale -->
+                            <rect x="2" y="14" width="20" height="2"></rect>
+                            
+                            <!-- Gabinetes base inferiores -->
+                            <rect x="4" y="16" width="16" height="6"></rect>
+                            <line x1="12" y1="16" x2="12" y2="22"></line>
+                            <!-- Tiradores inferiores -->
+                            <line x1="10" y1="17" x2="10" y2="18"></line>
+                            <line x1="14" y1="17" x2="14" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#8a501c] transition-colors">Cocinas Integrales</h4>
+                    <p class="text-on-surface-variant font-medium leading-relaxed mb-8">
+                        Producción en serie de módulos de cocina. Desde gabinetes y alacenas hasta barras, con herrajes de alta resistencia listos para instalación rápida.
+                    </p>
+                    <span class="inline-flex items-center justify-center bg-[#8a501c] text-white font-bold uppercase tracking-widest text-[0.8rem] px-6 py-3 rounded-none border border-[#0f1c28] transition-all duration-150 shadow-[6px_6px_0_0_#0f1c28] group-hover:bg-[#8a501c] group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-[3px_3px_0_0_#0f1c28] group-active:translate-x-[6px] group-active:translate-y-[6px] group-active:shadow-none w-fit">
+                        Cotizar Cocinas
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </span>
+                </div>
+                <div class="w-full h-1 bg-outline-variant/20 relative mt-8">
+                    <div class="absolute top-0 left-0 w-0 h-full bg-[#8a501c] transition-all duration-500 group-hover:w-full"></div>
+                </div>
+            </a>
+            </div>
+
+            <!-- Line 2: Closets -->
+            <div class="w-full rounded-sm transform transition-all duration-1000 delay-200 ease-out reveal-card translate-y-32 opacity-0">
+                <a href="/closets" data-shadow="shadow-[0_0.4em_0.1em_0.019em_#162839]" class="dynamic-card relative top-0 block h-full bg-[#162839]/5 hover:bg-[#162839]/10 p-10 border border-outline-variant/30 shadow-none transition-all duration-[500ms] group cursor-pointer flex flex-col justify-between hover:translate-y-[0.4em] hover:shadow-none hover:border-[#162839]/50">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-5xl font-black text-outline/30 group-hover:text-[#162839] transition-colors block">02</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-10 h-10 text-outline/40 group-hover:text-[#162839] transition-colors">
+                            <rect x="3" y="3" width="18" height="18"></rect>
+                            <line x1="12" y1="3" x2="12" y2="21"></line>
+                            <line x1="3" y1="9" x2="12" y2="9"></line>
+                            <line x1="3" y1="15" x2="12" y2="15"></line>
+                            <line x1="12" y1="7" x2="21" y2="7"></line>
+                            <line x1="16.5" y1="7" x2="16.5" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#162839] transition-colors">Clósets y Vestidores</h4>
+                    <p class="text-on-surface-variant font-medium leading-relaxed mb-8">
+                        Módulos de almacenamiento optimizados espacialmente. Diseños modulares adaptables a cualquier plano arquitectónico con acabados premium.
+                    </p>
+                    <span class="inline-flex items-center justify-center bg-[#162839] text-white font-bold uppercase tracking-widest text-[0.8rem] px-6 py-3 rounded-none border border-[#0f1c28] transition-all duration-150 shadow-[6px_6px_0_0_#0f1c28] group-hover:bg-[#162839] group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-[3px_3px_0_0_#0f1c28] group-active:translate-x-[6px] group-active:translate-y-[6px] group-active:shadow-none w-fit">
+                        Cotizar Clósets
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </span>
+                </div>
+                <div class="w-full h-1 bg-outline-variant/20 relative mt-8">
+                    <div class="absolute top-0 left-0 w-0 h-full bg-[#162839] transition-all duration-500 group-hover:w-full"></div>
+                </div>
+            </a>
+            </div>
+
+            <!-- Line 3: Puertas -->
+            <div class="w-full rounded-sm transform transition-all duration-1000 delay-[400ms] ease-out reveal-card translate-y-32 opacity-0">
+                <a href="/puertas" data-shadow="shadow-[0_0.4em_0.1em_0.019em_#8B3A36]" class="dynamic-card relative top-0 block h-full bg-[#8B3A36]/5 hover:bg-[#8B3A36]/10 p-10 border border-outline-variant/30 shadow-none transition-all duration-[500ms] group cursor-pointer flex flex-col justify-between hover:translate-y-[0.4em] hover:shadow-none hover:border-[#8B3A36]/50">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-5xl font-black text-outline/30 group-hover:text-[#8B3A36] transition-colors block">03</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-10 h-10 text-outline/40 group-hover:text-[#8B3A36] transition-colors">
+                            <rect x="5" y="3" width="14" height="18"></rect>
+                            <rect x="7" y="5" width="10" height="16"></rect>
+                            <line x1="14" y1="13" x2="15" y2="13"></line>
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#8B3A36] transition-colors">Puertas</h4>
+                    <p class="text-on-surface-variant font-medium leading-relaxed mb-8">
+                        Puertas de alta densidad con fabricación y ruteo de precisión milimétrica. Incluyen marco, chambrana y preparaciones exactas listas para su instalación.
+                    </p>
+                    <span class="inline-flex items-center justify-center bg-[#8B3A36] text-white font-bold uppercase tracking-widest text-[0.8rem] px-6 py-3 rounded-none border border-[#0f1c28] transition-all duration-150 shadow-[6px_6px_0_0_#0f1c28] group-hover:bg-[#8B3A36] group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-[3px_3px_0_0_#0f1c28] group-active:translate-x-[6px] group-active:translate-y-[6px] group-active:shadow-none w-fit">
+                        Cotizar Puertas
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </span>
+                </div>
+                <div class="w-full h-1 bg-outline-variant/20 relative mt-8">
+                    <div class="absolute top-0 left-0 w-0 h-full bg-[#8B3A36] transition-all duration-500 group-hover:w-full"></div>
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TERCERA SECCION: INFRAESTRUCTURA & CAPACIDAD -->
+<section id="infraestructura" class="w-full relative min-h-screen border-t border-primary/10 overflow-hidden flex flex-col justify-center py-24 md:py-32">
+
+    <div class="px-6 md:px-12 w-full relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="col-span-1 lg:col-span-5 flex flex-col justify-between h-full">
+                <div>
+                    <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-8 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                        02 // CAPACIDAD INDUSTRIAL
+                    </span>
+                    <h2 class="text-4xl md:text-[4vw] font-black uppercase tracking-tighter leading-[0.9] text-primary font-cabinet mb-8">
+                        Escala sin comprometer <span class="text-secondary block">precisión.</span>
+                    </h2>
+                    <p class="text-lg text-on-surface-variant font-medium leading-[1.4] pb-4 max-w-lg">
+                        Nuestra planta está equipada con trenes de maquinado avanzado europeos, canteadoras en línea y sierras automatizadas de alta velocidad. Capaces de manufacturar cientos de unidades modulares con tolerancia sub-milimétrica para cumplir con los tiempos críticos del desarrollador.
+                    </p>
+                    <div class="mt-4 mb-12">
+                        <a href="#contacto" class="cursor-pointer bg-primary border border-primary text-surface px-8 py-4 font-black uppercase tracking-[0.15em] text-[0.75rem] shadow-[6px_6px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_0_#1a1c1c] active:shadow-none active:translate-y-[6px] active:translate-x-[6px] transition-all duration-150 inline-flex items-center justify-center w-auto whitespace-nowrap">
+                            Programar Recorrido Técnico
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel de Métricas Brutalistas -->
+            <div class="col-span-1 lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-surface border border-primary p-6 shadow-[6px_6px_0_0_#162839] relative group hover:-translate-y-1 hover:shadow-[10px_10px_0_0_#162839] transition-all duration-300 min-h-[200px] flex flex-col justify-end">
+                    <span class="absolute top-4 right-4 text-xs font-bold text-primary/40">M01</span>
+                    <h3 class="text-5xl font-black text-primary font-cabinet tracking-tighter mb-2 mt-auto">+15<span class="text-xl text-secondary">k m²</span></h3>
+                    <div class="w-full h-px bg-primary/20 mb-3 mt-2"></div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-on-surface">Planta de Manufactura Base</p>
+                </div>
+                <div class="bg-surface border border-primary p-6 shadow-[6px_6px_0_0_#162839] relative group hover:-translate-y-1 hover:shadow-[10px_10px_0_0_#162839] transition-all duration-300 min-h-[200px] flex flex-col justify-end">
+                    <span class="absolute top-4 right-4 text-xs font-bold text-primary/40">M02</span>
+                    <h3 class="text-5xl font-black text-primary font-cabinet tracking-tighter mb-2 mt-auto">500<span class="text-xl text-secondary">+/mes</span></h3>
+                    <div class="w-full h-px bg-primary/20 mb-3 mt-2"></div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-on-surface">Modulares Ensamblados</p>
+                </div>
+                <div class="bg-primary text-surface border border-primary p-6 shadow-[6px_6px_0_0_#1a1c1c] relative group hover:-translate-y-1 hover:shadow-[10px_10px_0_0_#1a1c1c] transition-all duration-300 min-h-[200px] flex flex-col justify-end">
+                    <span class="absolute top-4 right-4 text-xs font-bold text-surface/40">M03</span>
+                    <h3 class="text-5xl font-black font-cabinet tracking-tighter mb-2 mt-auto">0.5<span class="text-xl text-secondary">mm</span></h3>
+                    <div class="w-full h-px bg-surface/20 mb-3 mt-2"></div>
+                    <p class="text-xs font-bold uppercase tracking-widest">Tolerancia de Corte Industrial</p>
+                </div>
+
+                <div class="border border-primary shadow-[6px_6px_0_0_#162839] relative group hover:-translate-y-1 hover:shadow-[10px_10px_0_0_#162839] transition-all duration-300 overflow-hidden min-h-[200px] flex items-end">
+                    <img src="/images/Hero2CNC%20.png" alt="Control Numérico" class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125 opacity-60 group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700 z-0">
+                    <div class="absolute inset-0 bg-primary/90 group-hover:bg-primary/20 transition-colors duration-700 z-10 mix-blend-multiply border-b border-primary/40"></div>
+
+                    <span class="absolute top-4 right-4 text-xs font-bold text-surface/40 group-hover:text-surface transition-colors duration-300 z-30">M04</span>
+
+                    <div class="relative z-20 w-full p-6 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent">
+                        <h4 class="text-lg md:text-xl text-surface font-black uppercase tracking-tight leading-none group-hover:text-secondary transition-colors">Integración<br/>Industrial</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CUARTA SECCION: INGENIERÍA & DRAFTING -->
+<section id="ingenieria" class="w-full bg-surface border-t border-primary/20 py-24 md:py-32 relative">
+    <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10">
+        <div class="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div class="max-w-2xl">
+                <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-8 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839] whitespace-nowrap">
+                    03 // INGENIERÍA & DRAFTING
+                </span>
+                <h2 class="text-4xl md:text-[4vw] font-black uppercase tracking-tighter leading-[0.9] text-primary font-cabinet">
+                    Del plano al dato paramétrico.
+                </h2>
+            </div>
+            <div class="flex flex-col items-start gap-6">
+                <p class="max-w-md text-base text-on-surface-variant font-medium">
+                    No interpretamos bosquejos; traducimos geometría arquitectónica en vectores ejecutables para manufactura automatizada. Menos margen de error, ensambles perfectos en sitio.
+                </p>
+                <a href="#contacto" class="cursor-pointer bg-primary border text-surface px-6 py-4 font-black uppercase tracking-[0.2em] text-[0.65rem] shadow-[4px_4px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#1a1c1c] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 inline-flex items-center justify-center">
+                    Cargar Planos (BIM/CAD)
+                </a>
+            </div>
+        </div>
+
+        <!-- Timeline Modular (The Engineering Flow) -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-0 border border-primary shadow-[8px_8px_0_0_#162839] bg-surface-container-lowest">
+            
+            <!-- Step 1 -->
+            <div class="p-8 border-b md:border-b-0 md:border-r border-primary/20 hover:bg-surface transition-all duration-300 group hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#162839]">
+                <div class="text-xs font-bold text-primary/40 mb-12 group-hover:text-secondary transition-colors">FASE 01</div>
+                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-4">Ingeniería de Detalle</h4>
+                <p class="text-sm text-on-surface-variant">Despiece constructivo CAD/CAM, optimización de tableros y ruteo de hardware.</p>
+                <div class="mt-8 border border-primary/10 p-2 inline-block transition-transform duration-300 group-hover:scale-105 group-hover:border-primary/30">
+                    <span class="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-primary">Input: BIM / AutoCAD</span>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="p-8 border-b md:border-b-0 md:border-r border-primary/20 hover:bg-surface transition-all duration-300 group hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#162839]">
+                <div class="text-xs font-bold text-primary/40 mb-12 group-hover:text-secondary transition-colors">FASE 02</div>
+                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-4">Código de Precisión</h4>
+                <p class="text-sm text-on-surface-variant">Los planos pasan automáticamente a vectores G-Code para centros de maquinado continuo.</p>
+                <div class="mt-8 border border-primary/10 p-2 inline-block transition-transform duration-300 group-hover:scale-105 group-hover:border-primary/30">
+                    <span class="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-primary">Proceso: Paramétrico</span>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="p-8 border-b md:border-b-0 md:border-r border-primary/20 hover:bg-surface transition-all duration-300 group hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#162839] relative overflow-hidden">
+                <div class="text-xs font-bold text-primary/40 mb-12 group-hover:text-secondary transition-colors relative z-10">FASE 03</div>
+                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-4 relative z-10">Corte & Canteado</h4>
+                <p class="text-sm text-on-surface-variant relative z-10">Dimensionamiento sub-milimétrico automático, colocación de cubierta perimetral (PUR/EVA).</p>
+                <div class="mt-8 border border-primary/10 p-2 inline-block relative z-10 transition-transform duration-300 group-hover:scale-105 group-hover:border-primary/30">
+                    <span class="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-primary">Maquinaria: Robótica</span>
+                </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="p-8 hover:bg-surface transition-all duration-300 group bg-surface-dim hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#162839]">
+                <div class="text-xs font-bold text-secondary mb-12">FASE 04</div>
+                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-4">Empaque / Flat-pack</h4>
+                <p class="text-sm text-on-surface-variant">Clasificación etiquetada con código QR por torre/nivel/unidad. Listo para ensamble en sitio.</p>      
+                <div class="mt-8 border border-secondary p-2 inline-block bg-secondary text-surface shadow-[2px_2px_0_0_#1a1c1c] transition-transform duration-300 group-hover:scale-105">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- QUINTA SECCION: ACUERDOS & DESARROLLADORES (B2B Reviews) -->
+<section id="trust" class="w-full border-t border-primary/20 py-24 relative overflow-hidden">
+    <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10">
+        <div class="mb-12">
+            <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-6 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                04 // TRUST & COMPLIANCE
+            </span>
+            <h2 class="text-4xl font-black uppercase tracking-tighter text-primary font-cabinet max-w-2xl">
+                Alianzas <span class="text-secondary">Estratégicas</span>.
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Testimonial 1 -->
+            <div class="border border-primary/20 bg-surface p-8 hover:bg-surface-container-low transition-colors group">
+                <div class="flex items-center gap-4 mb-8 border-b border-primary/10 pb-4">
+                    <div class="w-12 h-12 bg-primary flex items-center justify-center text-surface font-black font-cabinet text-xl">D1</div>
+                    <div>
+                        <h4 class="font-black text-primary uppercase tracking-tight text-sm">Residencial "El Bosque"</h4>
+                        <span class="text-xs text-secondary font-bold tracking-widest uppercase">Desarrolladora Norte</span>
+                    </div>
+                </div>
+                <p class="text-sm text-on-surface-variant italic mb-6">"Entregaron 120 cocinas y clósets bajo un cronograma agresivo sin un solo error de dimensión. La precisión milimétrica redujo el tiempo de instalación en obra en un 40%."</p>
+                <div class="text-[0.65rem] font-bold tracking-[0.2em] text-primary/50 uppercase">Tasa de defecto: <span class="text-primary">&lt;0.5%</span></div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="border border-primary/20 bg-surface p-8 hover:bg-surface-container-low transition-colors group">
+                <div class="flex items-center gap-4 mb-8 border-b border-primary/10 pb-4">
+                    <div class="w-12 h-12 bg-primary flex items-center justify-center text-surface font-black font-cabinet text-xl">A+</div>
+                    <div>
+                        <h4 class="font-black text-primary uppercase tracking-tight text-sm">Torre Arboleda (80 Niveles)</h4>
+                        <span class="text-xs text-secondary font-bold tracking-widest uppercase">Consorcio Arquitectónico</span>
+                    </div>
+                </div>
+                <p class="text-sm text-on-surface-variant italic mb-6">"Su capacidad para traducir nuestros modelos BIM a G-Code directo para manufactura salvó el proyecto. Las tolerancias milimétricas en las puertas ocultas fueron excepcionales."</p>
+                <div class="text-[0.65rem] font-bold tracking-[0.2em] text-primary/50 uppercase">Volumen: <span class="text-primary">850 Módulos</span></div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="border border-primary/20 bg-surface p-8 hover:bg-surface-container-low transition-colors group">
+                <div class="flex items-center gap-4 mb-8 border-b border-primary/10 pb-4">
+                    <div class="w-12 h-12 bg-primary flex items-center justify-center text-surface font-black font-cabinet text-xl">GC</div>
+                    <div>
+                        <h4 class="font-black text-primary uppercase tracking-tight text-sm">Hotel Boutique V.</h4>
+                        <span class="text-xs text-secondary font-bold tracking-widest uppercase">Grupo Constructor</span>
+                    </div>
+                </div>
+                <p class="text-sm text-on-surface-variant italic mb-6">"Buscábamos ese balance entre calidez orgánica y perfección industrial para el mobiliario de las habitaciones. Vyroba lo sistematizó para las 200 habitaciones sin perder calidad."</p>
+                <div class="text-[0.65rem] font-bold tracking-[0.2em] text-primary/50 uppercase">Tiempo Setup: <span class="text-primary">Record</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEXTA SECCION: PROTOCOLO FAQ OPERATIVO -->
+<section id="faq" class="w-full bg-surface-dim border-t border-primary py-24">
+    <div class="px-6 md:px-12 w-full max-w-[1000px] mx-auto">
+        <div class="mb-16 text-center">
+            <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-6 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                05 // FAQ OPERATIVO
+            </span>
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter text-primary font-cabinet mb-4">
+                Preguntas de Obra
+            </h2>
+            <p class="text-sm text-on-surface-variant max-w-lg mx-auto">Parámetros técnicos y logísticos para proyectos B2B de carpintería arquitectónica.</p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ 1: Instalación -->
+            <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
+                <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
+                    ¿Ofrecen instalación o solo manufactura flat-pack?      
+                    <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
+                    Ambas. Entregamos el material embalado y etiquetado (Flat-Pack) para su ensamble en obra. Si lo requiere, asigamos cuadrillas propias de instalación arquitectónica.
+                </div>
+            </details>
+
+            <!-- FAQ 2: Volumen y Tipos -->
+            <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
+                <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
+                    ¿Hacen proyectos residenciales únicos y altos volúmenes?
+                    <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
+                    Nuestra infraestructura B2B abastece desarrollos verticales (100+ unidades) con entregas "Just-in-Time", así como residenciales de alta gama completos (cocina, clósets, puertas). <strong>No hacemos reparaciones ni muebles individuales.</strong>
+                </div>
+            </details>
+
+            <!-- FAQ 3: Herrajes -->
+            <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
+                <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
+                    ¿Qué calidad de herrajes e insumos manejan?
+                    <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
+                    Solo utilizamos tableros hidrófugos de alta densidad, revestimientos técnicos (PET Supermate/Melaminas), herrajes de patente europea (Blum, Hettich) y pegado de cantos tecnología PUR antihumedad.
+                </div>
+            </details>
+
+            <!-- FAQ 4: Lead Time -->
+            <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
+                <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
+                    ¿Cuál es el tiempo promedio de entrega (Lead Time)?     
+                    <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
+                </summary>
+                <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
+                    De 4 a 6 semanas operativas a partir de la firma de planos de taller (BIM/CAD), dependiendo totalmente del volumen. Para desarrollos grandes, entregamos de forma secuencial alineados a la obra.
+            </details>
+        </div>
+
+        <div class="mt-12 flex justify-center">
+            <a href="https://wa.me/message/vyroba" target="_blank" class="cursor-pointer bg-primary border text-surface px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-primary/90 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0_0_#8a501c] transition-all duration-150 inline-flex items-center">
+                Tengo una pregunta técnica <span class="ml-2 font-black text-secondary">→</span>  
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- SEPTIMA SECCION: FINAL CTA (Brutalista Masivo) -->
+<section id="contacto" class="w-full bg-primary text-surface py-32 border-t border-secondary relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-secondary/10 transform skew-x-[-15deg] origin-bottom-right z-0"></div>
+    <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10 text-center flex flex-col items-center">
+        
+        <h2 class="text-5xl md:text-[6vw] font-black uppercase tracking-tighter leading-[0.9] text-surface font-cabinet mb-8 max-w-4xl">
+            Inicia tu <span class="text-secondary">Producción</span>.
+        </h2>
+        
+        <p class="text-lg text-surface/70 font-medium leading-[1.4] mb-12 max-w-xl">
+            Envía los requerimientos BIM/CAD de tu desarrollo o residencial. Evaluaremos las especificaciones y responderemos con un plan de maquinado exacto.
+        </p>
+
+        <a href="mailto:info@vyroba.com.mx" class="cursor-pointer bg-secondary border border-secondary text-primary px-10 py-6 font-black uppercase tracking-[0.2em] text-[0.8rem] md:text-sm shadow-[8px_8px_0_0_#1a1c1c] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#1a1c1c] hover:bg-primary-container hover:text-surface hover:border-primary-container active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all duration-150 inline-flex items-center justify-center">
+            <span>Enviar Planos y Requerimientos</span>
+        </a>
+
+        <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/40 uppercase">
+            <span>+ INFO +52 55 3645 1199</span>
+            <span>|</span>
+            <span>INFO@VYROBA.COM.MX</span>
+        </div>
+    </div>
+</section>
+
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    // Muestra el contenedor padre
+                    entry.target.classList.remove('translate-y-32', 'opacity-0');
+                    observer.unobserve(entry.target);
+                    
+                    // Anima el interior (el salto de boton) "uno a la vez"
+                    const card = entry.target.querySelector('.dynamic-card');
+                    if (card) {
+                        // El retraso se basa en el numero de elemento (delay escalonado ya definido en el padre mas 500ms al llegar)
+                        setTimeout(() => {
+                            card.classList.remove('top-0', 'shadow-none');
+                            card.classList.add('-top-[0.4em]', card.getAttribute('data-shadow'));
+                        }, 500); // Darle tiempo a la tarjeta 1 de aparecer
+                    }
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.reveal-card').forEach(card => observer.observe(card));
+    });
+  </script>
 </Layout>

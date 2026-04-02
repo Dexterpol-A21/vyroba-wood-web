@@ -1,0 +1,278 @@
+---
+---
+<header class="hidden lg:block fixed top-0 left-0 w-full z-50 bg-surface/70 backdrop-blur-2xl border-b border-outline-variant/20 transition-all duration-300 group/header">
+  <div class="flex justify-between items-center max-w-[1600px] mx-auto h-[72px] pr-6 lg:pr-12 relative">
+
+    <!-- LOGO (Fondo sólido Primario con Logo de Imagen) -->
+    <div class="flex-1 flex justify-start h-full">
+      <a href="/" class="flex flex-row items-center justify-center bg-primary px-8 h-[72px] hover:bg-primary-container transition-colors group border-r border-outline-variant/10">
+        <img src="/images/brand/vyrobaWhite.png" alt="Vyroba" class="h-14 w-auto object-contain" />
+      </a>
+    </div>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="hidden lg:flex items-center justify-center h-full gap-6 xl:gap-10">
+      
+      <!-- DROPDOWN: LÍNEAS (Mega Menú) -->
+      <div class="group/nav h-full flex items-center cursor-pointer">
+        <span class="font-cabinet font-bold text-base tracking-[0.1em] text-on-surface group-hover/nav:text-primary transition-colors uppercase flex items-center gap-2">
+          Líneas
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" class="group-hover/nav:rotate-180 transition-transform duration-300"><path d="m6 9 6 6 6-6"/></svg>
+        </span>
+        
+        <!-- MEGA MENU / DROPDOWN PANEL (Ancho Completo centrado en la pantalla) -->
+        <div class="absolute top-[72px] left-0 w-[100vw] -ml-[calc((100vw-100%)/2)] bg-surface/95 backdrop-blur-3xl border-b border-outline-variant/30 opacity-0 invisible translate-y-[-10px] group-hover/nav:opacity-100 group-hover/nav:visible group-hover/nav:translate-y-0 transition-all duration-300 shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]">
+          <div class="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline-variant/20">
+            
+            <!-- Item 1: Cocinas -->
+            <a href="/cocinas" class="relative top-0 block h-full bg-[#8a501c]/5 hover:bg-[#8a501c]/10 p-10 border border-transparent shadow-none transition-all duration-[500ms] group cursor-pointer flex flex-col justify-between hover:border-[#8a501c]/50">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-5xl font-black text-outline/30 group-hover:text-[#8a501c] transition-colors block">01</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-10 h-10 text-outline/40 group-hover:text-[#8a501c] transition-colors">
+                            <rect x="4" y="3" width="16" height="7"></rect>     
+                            <line x1="12" y1="3" x2="12" y2="10"></line>        
+                            <line x1="10" y1="8" x2="10" y2="9"></line>
+                            <line x1="14" y1="8" x2="14" y2="9"></line>
+                            <rect x="2" y="14" width="20" height="2"></rect>    
+                            <rect x="4" y="16" width="16" height="6"></rect>    
+                            <line x1="12" y1="16" x2="12" y2="22"></line>       
+                            <line x1="10" y1="17" x2="10" y2="18"></line>       
+                            <line x1="14" y1="17" x2="14" y2="18"></line>       
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#8a501c] transition-colors font-cabinet">Cocinas Integrales</h4>
+                    <p class="text-on-surface-variant font-medium leading-relaxed mb-8">
+                        Producción en serie de módulos de cocina. Desde gabinetes y alacenas hasta barras, con herrajes de alta resistencia listos para instalación rápida.
+                    </p>
+                </div>
+                <div class="w-full h-1 bg-outline-variant/20 relative mt-8">    
+                    <div class="absolute top-0 left-0 w-0 h-full bg-[#8a501c] transition-all duration-500 group-hover:w-full"></div>
+                </div>
+            </a>
+
+            <!-- Item 2: Closets -->
+            <a href="/closets" class="relative top-0 block h-full bg-[#162839]/5 hover:bg-[#162839]/10 p-10 border border-transparent shadow-none transition-all duration-[500ms] group cursor-pointer flex flex-col justify-between hover:border-[#162839]/50">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-5xl font-black text-outline/30 group-hover:text-[#162839] transition-colors block">02</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-10 h-10 text-outline/40 group-hover:text-[#162839] transition-colors">
+                            <rect x="3" y="3" width="18" height="18"></rect>    
+                            <line x1="12" y1="3" x2="12" y2="21"></line>        
+                            <line x1="3" y1="9" x2="12" y2="9"></line>
+                            <line x1="3" y1="15" x2="12" y2="15"></line>        
+                            <line x1="12" y1="7" x2="21" y2="7"></line>
+                            <line x1="16.5" y1="7" x2="16.5" y2="10"></line>    
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#162839] transition-colors font-cabinet">Clósets y Vestidores</h4>
+                    <p class="text-on-surface-variant font-medium leading-relaxed mb-8">
+                        Óptimos módulos geométricos de almacenamiento. Diseños personalizables que empatan arquitectónicamente con interiores corporativos o residenciales.
+                    </p>
+                </div>
+                <div class="w-full h-1 bg-outline-variant/20 relative mt-8">    
+                    <div class="absolute top-0 left-0 w-0 h-full bg-[#162839] transition-all duration-500 group-hover:w-full"></div>
+                </div>
+            </a>
+
+            <!-- Item 3: Puertas -->
+            <a href="/puertas" class="relative top-0 block h-full bg-[#8B3A36]/5 hover:bg-[#8B3A36]/10 p-10 border border-transparent shadow-none transition-all duration-[500ms] group cursor-pointer flex flex-col justify-between hover:border-[#8B3A36]/50">
+                <div>
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-5xl font-black text-outline/30 group-hover:text-[#8B3A36] transition-colors block">03</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-10 h-10 text-outline/40 group-hover:text-[#8B3A36] transition-colors">
+                            <rect x="5" y="3" width="14" height="18"></rect>    
+                            <rect x="7" y="5" width="10" height="16"></rect>    
+                            <line x1="14" y1="13" x2="15" y2="13"></line>       
+                        </svg>
+                    </div>
+                    <h4 class="text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#8B3A36] transition-colors font-cabinet">Puertas</h4>
+                    <p class="text-on-surface-variant font-medium leading-relaxed mb-8">
+                        Puertas de alta densidad con fabricación y ruteo de precisión milimétrica. Incluyen marco, chambrana y preparaciones exactas listas para su instalación.
+                    </p>
+                </div>
+                <div class="w-full h-1 bg-outline-variant/20 relative mt-8">    
+                    <div class="absolute top-0 left-0 w-0 h-full bg-[#8B3A36] transition-all duration-500 group-hover:w-full"></div>
+                </div>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- OTROS ENLACES -->
+      <a href="/materialoteca" class="group h-full flex items-center relative">
+        <span class="font-cabinet font-bold text-base tracking-[0.1em] text-on-surface group-hover:text-primary transition-colors uppercase">
+          Materialoteca
+        </span>
+        <div class="absolute bottom-[24px] left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></div>
+      </a>
+
+      <a href="/ingenieria" class="group h-full flex items-center relative">
+        <span class="font-cabinet font-bold text-base tracking-[0.1em] text-on-surface group-hover:text-primary transition-colors uppercase">
+          Ingeniería
+        </span>
+        <div class="absolute bottom-[24px] left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></div>
+      </a>
+
+      <a href="/manifiesto" class="group h-full flex items-center relative">
+        <span class="font-cabinet font-bold text-base tracking-[0.1em] text-on-surface group-hover:text-primary transition-colors uppercase">
+          Manifiesto
+        </span>
+        <div class="absolute bottom-[24px] left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></div>
+      </a>
+    </nav>
+
+    <!-- CALL TO ACTION RÍGIDO -->
+    <div class="flex-1 hidden lg:flex justify-end items-center h-[50px] relative z-10">
+      <a href="https://wa.me/525536451199" target="_blank" rel="noopener noreferrer" class="cursor-pointer flex items-center justify-center bg-surface border border-primary text-primary font-cabinet font-black uppercase tracking-wider text-sm px-8 py-3 shadow-[4px_4px_0_0_#162839] hover:bg-surface-container hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#162839] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 whitespace-nowrap">
+        Cotizar Proyecto
+      </a>
+    </div>
+</header>
+
+<!-- NAVEGACIÓN MÓVIL (Bottom Navigation Industrial) -->
+<div class="block lg:hidden fixed bottom-0 left-0 w-full z-[9999]">
+  <!-- Panel Expandible (Bottom Sheet Rígido) -->
+  <div id="mobileMenuSheet" class="absolute bottom-full left-0 w-full bg-surface-container/95 backdrop-blur-xl border-t-2 border-primary transition-all duration-300 translate-y-full opacity-0 invisible flex flex-col pointer-events-none shadow-[0_-20px_40px_rgba(0,0,0,0.5)]">
+    <div class="flex-1 overflow-y-auto p-8 flex flex-col gap-10 max-h-[70vh]">
+      
+      <!-- Líneas -->
+      <div class="flex flex-col gap-6">
+        <span class="font-cabinet font-black text-xs text-primary/50 uppercase tracking-[0.2em] border-b border-outline-variant/20 pb-2">Líneas Estructurales</span>
+        <div class="grid grid-cols-3 gap-4">
+          <!-- Cocinas -->
+          <a href="/cocinas" class="flex flex-col items-center justify-center gap-3 p-3 bg-[#8a501c]/5 hover:bg-[#8a501c]/10 border border-[#8a501c]/20 hover:border-[#8a501c]/50 transition-colors aspect-square group cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-8 h-8 text-[#8a501c]">
+              <rect x="4" y="3" width="16" height="7"></rect>     
+              <line x1="12" y1="3" x2="12" y2="10"></line>        
+              <line x1="10" y1="8" x2="10" y2="9"></line>
+              <line x1="14" y1="8" x2="14" y2="9"></line>
+              <rect x="2" y="14" width="20" height="2"></rect>    
+              <rect x="4" y="16" width="16" height="6"></rect>    
+              <line x1="12" y1="16" x2="12" y2="22"></line>       
+              <line x1="10" y1="17" x2="10" y2="18"></line>       
+              <line x1="14" y1="17" x2="14" y2="18"></line>       
+            </svg>
+            <span class="font-cabinet font-bold text-[0.65rem] sm:text-xs text-on-surface uppercase group-hover:text-[#8a501c] tracking-widest transition-colors text-center">Cocinas</span>
+          </a>
+          
+          <!-- Clósets -->
+          <a href="/closets" class="flex flex-col items-center justify-center gap-3 p-3 bg-[#162839]/5 hover:bg-[#162839]/10 border border-[#162839]/20 hover:border-[#162839]/50 transition-colors aspect-square group cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-8 h-8 text-[#162839]">
+              <rect x="3" y="3" width="18" height="18"></rect>    
+              <line x1="12" y1="3" x2="12" y2="21"></line>        
+              <line x1="3" y1="9" x2="12" y2="9"></line>
+              <line x1="3" y1="15" x2="12" y2="15"></line>        
+              <line x1="12" y1="7" x2="21" y2="7"></line>
+              <line x1="16.5" y1="7" x2="16.5" y2="10"></line>    
+            </svg>
+            <span class="font-cabinet font-bold text-[0.65rem] sm:text-xs text-on-surface uppercase group-hover:text-[#162839] tracking-widest transition-colors text-center">Clósets</span>
+          </a>
+          
+          <!-- Puertas -->
+          <a href="/puertas" class="flex flex-col items-center justify-center gap-3 p-3 bg-[#8B3A36]/5 hover:bg-[#8B3A36]/10 border border-[#8B3A36]/20 hover:border-[#8B3A36]/50 transition-colors aspect-square group cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-8 h-8 text-[#8B3A36]">
+              <rect x="5" y="3" width="14" height="18"></rect>    
+              <rect x="7" y="5" width="10" height="16"></rect>    
+              <line x1="14" y1="13" x2="15" y2="13"></line>       
+            </svg>
+            <span class="font-cabinet font-bold text-[0.65rem] sm:text-xs text-on-surface uppercase group-hover:text-[#8B3A36] tracking-widest transition-colors text-center">Puertas</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Otros enlaces -->
+      <div class="flex flex-col gap-6">
+        <span class="font-cabinet font-black text-xs text-primary/50 uppercase tracking-[0.2em] border-b border-outline-variant/20 pb-2">Recursos</span>
+        <div class="flex flex-col gap-4 pl-2 border-l-2 border-outline-variant/10">
+          <a href="/materialoteca" class="font-cabinet font-bold text-2xl text-on-surface hover:text-secondary transition-colors uppercase">Materialoteca</a>
+          <a href="/ingenieria" class="font-cabinet font-bold text-2xl text-on-surface hover:text-secondary transition-colors uppercase">Ingeniería</a>
+          <a href="/manifiesto" class="font-cabinet font-bold text-2xl text-on-surface hover:text-secondary transition-colors uppercase">Manifiesto</a>
+        </div>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div class="flex flex-col gap-4 mt-4 pt-6 border-t border-outline-variant/20">
+        <span class="font-cabinet font-black text-[0.65rem] text-primary/40 uppercase tracking-[0.2em]">Enlaces Externos</span>
+        <div class="flex flex-row items-center gap-6">
+          <a href="https://www.facebook.com/VyrobaComunicacionCreativa?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="text-on-surface hover:text-secondary transition-colors" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/agenciavyroba?igsh=NTF0anowNnBoemY5" target="_blank" rel="noopener noreferrer" class="text-on-surface hover:text-secondary transition-colors" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/vyrobacomunicacioncreativa" target="_blank" rel="noopener noreferrer" class="text-on-surface hover:text-secondary transition-colors" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Barra Inferior (Fija) -->
+  <div class="bg-primary h-[80px] pb-2 flex items-center justify-between px-6 relative z-[9999] border-t border-outline-variant/20 shadow-[0_-5px_20px_rgba(0,0,0,0.4)]">
+    <button type="button" id="mobileMenuBtn" class="flex items-center justify-center gap-4 h-full group outline-none">
+      <div class="flex flex-col items-start justify-center gap-[5px] w-[30px]">
+        <span class="block w-full h-[2px] bg-on-primary transition-all duration-300 origin-left" id="line1"></span>
+        <span class="block w-[70%] h-[2px] bg-on-primary transition-all duration-300" id="line2"></span>
+        <span class="block w-full h-[2px] bg-on-primary transition-all duration-300 origin-left" id="line3"></span>
+      </div>
+      <span class="font-cabinet font-black text-on-primary uppercase tracking-widest text-sm" id="menuText">Menú</span>
+    </button>
+
+    <a href="https://wa.me/525536451199" target="_blank" rel="noopener noreferrer" class="bg-surface text-primary font-cabinet font-black uppercase tracking-wider text-sm px-6 py-3 shadow-[4px_4px_0_0_#8a501c] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150">
+      Cotizar
+    </a>
+  </div>
+</div>
+
+<script>
+  // Lógica del Panel de Control Industrial Móvil
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenuSheet = document.getElementById('mobileMenuSheet');
+  const line1 = document.getElementById('line1');
+  const line2 = document.getElementById('line2');
+  const line3 = document.getElementById('line3');
+  const menuText = document.getElementById('menuText');
+  let isMenuOpen = false;
+
+  if (mobileMenuBtn && mobileMenuSheet) {
+    mobileMenuBtn.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      
+      if (isMenuOpen) {
+        // Abrir (El panel sube)
+        mobileMenuSheet.classList.remove('translate-y-full', 'opacity-0', 'invisible', 'pointer-events-none');
+        // Transformar icono a X
+        line1.style.transform = 'rotate(45deg)';
+        line1.style.width = '24px';
+        line2.style.opacity = '0';
+        line3.style.transform = 'rotate(-45deg)';
+        line3.style.width = '24px';
+        menuText.textContent = 'Cerrar';
+        menuText.classList.add('text-secondary');
+      } else {
+        // Cerrar (El panel baja)
+        mobileMenuSheet.classList.add('translate-y-full', 'opacity-0', 'invisible', 'pointer-events-none');
+        // Restaurar icono
+        line1.style.transform = 'none';
+        line1.style.width = '100%';
+        line2.style.opacity = '1';
+        line3.style.transform = 'none';
+        line3.style.width = '100%';
+        menuText.textContent = 'Menú';
+        menuText.classList.remove('text-secondary');
+      }
+    });
+
+    // Cerrar al dar click en una de las rutas
+    const links = mobileMenuSheet.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        if (isMenuOpen) mobileMenuBtn.click();
+      });
+    });
+  }
+</script>

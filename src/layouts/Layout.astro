@@ -1,33 +1,90 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SmoothScroll from '../components/SmoothScroll.astro';
 
 interface Props {
-  title?: string;
+  title: string;
   description?: string;
+  keywords?: string;
+  image?: string;
 }
 
 const { 
-  title = "Vyroba Wood | Precisión Industrial, Alma Artesanal",
-  description = "División de fabricación masiva de cocinas, closets y puertas con precisión industrial para desarrolladores y constructoras."
+  title, 
+  description = "Fabricación de mobiliario a escala industrial. Cocinas, clósets y puertas con precisión de ingeniería.",
+  keywords = "mobiliario industrial, cocinas, closets, puertas, carpintería b2b, manufactura en madera, vyroba wood",
+  image = "/images/brand/vyrobaWhite.png"
 } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content={description} />
-		<title>{title}</title>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
 
-        <!-- Google Fonts (Inter) -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-	</head>
-	<body class="bg-vyroba-coal text-white font-['Inter',sans-serif] antialiased selection:bg-vyroba-oak selection:text-white">
-		<slot />
-	</body>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+    <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@900,800,500,700,400&f[]=satoshi@900,700,500,400,300&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body class="bg-surface text-on-surface antialiased font-satoshi">
+    <SmoothScroll />
+    <Header />
+    <div class="min-h-screen flex flex-col relative text-xl">
+      <div class="flex-grow">
+        <slot />
+      </div>
+      <Footer />
+    </div>
+
+    <!-- Floating Social Contact Links (Desktop only) -->
+    <div class="fixed bottom-6 left-6 z-50 hidden lg:flex flex-col gap-4">
+        <!-- WhatsApp (Principal) -->
+        <a href="https://wa.me/525536451199" target="_blank" rel="noopener noreferrer" 
+           class="bg-[#25D366] text-white w-14 h-14 flex items-center justify-center border border-[#1a1c1c] shadow-[6px_6px_0_0_#1a1c1c] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-none transition-all duration-150"
+           aria-label="WhatsApp">
+            <svg xmlns="http://www.w3.org/-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/VyrobaComunicacionCreativa?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer"
+           class="bg-surface text-primary w-12 h-12 flex items-center justify-center border border-primary shadow-[4px_4px_0_0_#162839] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all duration-150"
+           aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/agenciavyroba?igsh=NTF0anowNnBoemY5" target="_blank" rel="noopener noreferrer"
+           class="bg-surface text-primary w-12 h-12 flex items-center justify-center border border-primary shadow-[4px_4px_0_0_#162839] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all duration-150"
+           aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        </a>
+        <!-- Email -->
+        <a href="mailto:info@vyroba.com.mx"
+           class="bg-surface text-primary w-12 h-12 flex items-center justify-center border border-primary shadow-[4px_4px_0_0_#162839] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all duration-150"
+           aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+    </div>
+  </body>
 </html>

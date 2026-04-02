@@ -1,0 +1,95 @@
+---
+// src/components/Footer.astro
+---
+<footer class="w-full bg-surface border-t-2 border-primary pt-16 pb-8 relative z-50">
+    <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10">
+        <!-- Main Footer Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-6 gap-12 md:gap-8 mb-16">     
+
+            <!-- Branding Column -->
+            <div class="col-span-1 md:col-span-2 flex flex-col justify-between items-start">
+                <div>
+                    <div class="inline-flex items-center justify-center bg-primary px-8 h-[80px] mb-6">
+                        <img src="/images/brand/vyrobaWhite.png" alt="Vyroba" class="h-14 w-auto object-contain" />
+                    </div>
+                    <h3 class="text-3xl md:text-5xl font-black font-cabinet uppercase tracking-tighter text-primary leading-[0.9] mb-6">
+                        MOBILIARIO<br />
+                        A ESCALA<br />
+                        <span class="text-secondary">INDUSTRIAL</span>
+                    </h3>
+                    <div class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                        Planta de Manufactura en Madera
+                    </div>
+                </div>
+            </div>
+
+            <!-- Links Column -->
+            <div class="col-span-1 flex flex-col">
+                <span class="text-xs font-bold text-primary/40 uppercase tracking-[0.2em] mb-6 border-b border-primary/10 pb-2">Compañía</span>
+                <ul class="space-y-4">
+                    <li><a href="/" class="text-sm font-black uppercase tracking-wide text-primary hover:text-secondary transition-colors relative group w-fit flex items-center">Inicio <span class="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">→</span></a></li> 
+                    <li><a href="/materialoteca" class="text-sm font-black uppercase tracking-wide text-primary hover:text-secondary transition-colors relative group w-fit flex items-center">Materialoteca <span class="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">→</span></a></li>
+                    <li><a href="/ingenieria" class="text-sm font-black uppercase tracking-wide text-primary hover:text-secondary transition-colors relative group w-fit flex items-center">Ingeniería <span class="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">→</span></a></li>
+                    <li><a href="/manifiesto" class="text-sm font-black uppercase tracking-wide text-primary hover:text-secondary transition-colors relative group w-fit flex items-center">Manifiesto <span class="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">→</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Products Column -->
+            <div class="col-span-1 flex flex-col">
+                <span class="text-xs font-bold text-primary/40 uppercase tracking-[0.2em] mb-6 border-b border-primary/10 pb-2">Soluciones</span>
+                <ul class="space-y-4">
+                    <li><a href="/cocinas" class="text-sm font-black uppercase tracking-wide text-primary hover:text-secondary transition-colors relative group w-fit flex items-center">Cocinas <span class="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">→</span></a></li>
+                    <li><a href="/closets" class="text-sm font-black uppercase tracking-wide text-primary hover:text-secondary transition-colors relative group w-fit flex items-center">Clósets <span class="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">→</span></a></li>
+                    <li><a href="/puertas" class="text-sm font-black uppercase tracking-wide text-primary hover:text-secondary transition-colors relative group w-fit flex items-center">Puertas <span class="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">→</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="col-span-1 flex flex-col">
+                <span class="text-xs font-bold text-primary/40 uppercase tracking-[0.2em] mb-6 border-b border-primary/10 pb-2">Contacto</span>   
+                <ul class="space-y-4">
+                    <li>
+                        <span class="block text-[0.65rem] uppercase tracking-widest text-primary/60 font-bold mb-1">Email B2B</span>
+                        <a href="mailto:info@vyroba.com.mx" class="text-sm font-bold text-primary hover:text-secondary transition-colors hover:underline decoration-2 underline-offset-4">info@vyroba.com.mx</a>
+                    </li>
+                    <li>
+                        <span class="block text-[0.65rem] uppercase tracking-widest text-primary/60 font-bold mb-1">Teléfono Planta</span>
+                        <a href="tel:+525536451199" class="text-sm font-bold text-primary hover:text-secondary transition-colors">+52 55 3645 1199</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Location & Socials Column -->
+            <div class="col-span-1 flex flex-col">
+                <span class="text-xs font-bold text-primary/40 uppercase tracking-[0.2em] mb-6 border-b border-primary/10 pb-2">Ubicación & Redes</span>   
+                <ul class="space-y-4">
+                    <li>
+                        <span class="block text-[0.65rem] uppercase tracking-widest text-primary/60 font-bold mb-1">Ubicación</span>
+                        <span class="text-sm font-bold text-primary">Bosques de Zambia 38,<br/>Bosques de Aragon, 57170<br/>Ciudad de México, Méx.</span>
+                    <li>
+                        <span class="block text-[0.65rem] uppercase tracking-widest text-primary/60 font-bold mb-1">Redes Sociales</span>
+                        <div class="flex flex-col gap-1">
+                            <a href="https://www.facebook.com/VyrobaComunicacionCreativa?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-primary hover:text-secondary transition-colors hover:underline decoration-2 underline-offset-4">Facebook</a>
+                            <a href="https://www.instagram.com/agenciavyroba?igsh=NTF0anowNnBoemY5" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-primary hover:text-secondary transition-colors hover:underline decoration-2 underline-offset-4">Instagram</a>
+                            <a href="https://www.linkedin.com/company/vyrobacomunicacioncreativa" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-primary hover:text-secondary transition-colors hover:underline decoration-2 underline-offset-4">LinkedIn</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Footer (Copyright & Legit lines) -->
+        <div class="border-t border-primary/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-4 text-[0.65rem] font-bold tracking-[0.1em] text-primary/50 uppercase">
+                <span>© 2026 VYROBA WOOD. TODOS LOS DERECHOS RESERVADOS.</span>
+            </div>
+            
+            <!-- Technical specs decorative -->
+            <div class="hidden md:flex items-center gap-4 text-[0.6rem] font-bold tracking-[0.2em] text-primary/40 uppercase">
+                <a href="/terminos" class="hover:text-primary transition-colors hover:underline">Términos</a>
+                <span>/</span>
+                <a href="/privacidad" class="hover:text-primary transition-colors hover:underline">Política de Privacidad</a>
+            </div>
+        </div>
+    </div>
+</footer>

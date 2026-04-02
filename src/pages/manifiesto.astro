@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DraftingGrid from '../components/grids/DraftingGrid';
+---
+
+<Layout 
+	title="Manifiesto: Artesanía y Precisión | Vyroba Wood" 
+	description="Nuestra filosofía para redefinir la industria del mueble conjugando el alma del diseño centrado en el ser humano con la escala técnica de operaciones."
+	keywords="manifiesto marca vyroba, diseño de muebles, mobiliario utilitario, arquitectura de madera, sistema industrial"
+>
+    <main class="text-primary min-h-screen pt-40 pb-32 border-b-[16px] border-secondary relative" id="manifesto-bg">
+
+        <!-- Grid del Index -->
+        <DraftingGrid client:load />
+        <section class="max-w-[1240px] mx-auto px-6 md:px-12 text-center md:text-left relative z-10">
+            <div class="bg-surface inline-block px-4 py-2 border border-secondary text-[0.65rem] font-bold text-secondary tracking-[0.2em] uppercase mb-16 shadow-[6px_6px_0_0_#8a501c]">
+                FILOSOFÍA DE DISEÑO
+            </div>
+
+            <h1 class="text-5xl md:text-[8vw] font-black font-cabinet uppercase tracking-tighter text-primary leading-[0.8] mb-12">
+                TRADICIÓN<br/>
+                <span class="text-secondary">POTENCIADA POR</span> LA<br/>
+                INNOVACIÓN.
+            </h1>
+
+            <div class="w-24 md:w-48 h-2 bg-secondary opacity-50 mb-16 mx-auto md:mx-0"></div>
+
+            <div class="text-xl md:text-3xl font-satoshi font-medium text-primary/80 leading-[1.5] max-w-4xl space-y-12 md:border-l-4 border-secondary/30 md:pl-10 text-left">
+
+                <p class="hover:text-primary transition-colors cursor-default"> 
+                    <strong>Diseño y calidad en cada mueble.</strong>  
+                    En Vyroba transformamos ideas en piezas de mobiliario únicas y funcionales. Respetamos la esencia de la madera combinando años de conocimiento artesanal con técnicas modernas.
+                </p>
+
+                <p class="hover:text-primary transition-colors cursor-default"> 
+                    Nuestra filosofía exige lo mejor de ambos mundos: la calidez de la artesanía tradicional unida a procesos de fabricación avanzados. Esto garantiza que cada proyecto, ya sea para el hogar o a nivel comercial, sea duradero, práctico y estéticamente irreprochable.
+                </p>
+
+                <p class="text-secondary font-black text-3xl md:text-5xl font-cabinet uppercase tracking-tighter mt-16 leading-none block">
+                    <span class="opacity-50">ARTESANÍA EN EL DETALLE</span><br/>
+                    <span class="underline decoration-2 decoration-secondary underline-offset-8 text-primary">EXCELENCIA DE ORIGEN.</span>
+                </p>
+                <div class="border border-secondary p-8 mt-12 bg-surface-container shadow-[8px_8px_0_0_#8a501c] hover:shadow-[16px_16px_0_0_#8a501c] transition-all duration-300">
+                    <p class="text-xs uppercase tracking-widest font-mono text-secondary mb-4">Nuestro Compromiso</p>
+                    <p class="text-base font-satoshi leading-relaxed font-bold">
+                        Explora nuestros proyectos y descubre cómo Vyroba puede ayudarte a crear espacios que inspiran. Aseguramos materiales seleccionados y dedicación total para entregar muebles personalizados hechos a la medida de tus necesidades.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NUEVA SECCION ESTILO/SEO MANIFIESTO -->
+        <section class="w-full bg-primary text-surface py-24 relative z-10 border-t-[8px] border-secondary">
+            <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <div>
+                        <div class="inline-block bg-secondary text-primary px-4 py-1 text-xs font-bold tracking-widest uppercase mb-6 shadow-[4px_4px_0_0_#1a1c1c]">
+                            ENFOQUE ARQUITECTÓNICO
+                        </div>
+                        <h2 class="text-4xl md:text-6xl font-black font-cabinet uppercase tracking-tighter mb-8 leading-[0.9]">
+                            LA ESTÉTICA <span class="text-secondary/80">VERSUS</span><br> LA ESCALA DE <br>PROYECTO
+                        </h2>
+                    </div>
+                    <div class="space-y-8 font-satoshi text-surface/90 text-lg leading-relaxed">
+                        <p>
+                            El problema endémico de la <strong>fabricación de muebles sobre medida</strong> es el cuello de botella del escalado. Los artesanos crean piezas maestras únicas, pero fallan terriblemente cuando un <strong>edificio de 50 departamentos</strong> necesita <a href="/cocinas" class="text-secondary hover:text-white underline decoration-2 underline-offset-4 tracking-wide font-bold">50 cocinas integrales idénticas</a>. Del otro lado, la maquiladora genérica pierde completamente el <strong>tacto, diseño y carácter estético</strong> exigido por interioristas.
+                        </p>
+                        <p>
+                            Nacimos para cerrar esa brecha. <strong>Vyroba Wood</strong> es un sistema constructor B2B que diseña el primer prototipo con manos artesanales y meticulosidad de ebanista, para luego inyectar ese ADN en parámetros de configuración. Lo repetimos a escala industrial con <a href="/puertas" class="text-secondary hover:text-white underline decoration-2 underline-offset-4 tracking-wide font-bold">puertas de intercomunicación de núcleo hueco (tambor) y semisólido</a>, o <a href="/closets" class="text-secondary hover:text-white underline decoration-2 underline-offset-4 tracking-wide font-bold">clósets armables flat-pack</a> para condominios residenciales enteros.
+                        </p>
+                        <ul class="pt-4 space-y-4 font-mono text-sm tracking-widest uppercase">
+                            <li class="flex items-center gap-4">
+                                <span class="block w-2 h-2 bg-secondary"></span> Materiales Técnicos Normalizados
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="block w-2 h-2 bg-secondary"></span> Ensambles Sincrónicos Tipo RTA
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <span class="block w-2 h-2 bg-secondary"></span> Capacidades de Licitación Residencial Múltiple
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCION: PROTOCOLO FAQ OPERATIVO -->
+        <section id="faq" class="w-full bg-surface-dim border-t border-primary mt-32 py-24 relative z-10">
+            <div class="px-6 md:px-12 w-full max-w-[1000px] mx-auto">
+                <div class="mb-16 text-center">
+                    <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-6 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+                        FAQ FILOSOFÍA
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter text-primary font-cabinet mb-4">
+                        Preguntas Comunes
+                    </h2>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ 1: Mezcla Tradición/Tech -->
+                    <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
+                        <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
+                            ¿Por qué mezclar artesanía con innovación robótica?      
+                            <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
+                        </summary>
+                        <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
+                            Porque la experiencia humana determina el cuidado de la estética y los acabados en la madera, y nuestras máquinas aseguran que esa misma experiencia sea precisa milimétricamente. Así entregamos productos masivos de alta cálidad sin error.
+                        </div>
+                    </details>
+
+                    <!-- FAQ 2: Residencial vs Masivo -->
+                    <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
+                        <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
+                            ¿A quién está enfocada su forma de trabajo?
+                            <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
+                        </summary>
+                        <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
+                            Nuestro enfoque sirve a ambas ramas. Podemos fabricar cocinas o espacios únicos para el hogar con atención al detalle y también ser proveedores masivos "Just In Time" para gigantes comerciales. La calidad Vyroba es estándar universal.
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section id="contacto" class="w-full bg-primary text-surface py-24 border-t border-secondary relative overflow-hidden z-10">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-secondary/10 transform skew-x-[-15deg] origin-bottom-right z-0"></div>
+            <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10 text-center flex flex-col items-center">
+
+                <h2 class="text-5xl md:text-[6vw] font-black uppercase tracking-tighter leading-[0.9] text-surface font-cabinet mb-8 max-w-4xl">
+                    Da vida a tus <span class="text-secondary">Proyectos</span>.       
+                </h2>
+
+                <p class="text-lg text-surface/70 font-medium leading-[1.4] mb-12 max-w-xl">
+                    Llevemos esa visión arquitectónica a nuestra fábrica. Conversemos.
+                </p>
+
+                <a href="mailto:info@vyroba.com.mx" class="cursor-pointer bg-secondary border border-secondary text-primary px-10 py-6 font-black uppercase tracking-[0.2em] text-[0.8rem] md:text-sm shadow-[8px_8px_0_0_#1a1c1c] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#1a1c1c] hover:bg-primary-container hover:text-surface hover:border-primary-container active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all duration-150 inline-flex items-center justify-center">
+                    <span>Contactar Ahora</span>
+                </a>
+
+                <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/40 uppercase">
+                    <span>+ INFO +52 55 3645 1199</span>
+                    <span>|</span>
+                    <span>INFO@VYROBA.COM.MX</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</Layout>

@@ -1,0 +1,249 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DraftingGrid from '../components/grids/DraftingGrid';
+---
+
+<Layout 
+	title="Puertas de Tambor y Alta Densidad | Vyroba Wood"
+	description="Ingeniería y producción de puertas interiores. Construcción semi-sólida, ensamblaje de alta tecnología y resistencia probada en proyectos a escala."
+	keywords="puertas de tambor, puertas de madera b2b, manufactura de puertas, tableros termoestructurados, proyectos inmobilirios, vyroba wood puertas"
+>
+  <main class="relative">
+    <DraftingGrid client:load theme="puertas" />
+
+    <!-- HERO SECTION: PUERTAS -->
+    <section class="relative z-10 min-h-[70vh] pt-[120px] pb-12 px-6 md:px-12 flex flex-col justify-end border-b border-outline-variant/20 bg-[#8B3A36]/5">
+      <div class="max-w-[1600px] mx-auto w-full relative z-10">
+        <div class="mb-8">
+            <span class="text-5xl font-black text-outline/30 block mb-4">03</span>
+            <h2 class="font-bold tracking-[0.2em] text-xs uppercase text-[#8B3A36] mb-4 block">Líneas B2B</h2>   
+            <h1 class="text-6xl md:text-[8vw] font-black uppercase tracking-tighter leading-[0.9] text-primary font-cabinet">
+                Puertas de<br/>Alta Densidad
+            </h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-end">    
+            <p class="text-xl md:text-2xl text-on-surface-variant font-medium leading-[1.3] max-w-2xl">
+                Producción de hojas sólidas y semisólidas con aislamiento acústico e ingeniería interna superior. Arquitectura de paso diseñada y calibrada para alto rendimiento en desarrollos hoteleros, corporativos y de escala residencial.
+            </p>
+            <div class="flex justify-start md:justify-end gap-4">
+                <a href="#contacto" class="inline-flex items-center justify-center bg-[#8B3A36] text-white font-bold border border-[#0f1c28] uppercase tracking-widest text-sm px-8 py-4 rounded-none transition-all duration-150 shadow-[8px_8px_0_0_#0f1c28] hover:bg-[#162839] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#0f1c28] active:translate-x-[8px] active:translate-y-[8px] active:shadow-none whitespace-nowrap">
+                    Cotizar Proyecto
+                </a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPECIFICATIONS / TECHNICAL DETAILS -->
+    <section class="py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full overflow-hidden bg-surface">
+      <div class="max-w-[1600px] mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          
+          <!-- Details Left -->
+          <div>
+            <h3 class="text-3xl font-black uppercase text-primary mb-8 font-cabinet">Fabricación Sólida y Celdas</h3>
+            <p class="text-lg text-on-surface-variant font-medium leading-relaxed mb-8">
+              Fabricadas a través de prensado térmico y ruteado robótico 5-ejes, entregando block-puertas pre-preparadas para recibir bisagras, cerrojos y mirillas sin intervención directa manual, eliminando los márgenes de error en la instalación vertical.
+            </p>
+            
+            <!-- Features List -->
+            <div class="space-y-6">
+              <div class="border-l-2 border-[#8B3A36] pl-6">
+                <h4 class="text-xl font-bold text-primary uppercase">Densidad STC</h4>
+                <p class="text-on-surface-variant mt-2 text-sm">Disponibilidad de construcción núcleo hueco panal o núcleo sólido acústicamente testeado.</p>
+              </div>
+              <div class="border-l-2 border-[#8B3A36] pl-6">
+                <h4 class="text-xl font-bold text-primary uppercase">Corte Preciso de Fábrica</h4>
+                <p class="text-on-surface-variant mt-2 text-sm">Entrega con resaque exacto para cerradura tubular y bisagras preparadas y alineadas con precisión milimétrica.</p>
+              </div>
+              <div class="border-l-2 border-[#8B3A36] pl-6">
+                <h4 class="text-xl font-bold text-primary uppercase">Marcos y Chambranas</h4>
+                <p class="text-on-surface-variant mt-2 text-sm">Integrados en el mismo envío con recubrimientos perimetrales exactos para enmascarar desplomes de albañilería.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Graphic / Tech Spec Visual -->
+          <div class="bg-surface-container border border-outline-variant/30 p-12 flex flex-col justify-center items-center relative group">
+             <!-- Technical grid background (Crisp CSS layer) -->
+             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none z-0"></div>
+
+             <!-- Center Technical SVG -->
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -10 320 120" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="square" class="w-full max-w-[700px] h-auto overflow-visible text-primary/50 relative z-10 transition-colors duration-500 group-hover:text-[#8B3A36]">
+
+                <!-- DOOR ELEVATION - MAIN -->
+                <rect x="15" y="10" width="30" height="80" stroke-width="1.5"></rect> <!-- Main Door -->
+                
+                <!-- Floor line -->
+                <line x1="0" y1="90" x2="60" y2="90" stroke-dasharray="1 1"></line>
+
+                <!-- Hardware: Hinges -->
+                <rect x="15" y="20" width="2" height="6" fill="currentColor" stroke="none"></rect>
+                <rect x="15" y="47" width="2" height="6" fill="currentColor" stroke="none"></rect>
+                <rect x="15" y="74" width="2" height="6" fill="currentColor" stroke="none"></rect>
+                
+                <!-- Hardware: Handle -->
+                <circle cx="39" cy="53" r="1.5" fill="none"></circle>
+                <rect x="36" y="52" width="6" height="2" rx="0.5" fill="currentColor"></rect>
+
+                <!-- TECHNICAL DIMENSIONS & DETAILS -->
+                <!-- Vertical Height -->
+                <line x1="5" y1="10" x2="13" y2="10" stroke-width="0.3" stroke-dasharray="1 1"></line>
+                <line x1="5" y1="90" x2="13" y2="90" stroke-width="0.3" stroke-dasharray="1 1"></line>
+                <line x1="8" y1="10" x2="8" y2="90" stroke-width="0.3"></line>
+                <path d="M7 12 L8 10 L9 12 M7 88 L8 90 L9 88" fill="none" stroke-width="0.3"></path>
+                <text x="5" y="50" font-family="monospace" font-size="2.5" transform="rotate(-90 5 50)" text-anchor="middle" fill="currentColor" stroke="none">H=2130 / MAX 2400</text>
+
+                <!-- Horizontal Width -->
+                <line x1="15" y1="0" x2="15" y2="8" stroke-width="0.3" stroke-dasharray="1 1"></line>
+                <line x1="45" y1="0" x2="45" y2="8" stroke-width="0.3" stroke-dasharray="1 1"></line>
+                <line x1="15" y1="3" x2="45" y2="3" stroke-width="0.3"></line>
+                <path d="M17 2 L15 3 L17 4 M43 2 L45 3 L43 4" fill="none" stroke-width="0.3"></path>
+                <text x="30" y="1" font-family="monospace" font-size="2.5" text-anchor="middle" fill="currentColor" stroke="none">W=900 (CLEAR OPENING)</text>
+
+                <!-- Minor hardware / tech notes -->
+                <text x="62" y="89" font-family="monospace" font-size="2.5" fill="currentColor" stroke="none">N.P.T. ±0.00</text>
+                <line x1="43" y1="53" x2="48" y2="53" stroke-width="0.2" stroke-dasharray="1 1"></line>
+                <text x="50" y="54.5" font-family="monospace" font-size="2" fill="currentColor" stroke="none">LOCKSET BORE</text>
+                
+                <!-- Hinge Markers -->
+                <text x="11" y="24" font-family="monospace" font-size="2" fill="currentColor" stroke="none">H1</text>
+                <text x="11" y="51" font-family="monospace" font-size="2" fill="currentColor" stroke="none">H2</text>
+                <text x="11" y="78" font-family="monospace" font-size="2" fill="currentColor" stroke="none">H3</text>
+
+                <!-- ADVANCED CALLOUTS (INDUSTRIAL B2B METRICS) -->
+                <!-- Callout 1: Marco -->
+                <circle cx="15" cy="15" r="1.5" fill="currentColor" stroke="none"></circle>
+                <line x1="15" y1="15" x2="-20" y2="15" stroke-width="0.3" stroke-dasharray="1 1"></line>
+                <text x="-22" y="17" font-family="monospace" font-size="6" font-weight="bold" text-anchor="end" fill="currentColor" stroke="none">MARCO ESTRUCTURAL</text>
+
+                <!-- Callout 2: Puerta (Superficie) -->
+                <circle cx="30" cy="35" r="1.5" fill="currentColor" stroke="none"></circle>
+                <line x1="30" y1="35" x2="-20" y2="35" stroke-width="0.3" stroke-dasharray="1 1"></line>
+                <text x="-22" y="37" font-family="monospace" font-size="6" font-weight="bold" text-anchor="end" fill="currentColor" stroke="none">SUPERFICIE PRECISIÓN</text>
+
+                <!-- Callout 3: Chapa (Hardware) -->
+                <circle cx="43" cy="53" r="1.5" fill="currentColor" stroke="none"></circle>
+                <line x1="43" y1="53" x2="60" y2="53" stroke-width="0.3" stroke-dasharray="1 1"></line>
+                <text x="62" y="55" font-family="monospace" font-size="6" font-weight="bold" text-anchor="start" fill="currentColor" stroke="none">HERRAJES PREMIUM</text>
+
+              </svg>
+              
+              <div class="absolute bottom-6 right-6 font-mono text-xs font-bold text-outline uppercase tracking-widest">
+                FIG. A-P / PUERTAS Y MARCOS
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPLEMENTATION GALLERY -->
+    <section class="py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full bg-transparent">
+      <div class="max-w-[1600px] mx-auto">
+        <!-- Section Header -->
+        <div class="flex items-end justify-between mb-12">
+          <div>
+            <h2 class="text-sm font-bold tracking-[0.2em] text-[#8B3A36] uppercase mb-4">Registro Operativo</h2>
+            <h3 class="text-4xl md:text-5xl font-black uppercase text-primary font-cabinet">Galería de Implementación</h3>
+          </div>
+          <div class="hidden md:block text-right">
+            <p class="text-sm font-mono text-outline font-bold">REF // G-001</p>
+          </div>
+        </div>
+
+        <!-- Gallery Grid (Blueprint placeholders) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-l border-t border-outline-variant/20 auto-rows-fr">
+          
+          <!-- Image Placeholder 1 (BENTO LARGE - Middle Bottom) -->
+          <div class="md:col-span-2 md:row-span-2 relative group border-r border-b border-outline-variant/20 bg-white overflow-hidden cursor-crosshair min-h-[400px] md:min-h-0">
+            <!-- Default State: The Blueprint/Diagram -->
+            <img src="/images/door/diagramDoor.png" alt="Puertas Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+            <!-- Hover State: The Real Render -->
+            <img src="/images/door/doorRender.png" alt="Puertas Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+            <!-- Technical label -->
+            <div class="absolute top-4 left-4 font-mono text-xs text-primary/70 bg-white/80 px-2 py-1 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300">FIG 01 // ESQUEMA Y RENDER</div>
+          </div>
+
+          <!-- PROMPT 1 -->
+          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
+            <!-- BASE IMAGE -->
+            <img src="/images/door/renderDoor1.png" alt="Nordic Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <!-- HOVER IMAGE -->
+            <img src="/images/door/doorRender1B.png" alt="Nordic Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+          </div>
+
+          <!-- PROMPT 2 -->
+          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
+            <!-- BASE IMAGE -->
+            <img src="/images/door/doorRender2.png" alt="Brutalism Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <!-- HOVER IMAGE -->
+            <img src="/images/door/renderDoor2B.png" alt="Brutalism Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+          </div>
+
+          <!-- PROMPT 3 -->
+          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
+            <!-- BASE IMAGE -->
+            <img src="/images/door/renderDoor3.png" alt="Monolith Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <!-- HOVER IMAGE -->
+            <img src="/images/door/renderDoor3B.png" alt="Monolith Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+          </div>
+
+          <!-- PROMPT 4 -->
+          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
+            <!-- BASE IMAGE -->
+            <img src="/images/door/renderDoor4.png" alt="Warm Nat Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <!-- HOVER IMAGE -->
+            <img src="/images/door/renderDoor4B.png" alt="Warm Nat Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+          </div>
+
+          <!-- PROMPT 5 -->
+          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
+            <!-- BASE IMAGE -->
+            <img src="/images/door/renderDoor5.png" alt="Gallery Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <!-- HOVER IMAGE -->
+            <img src="/images/door/renderDoor5B.png" alt="Gallery Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
+    </section>
+
+    <script is:inline>
+      document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const text = btn.getAttribute('data-prompt');
+          if(text) {
+            navigator.clipboard.writeText(text).then(() => {
+              const originalHtml = btn.innerHTML;
+              btn.innerHTML = '✅ COPIADO';
+              setTimeout(() => { btn.innerHTML = originalHtml; }, 2000);
+            }).catch(err => console.error('Error al copiar:', err));
+          }
+        });
+      });
+    </script>
+    <!-- CTA Final -->
+    <section id="contacto" class="w-full bg-[#8B3A36] text-surface py-32 border-t border-[#162839] relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-[#162839]/20 transform skew-x-[-15deg] origin-bottom-right z-0"></div>
+        <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10 text-center flex flex-col items-center">
+            <h2 class="text-5xl md:text-[6vw] font-black uppercase tracking-tighter leading-[0.9] text-surface font-cabinet mb-8 max-w-4xl">
+                Inicia tu <span class="text-[#162839]">Producción</span>.
+            </h2>
+            <p class="text-lg text-surface/90 font-medium leading-[1.4] mb-12 max-w-xl">
+                Envía los requerimientos BIM/CAD de tu desarrollo o residencial. Evaluaremos las especificaciones y responderemos con un plan de maquinado exacto.
+            </p>
+            <a href="mailto:info@vyroba.com.mx" class="cursor-pointer bg-[#162839] border border-[#162839] text-surface px-10 py-6 font-black uppercase tracking-[0.2em] text-[0.8rem] md:text-sm shadow-[8px_8px_0_0_#1a1c1c] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#1a1c1c] hover:bg-surface hover:text-[#162839] hover:border-surface active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all duration-150 inline-flex items-center justify-center">
+                <span>Enviar Planos y Requerimientos</span>
+            </a>
+            <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/60 uppercase">
+                <span>+ INFO +52 55 3645 1199</span>
+                <span>|</span>
+                <span>INFO@VYROBA.COM.MX</span>
+            </div>
+        </div>
+    </section>
+  </main>
+</Layout>

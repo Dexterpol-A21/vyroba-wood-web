@@ -1,1 +1,48 @@
-@import "tailwindcss"; @theme { --color-vyroba-coal: #111827; --color-vyroba-steel: #1F2937; --color-vyroba-oak: #B48A5E; --color-vyroba-metal: #9CA3AF; }
+@import "tailwindcss";
+
+@theme {
+  /* Vyroba Wood Engineered Organic Theme */
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-dim: #dadada;
+  --color-surface: #f9f9f9;
+  --color-surface-container-high: #e8e8e8;
+  --color-surface-container: #eeeeee;
+  --color-surface-container-low: #f3f3f3;
+  --color-surface-container-highest: #e2e2e2;
+  
+  --color-on-surface: #1a1c1c;
+  --color-on-surface-variant: #43474c;
+  
+  --color-primary: #162839;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #2c3e50;
+  --color-on-primary-container: #96a9be;
+  
+  --color-secondary: #8a501c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #fdb074;
+  --color-on-secondary-container: #77410d;
+
+  --color-outline: #74777d;
+  --color-outline-variant: #c4c6cd;
+
+  /* Custom Fonts */
+  --font-inter: 'Inter', sans-serif;
+  --font-satoshi: 'Satoshi', sans-serif;
+  --font-space: 'Space Grotesk', monospace;
+  --font-cabinet: 'Cabinet Grotesk', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-satoshi antialiased selection:bg-secondary selection:text-white;
+  }
+  
+  /* Blueprint Grid Background Pattern */
+  .blueprint-grid {
+    background-image: 
+      linear-gradient(to right, rgba(22, 40, 57, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(22, 40, 57, 0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
