@@ -1,0 +1,77 @@
+---
+const { theme = 'closets' } = Astro.props;
+
+let colorHex = '#162839'; // Default Azul (closets)
+if (theme === 'cocinas') {
+    colorHex = '#4A7C59';
+} else if (theme === 'puertas') {
+    colorHex = '#8B3A36';
+}
+---
+
+<section class="w-full relative py-12 lg:py-24 border-b border-t border-outline-variant/20 overflow-hidden bg-surface" style={`background-color: ${colorHex}08;`}>       
+    <!-- Elementos de Grid al fondo -->
+    <div class="absolute inset-0 pointer-events-none opacity-20" style={`background-image: linear-gradient(${colorHex}40 1px, transparent 1px), linear-gradient(90deg, ${colorHex}40 1px, transparent 1px); background-size: 40px 40px;`}></div>
+
+    <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10">     
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+            <!-- Bloque de Texto (Izquierda) -->
+            <div class="lg:col-span-5 flex flex-col items-start relative z-20 xl:sticky xl:top-32">
+                <span class="inline-block px-4 py-2 bg-surface text-[0.65rem] font-bold tracking-[0.2em] uppercase mb-8 shadow-[4px_4px_0_0_#1a1c1c] border border-primary" style={`color: ${colorHex};`}>
+                    // INGENIERÍA VISUAL
+                </span>
+                <h3 class="text-4xl md:text-[3.5vw] lg:text-5xl font-black uppercase tracking-tighter leading-[0.9] font-cabinet mb-8" style={`color: ${colorHex};`}>       
+                    Renders 3D y<br/>
+                    Diseño a Medida
+                </h3>
+                <p class="text-lg text-on-surface-variant font-medium leading-[1.5] mb-12 max-w-lg">
+                    Previo a la manufactura, desarrollamos el gemelo digital de tu desarrollo. Realizamos exploraciones volumétricas y <strong>renders fotorrealistas</strong> para garantizar precisión espacial absoluta antes de encender las máquinas.
+                </p>
+
+                <!-- Botón Interactivo estilo Mecánico -->
+                <a href="#contacto" class="cursor-pointer bg-surface text-surface px-10 py-5 font-black uppercase tracking-[0.2em] text-[0.75rem] md:text-sm transition-all duration-150 inline-flex items-center justify-center whitespace-nowrap shadow-[8px_8px_0_0_#1a1c1c] hover:shadow-[4px_4px_0_0_#1a1c1c] hover:translate-x-[4px] hover:translate-y-[4px] active:shadow-none active:translate-y-[8px] active:translate-x-[8px]" style={`background-color: ${colorHex}; border: 1px solid #0f1c28;`}>
+                    Solicitar Render 3D
+                </a>
+            </div>
+
+            <!-- Bloque de Tarjetas Brutalistas (Derecha) -->
+            <div class="lg:col-span-7 flex flex-col gap-6 lg:gap-8">
+                
+                <!-- Tarjeta 1 -->
+                <div class="bg-surface border p-8 shadow-[6px_6px_0_0_#1a1c1c] hover:shadow-[10px_10px_0_0_#1a1c1c] hover:-translate-y-1 transition-all duration-300 relative group" style={`border-color: ${colorHex}50;`}>
+                    <span class="absolute top-4 right-4 text-[0.55rem] font-bold tracking-widest uppercase opacity-50" style={`color: ${colorHex};`}>FASE 01</span>
+                    <h4 class="text-2xl lg:text-3xl font-black uppercase mb-4 font-cabinet" style={`color: ${colorHex};`}>
+                        Renders Fotorrealistas
+                    </h4>
+                    <p class="text-base text-on-surface-variant font-medium leading-relaxed max-w-xl">
+                        Visualización hiperrealista en 4K para visualizar acabados, vetas y la volumetría exacta del mobiliario. Ideal para tomar decisiones estéticas con tu cliente final sin construir prototipos físicos.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="bg-surface border p-8 shadow-[6px_6px_0_0_#1a1c1c] hover:shadow-[10px_10px_0_0_#1a1c1c] hover:-translate-y-1 transition-all duration-300 relative group" style={`border-color: ${colorHex}50;`}>
+                    <span class="absolute top-4 right-4 text-[0.55rem] font-bold tracking-widest uppercase opacity-50" style={`color: ${colorHex};`}>FASE 02</span>
+                    <h4 class="text-2xl lg:text-3xl font-black uppercase mb-4 font-cabinet" style={`color: ${colorHex};`}>
+                        Diseño Personalizado
+                    </h4>
+                    <p class="text-base text-on-surface-variant font-medium leading-relaxed max-w-xl">
+                        Parametrización y diseño 100% a la medida para adaptarse estrictamente a la retícula y restricciones de tus planos arquitectónicos. Eliminamos colisiones antes de llegar a la obra.
+                    </p>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="bg-surface border p-8 shadow-[6px_6px_0_0_#1a1c1c] hover:shadow-[10px_10px_0_0_#1a1c1c] hover:-translate-y-1 transition-all duration-300 relative group" style={`border-color: ${colorHex}50;`}>
+                    <span class="absolute top-4 right-4 text-[0.55rem] font-bold tracking-widest uppercase opacity-50" style={`color: ${colorHex};`}>MKT</span>
+                    <h4 class="text-2xl lg:text-3xl font-black uppercase mb-4 font-cabinet" style={`color: ${colorHex};`}>
+                        Listos para Anuncios
+                    </h4>
+                    <p class="text-base text-on-surface-variant font-medium leading-relaxed max-w-xl">
+                        Renders de interiorismo estilizados con iluminación de estudio, entregados listos para potenciar tus campañas de marketing, preventa de desarrollos y redes sociales.
+                    </p>
+                </div>
+
+            </div>
+          </div>
+        </div>
+</section>

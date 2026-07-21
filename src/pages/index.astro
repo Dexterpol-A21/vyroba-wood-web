@@ -1,41 +1,28 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import DraftingGrid from '../components/grids/DraftingGrid';
-import CNCGrid from '../components/grids/CNCGrid';
-import BlueprintGrid from '../components/grids/BlueprintGrid';
 ---
 
 <Layout 
-	title="Vyroba Wood | Diseño y Calidad"
-	description="Fabricación de cocinas, clósets y puertas con precisión de ingeniería. Fusionamos la tradición del trabajo en madera con tecnología de manufactura avanzada B2B."
-	keywords="vyroba wood, mobiliario a escala industrial, carpintería b2b, manufactura en madera, cocinas integrales, closets a medida, diseño industrial"
+	title="Vyroba Wood | Cocinas, Clósets y Puertas"
+	description="Vyroba Wood fabrica cocinas, clósets y puertas a medida. Diseño, manufactura CNC y calidad para desarrollos residenciales, hotelería y proyectos comerciales."
+	keywords="vyroba wood, vyroba, cocinas integrales, closets a medida, puertas, carpintería b2b, manufactura en madera, mobiliario a medida"
 >
   <main class="relative">
-    <!-- Logo Móvil Superior (No fijo, fondo azul) -->
-    <div class="block lg:hidden w-full h-[80px] bg-primary z-[90] px-6 flex items-center justify-start">
-      <a href="/" aria-label="Vyroba Wood Inicio" class="flex items-center">
-        <picture class="contents">
-  <source srcset="/images/brand/vyrobaWhite.avif" type="image/avif" />
-  <source srcset="/images/brand/vyrobaWhite.webp" type="image/webp" />
-  <img src="/images/brand/vyrobaWhite.png" alt="Vyroba Wood" class="h-12 w-auto object-contain" />
-</picture>
-      </a>
-    </div>
-
     <!-- Grid Global Fijo -->
     <DraftingGrid client:load />
 
 
 <!-- Hero: THE ENGINEERED ORGANIC -->
-<section class="relative min-h-[calc(100vh-80px)] lg:min-h-screen pt-4 lg:pt-[130px] pb-10 lg:pb-12 px-6 md:px-12 flex flex-col justify-between overflow-hidden border-b border-outline-variant/20 w-full mb-0">
+<section class="relative min-h-0 lg:min-h-screen pt-4 lg:pt-[130px] pb-24 lg:pb-12 px-6 md:px-12 flex flex-col justify-start lg:justify-between overflow-hidden border-b border-outline-variant/20 w-full mb-0">
 
-<div class="relative w-full z-10 pointer-events-auto flex flex-col justify-center h-full flex-grow pt-4 lg:pt-0">
+<div class="relative w-full z-10 pointer-events-auto flex flex-col justify-start lg:justify-center h-auto lg:h-full lg:flex-grow pt-4 lg:pt-0">
 
     <!-- Main Content Area -->
-    <div class="flex flex-col lg:flex-row justify-between items-center w-full h-full pb-8 lg:gap-12">
+    <div class="flex flex-col lg:flex-row justify-between items-center w-full h-auto lg:h-full pb-0 lg:pb-8 lg:gap-12">
 
         <!-- Left Column: Pre-title, Title, Text -->
-        <div class="flex flex-col items-start w-full lg:w-7/12 mt-auto">        
+        <div class="flex flex-col items-start w-full lg:w-7/12 lg:mt-auto">        
             <span class="font-bold tracking-[0.2em] text-xs text-secondary uppercase block mb-6">Vyroba Wood // Diseño y Calidad en Cada Mueble</span>
 
             <h1 class="text-[clamp(3.5rem,7.5vw,10rem)] font-black leading-[0.80] tracking-tighter text-primary uppercase font-cabinet w-full text-left break-words m-0 p-0 transform -translate-y-2 mb-8 xl:mb-10">
@@ -44,31 +31,13 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                 FUNCIONAL
             </h1>
 
-            <p class="text-lg lg:text-[1.3rem] text-on-surface-variant font-medium leading-[1.35] text-left max-w-[55ch] mb-10 lg:mb-12">
-                <strong>Transformamos ideas.</strong> Combinamos artesanía tradicional y técnicas innovadoras para ofrecer muebles personalizados de la más alta calidad. Desde mobiliario para el hogar hasta soluciones comerciales, cada pieza refleja dedicación al diseño empleando <strong class="text-primary font-black">materiales seleccionados y tecnología avanzada.</strong>
+            <p class="text-lg lg:text-[1.3rem] text-on-surface-variant font-medium leading-[1.35] text-left max-w-[55ch] mb-4 lg:mb-12">
+                <strong>Vyroba Wood transforma ideas en mobiliario.</strong> Combinamos artesanía tradicional y técnicas innovadoras para ofrecer muebles personalizados de la más alta calidad. Desde el hogar hasta soluciones comerciales, cada pieza Vyroba refleja dedicación al diseño con <strong class="text-primary font-black">materiales seleccionados y tecnología avanzada.</strong>
             </p>
-
-            <!-- Space Filler: Key Metrics (Architectural Minimalist) -->
-            <div class="hidden lg:flex flex-wrap items-center gap-4 xl:gap-6">
-                <div class="flex flex-col">
-                    <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary mb-1">01 // Enfoque</span>
-                    <span class="text-[0.85rem] text-primary font-bold tracking-wide">Muebles Hechos a Medida</span>
-                </div>
-                <div class="w-[1px] h-8 bg-primary/20"></div>
-                <div class="flex flex-col">
-                    <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary mb-1">02 // Metodología</span>
-                    <span class="text-[0.85rem] text-primary font-bold tracking-wide">Artesanía & Innovación</span>
-                </div>
-                <div class="w-[1px] h-8 bg-primary/20"></div>
-                <div class="flex flex-col">
-                    <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary mb-1">03 // Cumplimiento</span>
-                    <span class="text-[0.85rem] text-primary font-bold tracking-wide">Entregas Just-in-Time</span>
-                </div>
-            </div>
         </div>
 
         <!-- Right Column: Image and Buttons -->
-        <div class="flex flex-col items-start lg:items-center w-full lg:w-7/12 mt-12 lg:mt-0 relative z-20 justify-center">
+        <div class="flex flex-col items-start lg:items-center w-full lg:w-7/12 relative z-20 justify-center">
             
             <!-- Floating Image Box with Slow Gallery CSS -->
             <style>
@@ -143,7 +112,7 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                 }
             </style>
 
-            <div class="w-full max-w-[550px] xl:max-w-[750px] aspect-[4/3] xl:aspect-[16/9] border border-primary relative shadow-[12px_12px_0_0_#162839] bg-primary mb-8 hero-image-box cursor-grab overflow-visible" id="hero-slider-wrap" style="perspective: 1200px;">
+            <div class="w-full max-w-[550px] xl:max-w-[750px] aspect-[4/3] xl:aspect-[16/9] border border-primary relative shadow-[12px_12px_0_0_#162839] bg-primary mb-4 lg:mb-8 hero-image-box cursor-grab overflow-visible" id="hero-slider-wrap" style="perspective: 1200px;">
 
                 <!-- Inner container to mask overflowing gallery images -->     
                 <div class="absolute inset-0 w-full h-full" style="transform-style: preserve-3d;">    
@@ -152,31 +121,11 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
 
                     <!-- Draggable / Scrollable Gallery Images -->
                     <div class="gallery-slider w-full h-full" id="hero-slider">
-                        <div class="gallery-card"><picture class="contents">
-  <source srcset="/images/kitchen/Hero5full%20kitchen%20.avif" type="image/avif" />
-  <source srcset="/images/kitchen/Hero5full%20kitchen%20.webp" type="image/webp" />
-  <img src="/images/kitchen/Hero5full%20kitchen%20.png" alt="Cocina Residencial Final" class="gallery-img-sw" />
-</picture></div>
-                        <div class="gallery-card"><picture class="contents">
-  <source srcset="/images/Hero1Madera.avif" type="image/avif" />
-  <source srcset="/images/Hero1Madera.webp" type="image/webp" />
-  <img src="/images/Hero1Madera.png" alt="Detalle Arquitectónico Madera" class="gallery-img-sw" />
-</picture></div>
-                        <div class="gallery-card"><picture class="contents">
-  <source srcset="/images/Hero2CNC%20.avif" type="image/avif" />
-  <source srcset="/images/Hero2CNC%20.webp" type="image/webp" />
-  <img src="/images/Hero2CNC%20.png" alt="Maquinaria Industrial" class="gallery-img-sw" />
-</picture></div>
-                        <div class="gallery-card"><picture class="contents">
-  <source srcset="/images/Hero3VOLUMEN%20.avif" type="image/avif" />
-  <source srcset="/images/Hero3VOLUMEN%20.webp" type="image/webp" />
-  <img src="/images/Hero3VOLUMEN%20.png" alt="Escala de Producción Arquitectónica" class="gallery-img-sw" />
-</picture></div>
-                        <div class="gallery-card"><picture class="contents">
-  <source srcset="/images/Hero4Cocinacost.avif" type="image/avif" />
-  <source srcset="/images/Hero4Cocinacost.webp" type="image/webp" />
-  <img src="/images/Hero4Cocinacost.png" alt="Control de Costos Producción" class="gallery-img-sw" />
-</picture></div>
+                        <div class="gallery-card"><img src="/images/kitchen/Hero5full%20kitchen%20.webp" alt="Cocina Residencial Final" class="gallery-img-sw" /></div>
+                        <div class="gallery-card"><img src="/images/Hero1Madera.webp" alt="Detalle Arquitectónico Madera" class="gallery-img-sw" /></div>
+                        <div class="gallery-card"><img src="/images/Hero2CNC%20.webp" alt="Maquinaria Industrial" class="gallery-img-sw" /></div>
+                        <div class="gallery-card"><img src="/images/Hero3VOLUMEN%20.webp" alt="Escala de Producción Arquitectónica" class="gallery-img-sw" /></div>
+                        <div class="gallery-card"><img src="/images/Hero4Cocinacost.webp" alt="Control de Costos Producción" class="gallery-img-sw" /></div>
                     </div>
                 </div>
 
@@ -199,7 +148,7 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
             </div>
 
             <!-- CTA Buttons Box -->
-            <div class="w-full max-w-[550px] xl:max-w-[750px] flex flex-col sm:flex-row gap-4 mt-6">
+            <div class="w-full max-w-[550px] xl:max-w-[750px] flex flex-col sm:flex-row gap-4 mt-4 lg:mt-6">
                 <!-- Action Button 1 -->
                 <a href="#contacto" class="cursor-pointer bg-secondary border border-secondary text-surface px-6 py-5 font-black uppercase tracking-widest text-[0.70rem] shadow-[4px_4px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#1a1c1c] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 inline-flex items-center justify-center w-full whitespace-nowrap truncate">
                     Cotizar Desarrollo
@@ -354,8 +303,26 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
     </div>
 </section>
 
+<!-- PILARES: Franja corta post-hero -->
+<section class="w-full border-b border-outline-variant/20 bg-surface relative z-10">
+    <div class="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline-variant/20">
+        <div class="flex flex-col gap-2 px-6 md:px-12 py-8 md:py-10">
+            <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary">01 // Enfoque</span>
+            <span class="text-sm md:text-base text-primary font-bold tracking-wide font-cabinet uppercase">Muebles Hechos a Medida</span>
+        </div>
+        <div class="flex flex-col gap-2 px-6 md:px-12 py-8 md:py-10">
+            <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary">02 // Metodología</span>
+            <span class="text-sm md:text-base text-primary font-bold tracking-wide font-cabinet uppercase">Artesanía & Innovación</span>
+        </div>
+        <div class="flex flex-col gap-2 px-6 md:px-12 py-8 md:py-10">
+            <span class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-secondary">03 // Cumplimiento</span>
+            <span class="text-sm md:text-base text-primary font-bold tracking-wide font-cabinet uppercase">Entregas Just-in-Time</span>
+        </div>
+    </div>
+</section>
+
 <!-- SEGUNDA SECCION: MÓDULOS & DEPARTAMENTO -->
-<section id="lineas-de-produccion" class="w-full relative min-h-screen pt-12 md:pt-32 bg-surface border-t border-surface-dim">
+<section id="lineas-de-produccion" class="w-full relative min-h-0 py-12 lg:py-24 bg-surface border-t border-surface-dim">
     <div class="px-6 md:px-12 w-full">
         <!-- Título -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end mb-6 lg:mb-12">
@@ -369,19 +336,19 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
             </div>
             <div class="col-span-1 md:col-span-6">
                 <p class="text-xl md:text-2xl text-on-surface-variant font-medium leading-[1.3] max-w-2xl">
-                    Manufacturamos y ensamblamos mobiliario fijo a gran escala para equipar torres residenciales, hotelería y complejos corporativos. Un solo proveedor, calidad estandarizada en cientos de unidades.
+                    En Vyroba Wood manufacturamos y ensamblamos mobiliario fijo a gran escala para torres residenciales, hotelería y complejos corporativos. Un solo proveedor: calidad Vyroba estandarizada en cientos de unidades.
                 </p>
             </div>
         </div>
 
-        <div class="flex overflow-x-auto snap-x snap-mandatory overscroll-x-contain lg:grid lg:grid-cols-3 gap-4 lg:gap-6 w-[calc(100%+3rem)] -mx-6 px-6 md:w-[calc(100%+6rem)] md:-mx-12 md:px-12 lg:w-full lg:mx-0 lg:px-0 pt-8 pb-4 lg:pb-0" style="scrollbar-width: none;">
+        <div class="flex overflow-x-auto snap-x snap-mandatory overscroll-x-contain lg:grid lg:grid-cols-3 gap-4 lg:gap-6 w-[calc(100%+3rem)] -mx-6 px-6 md:w-[calc(100%+6rem)] md:-mx-12 md:px-12 lg:w-full lg:mx-0 lg:px-0 pt-4 lg:pt-8 pb-2 lg:pb-0" style="scrollbar-width: none;">
             <!-- Line 1: Cocinas -->
             <div class="w-[85vw] md:w-[60vw] lg:w-full shrink-0 snap-center rounded-sm transform transition-all duration-1000 ease-out">
-                <a href="/cocinas" data-shadow="shadow-[0_0.4em_0.1em_0.019em_#8a501c]" class="dynamic-card relative top-0 block h-full bg-[#8a501c]/5 hover:bg-[#8a501c]/10 p-6 lg:p-10 border border-outline-variant/30 shadow-[0_0.4em_0.1em_0.019em_#8a501c] -top-[0.4em] transition-all duration-[500ms] group cursor-pointer flex flex-col justify-between hover:translate-y-[0.4em] hover:shadow-none hover:border-[#8a501c]/50">
+                <a href="/cocinas" data-shadow="shadow-[0_0.4em_0.1em_0.019em_#4A7C59]" class="dynamic-card relative top-0 block h-full bg-[#4A7C59]/5 hover:bg-[#4A7C59]/10 p-6 lg:p-10 border border-outline-variant/30 shadow-[0_0.4em_0.1em_0.019em_#4A7C59] -top-[0.4em] transition-all duration-[500ms] group cursor-pointer flex flex-col justify-between hover:translate-y-[0.4em] hover:shadow-none hover:border-[#4A7C59]/50">
                     <div>
                     <div class="flex justify-between items-start mb-6">
-                        <span class="text-3xl lg:text-5xl font-black text-outline/30 group-hover:text-[#8a501c] transition-colors block">01</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-10 h-10 text-outline/40 group-hover:text-[#8a501c] transition-colors">
+                        <span class="text-3xl lg:text-5xl font-black text-outline/30 group-hover:text-[#4A7C59] transition-colors block">01</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" class="w-10 h-10 text-outline/40 group-hover:text-[#4A7C59] transition-colors">
                             <!-- Gabinetes superiores (Alacenas) -->
                             <rect x="4" y="3" width="16" height="7"></rect>
                             <line x1="12" y1="3" x2="12" y2="10"></line>
@@ -398,17 +365,17 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                             <line x1="14" y1="17" x2="14" y2="18"></line>
                         </svg>
                     </div>
-                    <h4 class="text-xl lg:text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#8a501c] transition-colors">Cocinas Integrales</h4>
+                    <h4 class="text-xl lg:text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#4A7C59] transition-colors">Cocinas Integrales</h4>
                     <p class="text-[0.9rem] lg:text-base text-on-surface-variant font-medium leading-relaxed mb-8">
-                        Producción en serie de módulos de cocina. Desde gabinetes y alacenas hasta barras, con herrajes de alta resistencia listos para instalación rápida.
+                        Cocinas integrales Vyroba: producción en serie de módulos. Desde gabinetes y alacenas hasta barras, con herrajes de alta resistencia listos para instalación rápida.
                     </p>
-                    <span class="inline-flex items-center justify-center bg-[#8a501c] text-white font-bold uppercase tracking-widest text-[0.65rem] lg:text-[0.8rem] px-6 py-3 rounded-none border border-[#0f1c28] transition-all duration-150 shadow-[6px_6px_0_0_#0f1c28] group-hover:bg-[#8a501c] group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-[3px_3px_0_0_#0f1c28] group-active:translate-x-[6px] group-active:translate-y-[6px] group-active:shadow-none w-fit">
+                    <span class="inline-flex items-center justify-center bg-[#4A7C59] text-white font-bold uppercase tracking-widest text-[0.65rem] lg:text-[0.8rem] px-6 py-3 rounded-none border border-[#0f1c28] transition-all duration-150 shadow-[6px_6px_0_0_#0f1c28] group-hover:bg-[#4A7C59] group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-[3px_3px_0_0_#0f1c28] group-active:translate-x-[6px] group-active:translate-y-[6px] group-active:shadow-none w-fit">
                         Cotizar Cocinas
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                     </span>
                 </div>
                 <div class="w-full h-1 bg-outline-variant/20 relative mt-8">
-                    <div class="absolute top-0 left-0 w-0 h-full bg-[#8a501c] transition-all duration-500 group-hover:w-full"></div>
+                    <div class="absolute top-0 left-0 w-0 h-full bg-[#4A7C59] transition-all duration-500 group-hover:w-full"></div>
                 </div>
             </a>
             </div>
@@ -430,7 +397,7 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                     </div>
                     <h4 class="text-xl lg:text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#162839] transition-colors">Clósets y Vestidores</h4>
                     <p class="text-[0.9rem] lg:text-base text-on-surface-variant font-medium leading-relaxed mb-8">
-                        Módulos de almacenamiento optimizados espacialmente. Diseños modulares adaptables a cualquier plano arquitectónico con acabados premium.
+                        Clósets Vyroba Wood: módulos de almacenamiento optimizados espacialmente. Diseños adaptables a cualquier plano arquitectónico con acabados premium.
                     </p>
                     <span class="inline-flex items-center justify-center bg-[#162839] text-white font-bold uppercase tracking-widest text-[0.65rem] lg:text-[0.8rem] px-6 py-3 rounded-none border border-[#0f1c28] transition-all duration-150 shadow-[6px_6px_0_0_#0f1c28] group-hover:bg-[#162839] group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-[3px_3px_0_0_#0f1c28] group-active:translate-x-[6px] group-active:translate-y-[6px] group-active:shadow-none w-fit">
                         Cotizar Clósets
@@ -457,7 +424,7 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                     </div>
                     <h4 class="text-xl lg:text-2xl font-black uppercase mb-4 text-primary group-hover:text-[#8B3A36] transition-colors">Puertas</h4>
                     <p class="text-[0.9rem] lg:text-base text-on-surface-variant font-medium leading-relaxed mb-8">
-                        Puertas de alta densidad con fabricación y ruteo de precisión milimétrica. Incluyen marco, chambrana y preparaciones exactas listas para su instalación.
+                        Puertas Vyroba de alta densidad con fabricación y ruteo de precisión milimétrica. Incluyen marco, chambrana y preparaciones exactas listas para instalación.
                     </p>
                     <span class="inline-flex items-center justify-center bg-[#8B3A36] text-white font-bold uppercase tracking-widest text-[0.65rem] lg:text-[0.8rem] px-6 py-3 rounded-none border border-[#0f1c28] transition-all duration-150 shadow-[6px_6px_0_0_#0f1c28] group-hover:bg-[#8B3A36] group-hover:translate-x-[3px] group-hover:translate-y-[3px] group-hover:shadow-[3px_3px_0_0_#0f1c28] group-active:translate-x-[6px] group-active:translate-y-[6px] group-active:shadow-none w-fit">
                         Cotizar Puertas
@@ -474,10 +441,10 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
 </section>
 
 <!-- TERCERA SECCION: INFRAESTRUCTURA & CAPACIDAD -->
-<section id="infraestructura" class="w-full relative min-h-[auto] border-t border-primary/10 overflow-hidden flex flex-col justify-center py-12 lg:py-32">
+<section id="infraestructura" class="w-full relative min-h-[auto] border-t border-primary/10 overflow-hidden flex flex-col justify-center py-12 lg:py-24">
 
     <div class="px-6 md:px-12 w-full relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
             <div class="col-span-1 lg:col-span-5 flex flex-col justify-between h-full">
                 <div>
                     <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-4 lg:mb-8 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
@@ -487,9 +454,9 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                         Escala sin comprometer <span class="text-secondary block">precisión.</span>
                     </h2>
                     <p class="text-xl md:text-2xl text-on-surface-variant font-medium leading-[1.3] pb-0 lg:pb-4 max-w-lg">
-                        Nuestra planta está equipada con trenes de maquinado avanzado europeos, canteadoras en línea y sierras automatizadas de alta velocidad. Capaces de manufacturar cientos de unidades modulares con tolerancia sub-milimétrica.
+                        La planta de Vyroba Wood está equipada con maquinado europeo, canteadoras en línea y sierras automatizadas de alta velocidad. Capacidad Vyroba para manufacturar cientos de unidades modulares con tolerancia sub-milimétrica.
                     </p>
-                    <div class="mt-4 mb-12">
+                    <div class="mt-4 mb-6 lg:mb-12">
                         <a href="#contacto" class="cursor-pointer bg-primary border border-primary text-surface px-8 py-4 font-black uppercase tracking-[0.15em] text-[0.75rem] shadow-[6px_6px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_0_#1a1c1c] active:shadow-none active:translate-y-[6px] active:translate-x-[6px] transition-all duration-150 inline-flex items-center justify-center w-auto whitespace-nowrap">
                             Programar Recorrido Técnico
                         </a>
@@ -502,7 +469,7 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                 <div class="bg-surface border border-primary p-4 md:p-6 shadow-[4px_4px_0_0_#162839] relative group hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#162839] md:hover:shadow-[10px_10px_0_0_#162839] transition-all duration-300 flex flex-col justify-between min-h-[140px] md:min-h-[160px]">
                     <span class="absolute top-3 right-3 md:top-4 md:right-4 text-[0.65rem] md:text-xs font-bold text-primary/40">M01</span>
                     <div>
-                        <h3 class="text-3xl md:text-5xl font-black text-primary font-cabinet tracking-tighter mb-1 mt-6">+15<span class="text-sm md:text-xl text-secondary">k m²</span></h3>
+                        <h3 class="text-3xl md:text-5xl font-black text-primary font-cabinet tracking-tighter mb-1 mt-6">+3<span class="text-sm md:text-xl text-secondary">k m²</span></h3>
                         <div class="w-full h-px bg-primary/20 mb-2 mt-1"></div>
                         <p class="text-[0.65rem] md:text-xs font-bold uppercase tracking-widest text-on-surface leading-tight">Planta de Manufactura</p>
                     </div>
@@ -510,7 +477,7 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                 <div class="bg-surface border border-primary p-4 md:p-6 shadow-[4px_4px_0_0_#162839] relative group hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#162839] md:hover:shadow-[10px_10px_0_0_#162839] transition-all duration-300 flex flex-col justify-between min-h-[140px] md:min-h-[160px]">
                     <span class="absolute top-3 right-3 md:top-4 md:right-4 text-[0.65rem] md:text-xs font-bold text-primary/40">M02</span>
                     <div>
-                        <h3 class="text-3xl md:text-5xl font-black text-primary font-cabinet tracking-tighter mb-1 mt-6">500<span class="text-sm md:text-xl text-secondary">+/mes</span></h3>
+                        <h3 class="text-3xl md:text-5xl font-black text-primary font-cabinet tracking-tighter mb-1 mt-6">200<span class="text-sm md:text-xl text-secondary">+/mes</span></h3>
                         <div class="w-full h-px bg-primary/20 mb-2 mt-1"></div>
                         <p class="text-[0.65rem] md:text-xs font-bold uppercase tracking-widest text-on-surface leading-tight">Modulares Ensamblados</p>
                     </div>
@@ -525,11 +492,7 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                 </div>
 
                 <div class="border border-primary shadow-[4px_4px_0_0_#162839] relative group hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#162839] md:hover:shadow-[10px_10px_0_0_#162839] transition-all duration-300 overflow-hidden flex flex-col justify-center min-h-[140px] md:min-h-[160px] p-4 md:p-6 bg-primary">
-                    <picture class="absolute inset-0 z-0">
-                        <source srcset="/images/Hero2CNC%20.avif" type="image/avif" />
-                        <source srcset="/images/Hero2CNC%20.webp" type="image/webp" />
-                        <img src="/images/Hero2CNC%20.png" alt="Control Numérico" class="w-full h-full object-cover filter grayscale contrast-125 opacity-40 group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-60 transition-all duration-700" />
-                    </picture>
+                    <img src="/images/Hero2CNC%20.webp" alt="Control Numérico" class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125 opacity-40 group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-60 transition-all duration-700 z-0" />
                     <div class="absolute inset-0 bg-primary/80 group-hover:bg-primary/40 transition-colors duration-700 z-10 mix-blend-multiply"></div>
 
                     <span class="absolute top-3 right-3 md:top-4 md:right-4 text-[0.65rem] md:text-xs font-bold text-surface/40 group-hover:text-surface transition-colors duration-300 z-30">M04</span>
@@ -546,20 +509,20 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
 </section>
 
 <!-- CUARTA SECCION: INGENIERÍA & DRAFTING -->
-<section id="ingenieria" class="w-full bg-surface border-t border-primary/20 py-12 lg:py-32 relative">
+<section id="ingenieria" class="w-full bg-surface border-t border-primary/20 py-12 lg:py-24 relative">
     <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10">
-        <div class="mb-10 lg:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6 lg:gap-8">
+        <div class="mb-8 lg:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4 lg:gap-8">
             <div class="max-w-2xl">
                 <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-4 lg:mb-8 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839] whitespace-nowrap">
                     03 // INGENIERÍA & DRAFTING
                 </span>
                 <h2 class="text-4xl md:text-[4vw] font-black uppercase tracking-tighter leading-[0.9] text-primary font-cabinet">
-                    Del plano al dato paramétrico.
+                    Del plano a la manufactura Vyroba.
                 </h2>
             </div>
             <div class="flex flex-col items-start gap-4 lg:gap-6 mt-4 lg:mt-0">
                 <p class="max-w-md text-xl md:text-2xl text-on-surface-variant font-medium leading-[1.3]">
-                    No interpretamos bosquejos; traducimos geometría arquitectónica en vectores ejecutables para manufactura automatizada. Menos margen de error, ensambles perfectos en sitio.
+                    En Vyroba no interpretamos bosquejos: traducimos geometría arquitectónica en vectores ejecutables para manufactura automatizada. Menos margen de error, ensambles perfectos en sitio.
                 </p>
                 <a href="#contacto" class="cursor-pointer bg-primary border text-surface px-6 py-4 font-black uppercase tracking-[0.2em] text-[0.65rem] shadow-[4px_4px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#1a1c1c] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 inline-flex items-center justify-center">
                     Cargar Planos (BIM/CAD)
@@ -571,42 +534,35 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
         <div class="grid grid-cols-1 md:grid-cols-4 gap-0 border border-primary shadow-[8px_8px_0_0_#162839] bg-surface-container-lowest">
             
             <!-- Step 1 -->
-            <div class="p-8 border-b md:border-b-0 md:border-r border-primary/20 hover:bg-surface transition-all duration-300 group hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#162839]">
-                <div class="text-xs font-bold text-primary/40 mb-12 group-hover:text-secondary transition-colors">PASO 01</div>
-                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-4">Revisión de Proyecto</h4>
-                <p class="text-sm text-on-surface-variant">Escuchamos y adaptamos tus necesidades para garantizarte un negocio rentable y seguro.</p>
-                <div class="mt-8 border border-primary/10 p-2 inline-block transition-transform duration-300 group-hover:scale-105 group-hover:border-primary/30">
-                    <span class="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-primary">Diseño Inicial</span>
-                </div>
+            <div class="flex flex-col p-6 md:p-8 border-b md:border-b-0 md:border-r border-primary/20 hover:bg-surface transition-colors duration-300 group">
+                <div class="text-xs font-bold text-primary/40 mb-6 group-hover:text-secondary transition-colors">PASO 01</div>
+                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-3 font-cabinet">Diseño y Renders 3D</h4>
+                <p class="text-sm text-on-surface-variant leading-relaxed mb-6">En Vyroba Wood creamos propuestas de mobiliario personalizado y renders fotorrealistas para previsualizar cada espacio antes de fabricar.</p>
+                <span class="mt-auto self-start border border-primary/20 px-2.5 py-1 text-[0.65rem] font-bold tracking-[0.15em] uppercase text-primary leading-none">Estudio Visual</span>
             </div>
 
             <!-- Step 2 -->
-            <div class="p-8 border-b md:border-b-0 md:border-r border-primary/20 hover:bg-surface transition-all duration-300 group hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#162839]">
-                <div class="text-xs font-bold text-primary/40 mb-12 group-hover:text-secondary transition-colors">PASO 02</div>
-                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-4">Preparación Rápida</h4>
-                <p class="text-sm text-on-surface-variant">Alistamos cada detalle para garantizar que ningún ensamble tenga un solo fallo o contratiempo.</p>
-                <div class="mt-8 border border-primary/10 p-2 inline-block transition-transform duration-300 group-hover:scale-105 group-hover:border-primary/30">
-                    <span class="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-primary">Previsión Total</span>
-                </div>
+            <div class="flex flex-col p-6 md:p-8 border-b md:border-b-0 md:border-r border-primary/20 hover:bg-surface transition-colors duration-300 group">
+                <div class="text-xs font-bold text-primary/40 mb-6 group-hover:text-secondary transition-colors">PASO 02</div>
+                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-3 font-cabinet">Preparación Rápida</h4>
+                <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Alistamos cada detalle para garantizar que ningún ensamble tenga un solo fallo o contratiempo.</p>
+                <span class="mt-auto self-start border border-primary/20 px-2.5 py-1 text-[0.65rem] font-bold tracking-[0.15em] uppercase text-primary leading-none">Previsión Total</span>
             </div>
 
             <!-- Step 3 -->
-            <div class="p-8 border-b md:border-b-0 md:border-r border-primary/20 hover:bg-surface transition-all duration-300 group hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#162839] relative overflow-hidden">
-                <div class="text-xs font-bold text-primary/40 mb-12 group-hover:text-secondary transition-colors relative z-10">PASO 03</div>
-                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-4 relative z-10">Fabricación en Volumen</h4>
-                <p class="text-sm text-on-surface-variant relative z-10">Líneas de producción activas para crear cientos de unidades con calidad igual e intacta todo el tiempo.</p>
-                <div class="mt-8 border border-primary/10 p-2 inline-block relative z-10 transition-transform duration-300 group-hover:scale-105 group-hover:border-primary/30">
-                    <span class="text-[0.6rem] font-bold tracking-[0.2em] uppercase text-primary">Gran Escala</span>
-                </div>
+            <div class="flex flex-col p-6 md:p-8 border-b md:border-b-0 md:border-r border-primary/20 hover:bg-surface transition-colors duration-300 group">
+                <div class="text-xs font-bold text-primary/40 mb-6 group-hover:text-secondary transition-colors">PASO 03</div>
+                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-3 font-cabinet">Fabricación en Volumen</h4>
+                <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Líneas de producción Vyroba activas para crear cientos de unidades con la misma calidad, pieza tras pieza.</p>
+                <span class="mt-auto self-start border border-primary/20 px-2.5 py-1 text-[0.65rem] font-bold tracking-[0.15em] uppercase text-primary leading-none">Gran Escala</span>
             </div>
 
             <!-- Step 4 -->
-            <div class="p-8 hover:bg-surface transition-all duration-300 group bg-surface-dim hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#162839]">
-                <div class="text-xs font-bold text-secondary mb-12">PASO 04</div>
-                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-4">Logística y Entrega</h4>
-                <p class="text-sm text-on-surface-variant">Cada elemento llega empaquetado para su área definitiva listo para un montaje veloz y seguro.</p>      
-                <div class="mt-8 border border-secondary p-2 inline-block bg-secondary text-surface shadow-[2px_2px_0_0_#1a1c1c] transition-transform duration-300 group-hover:scale-105">
-                </div>
+            <div class="flex flex-col p-6 md:p-8 hover:bg-surface transition-colors duration-300 group">
+                <div class="text-xs font-bold text-secondary mb-6">PASO 04</div>
+                <h4 class="text-xl font-black uppercase tracking-tight text-primary mb-3 font-cabinet">Logística y Entrega</h4>
+                <p class="text-sm text-on-surface-variant leading-relaxed mb-6">Cada elemento llega empaquetado para su área definitiva listo para un montaje veloz y seguro.</p>
+                <span class="mt-auto self-start border border-secondary bg-secondary px-2.5 py-1 text-[0.65rem] font-bold tracking-[0.15em] uppercase text-surface leading-none">Montaje Veloz</span>
             </div>
 
         </div>
@@ -621,113 +577,136 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
                 04 // TRUST & COMPLIANCE
             </span>
             <h2 class="text-4xl font-black uppercase tracking-tighter text-primary font-cabinet max-w-2xl mt-4 lg:mt-0">
-                Alianzas <span class="text-secondary">Estratégicas</span>.
+                Aliados de <span class="text-secondary">Vyroba Wood</span>.
             </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="flex overflow-x-auto snap-x snap-mandatory overscroll-x-contain lg:grid lg:grid-cols-3 gap-4 lg:gap-6 w-[calc(100%+3rem)] -mx-6 px-6 md:w-[calc(100%+6rem)] md:-mx-12 md:px-12 lg:w-full lg:mx-0 lg:px-0 pb-4 lg:pb-0" style="scrollbar-width: none;">
             <!-- Testimonial 1 -->
-            <div class="border border-primary/20 bg-surface p-8 hover:bg-surface-container-low transition-colors group">
-                <div class="flex items-center gap-4 mb-8 border-b border-primary/10 pb-4">
-                    <div class="w-12 h-12 bg-primary flex items-center justify-center text-surface font-black font-cabinet text-xl">D1</div>
-                    <div>
-                        <h4 class="font-black text-primary uppercase tracking-tight text-sm">Residencial "El Bosque"</h4>
-                        <span class="text-xs text-secondary font-bold tracking-widest uppercase">Desarrolladora Norte</span>
+            <div class="w-[85vw] md:w-[60vw] lg:w-full shrink-0 snap-center border border-primary/20 bg-surface p-6 lg:p-8 hover:bg-surface-container-low transition-colors group flex flex-col justify-between h-full">
+                <div>
+                    <div class="flex items-center gap-4 mb-6 lg:mb-8 border-b border-primary/10 pb-4">
+                        <div class="w-12 h-12 shrink-0 bg-primary flex items-center justify-center text-surface font-black font-cabinet text-xl">AR</div>
+                        <div>
+                            <h4 class="font-black text-primary uppercase tracking-tight text-sm">Andrea Rivas</h4>
+                            <span class="text-[0.65rem] lg:text-xs text-secondary font-bold tracking-widest uppercase">Directora de Obra</span>
+                        </div>
                     </div>
+                    <p class="text-sm text-on-surface-variant italic mb-6">"Vyroba Wood entregó cocinas y clósets bajo un cronograma agresivo sin un solo error de dimensión. La precisión milimétrica redujo el tiempo de instalación en obra de forma notable."</p>
                 </div>
-                <p class="text-sm text-on-surface-variant italic mb-6">"Entregaron 120 cocinas y clósets bajo un cronograma agresivo sin un solo error de dimensión. La precisión milimétrica redujo el tiempo de instalación en obra en un 40%."</p>
-                <div class="text-[0.65rem] font-bold tracking-[0.2em] text-primary/50 uppercase">Tasa de defecto: <span class="text-primary">&lt;0.5%</span></div>
+                <div class="text-[0.65rem] font-bold tracking-[0.2em] text-primary/50 uppercase mt-auto">Desarrollo Residencial</div>
             </div>
             
             <!-- Testimonial 2 -->
-            <div class="border border-primary/20 bg-surface p-8 hover:bg-surface-container-low transition-colors group">
-                <div class="flex items-center gap-4 mb-8 border-b border-primary/10 pb-4">
-                    <div class="w-12 h-12 bg-primary flex items-center justify-center text-surface font-black font-cabinet text-xl">A+</div>
-                    <div>
-                        <h4 class="font-black text-primary uppercase tracking-tight text-sm">Torre Arboleda (80 Niveles)</h4>
-                        <span class="text-xs text-secondary font-bold tracking-widest uppercase">Consorcio Arquitectónico</span>
+            <div class="w-[85vw] md:w-[60vw] lg:w-full shrink-0 snap-center border border-primary/20 bg-surface p-6 lg:p-8 hover:bg-surface-container-low transition-colors group flex flex-col justify-between h-full">
+                <div>
+                    <div class="flex items-center gap-4 mb-6 lg:mb-8 border-b border-primary/10 pb-4">
+                        <div class="w-12 h-12 shrink-0 bg-primary flex items-center justify-center text-surface font-black font-cabinet text-xl">LM</div>
+                        <div>
+                            <h4 class="font-black text-primary uppercase tracking-tight text-sm">Luis Mendoza</h4>
+                            <span class="text-[0.65rem] lg:text-xs text-secondary font-bold tracking-widest uppercase">Arquitecto de Proyecto</span>
+                        </div>
                     </div>
+                    <p class="text-sm text-on-surface-variant italic mb-6">"La capacidad de Vyroba para traducir nuestros modelos BIM a manufactura directa salvó el proyecto. Las tolerancias milimétricas en las puertas ocultas fueron excepcionales."</p>
                 </div>
-                <p class="text-sm text-on-surface-variant italic mb-6">"Su capacidad para traducir nuestros modelos BIM a G-Code directo para manufactura salvó el proyecto. Las tolerancias milimétricas en las puertas ocultas fueron excepcionales."</p>
-                <div class="text-[0.65rem] font-bold tracking-[0.2em] text-primary/50 uppercase">Volumen: <span class="text-primary">850 Módulos</span></div>
+                <div class="text-[0.65rem] font-bold tracking-[0.2em] text-primary/50 uppercase mt-auto">Torre Corporativa</div>
             </div>
 
             <!-- Testimonial 3 -->
-            <div class="border border-primary/20 bg-surface p-8 hover:bg-surface-container-low transition-colors group">
-                <div class="flex items-center gap-4 mb-8 border-b border-primary/10 pb-4">
-                    <div class="w-12 h-12 bg-primary flex items-center justify-center text-surface font-black font-cabinet text-xl">GC</div>
-                    <div>
-                        <h4 class="font-black text-primary uppercase tracking-tight text-sm">Hotel Boutique V.</h4>
-                        <span class="text-xs text-secondary font-bold tracking-widest uppercase">Grupo Constructor</span>
+            <div class="w-[85vw] md:w-[60vw] lg:w-full shrink-0 snap-center border border-primary/20 bg-surface p-6 lg:p-8 hover:bg-surface-container-low transition-colors group flex flex-col justify-between h-full">
+                <div>
+                    <div class="flex items-center gap-4 mb-6 lg:mb-8 border-b border-primary/10 pb-4">
+                        <div class="w-12 h-12 shrink-0 bg-primary flex items-center justify-center text-surface font-black font-cabinet text-xl">CV</div>
+                        <div>
+                            <h4 class="font-black text-primary uppercase tracking-tight text-sm">Carmen Valdés</h4>
+                            <span class="text-[0.65rem] lg:text-xs text-secondary font-bold tracking-widest uppercase">Gerente de Proyecto</span>
+                        </div>
                     </div>
+                    <p class="text-sm text-on-surface-variant italic mb-6">"Buscábamos ese balance entre calidez orgánica y perfección industrial. Vyroba Wood lo sistematizó para todas las habitaciones sin perder calidad."</p>
                 </div>
-                <p class="text-sm text-on-surface-variant italic mb-6">"Buscábamos ese balance entre calidez orgánica y perfección industrial para el mobiliario de las habitaciones. Vyroba lo sistematizó para las 200 habitaciones sin perder calidad."</p>
-                <div class="text-[0.65rem] font-bold tracking-[0.2em] text-primary/50 uppercase">Tiempo Setup: <span class="text-primary">Record</span></div>
+                <div class="text-[0.65rem] font-bold tracking-[0.2em] text-primary/50 uppercase mt-auto">Hospitalidad</div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- SEXTA SECCION: PROTOCOLO FAQ OPERATIVO -->
-<section id="faq" class="w-full bg-surface-dim border-t border-primary py-24">
+<section id="faq" class="w-full bg-surface-dim border-t border-primary py-12 lg:py-24">
     <div class="px-6 md:px-12 w-full max-w-[1000px] mx-auto">
-        <div class="mb-16 text-center">
-            <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-6 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
+        <div class="mb-8 lg:mb-16 text-center">
+            <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-4 lg:mb-6 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
                 05 // FAQ OPERATIVO
             </span>
             <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter text-primary font-cabinet mb-4">
                 Preguntas de Obra
             </h2>
-            <p class="text-sm text-on-surface-variant max-w-lg mx-auto">Parámetros técnicos y logísticos para proyectos B2B de carpintería arquitectónica.</p>
+            <p class="text-sm text-on-surface-variant max-w-lg mx-auto">Parámetros técnicos y logísticos de Vyroba Wood para proyectos B2B de carpintería arquitectónica.</p>
         </div>
 
         <div class="space-y-4">
             <!-- FAQ 1: Instalación -->
-            <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
-                <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
-                    ¿Ofrecen instalación o solo manufactura flat-pack?      
-                    <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
-                </summary>
-                <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
-                    Ambas. Entregamos el material embalado y etiquetado (Flat-Pack) para su ensamble en obra. Si lo requiere, asigamos cuadrillas propias de instalación arquitectónica.
+            <div class="faq-item bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] transition-shadow duration-300">
+                <button type="button" class="faq-toggle w-full flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm text-left select-none" aria-expanded="false">
+                    ¿Ofrecen instalación o solo manufactura flat-pack?
+                    <span class="faq-icon flex-shrink-0 ml-4 text-secondary transition-transform duration-300 text-lg leading-none">+</span>
+                </button>
+                <div class="faq-panel">
+                    <div class="overflow-hidden">
+                        <div class="px-6 pb-6 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-0 pt-4 bg-surface">
+                            Ambas. En Vyroba Wood entregamos el material embalado y etiquetado (Flat-Pack) para su ensamble en obra. Si lo requiere, asignamos cuadrillas propias de instalación arquitectónica.
+                        </div>
+                    </div>
                 </div>
-            </details>
+            </div>
 
             <!-- FAQ 2: Volumen y Tipos -->
-            <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
-                <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
+            <div class="faq-item bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] transition-shadow duration-300">
+                <button type="button" class="faq-toggle w-full flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm text-left select-none" aria-expanded="false">
                     ¿Hacen proyectos residenciales únicos y altos volúmenes?
-                    <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
-                </summary>
-                <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
-                    Nuestra infraestructura B2B abastece desarrollos verticales (100+ unidades) con entregas "Just-in-Time", así como residenciales de alta gama completos (cocina, clósets, puertas). <strong>No hacemos reparaciones ni muebles individuales.</strong>
+                    <span class="faq-icon flex-shrink-0 ml-4 text-secondary transition-transform duration-300 text-lg leading-none">+</span>
+                </button>
+                <div class="faq-panel">
+                    <div class="overflow-hidden">
+                        <div class="px-6 pb-6 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-0 pt-4 bg-surface">
+                            La infraestructura B2B de Vyroba abastece desarrollos verticales (100+ unidades) con entregas "Just-in-Time", así como residenciales de alta gama completos (cocina, clósets, puertas). <strong>No hacemos reparaciones ni muebles individuales.</strong>
+                        </div>
+                    </div>
                 </div>
-            </details>
+            </div>
 
             <!-- FAQ 3: Herrajes -->
-            <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
-                <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
+            <div class="faq-item bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] transition-shadow duration-300">
+                <button type="button" class="faq-toggle w-full flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm text-left select-none" aria-expanded="false">
                     ¿Qué calidad de herrajes e insumos manejan?
-                    <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
-                </summary>
-                <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
-                    Solo utilizamos tableros hidrófugos de alta densidad, revestimientos técnicos (PET Supermate/Melaminas), herrajes de patente europea (Blum, Hettich) y pegado de cantos tecnología PUR antihumedad.
+                    <span class="faq-icon flex-shrink-0 ml-4 text-secondary transition-transform duration-300 text-lg leading-none">+</span>
+                </button>
+                <div class="faq-panel">
+                    <div class="overflow-hidden">
+                        <div class="px-6 pb-6 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-0 pt-4 bg-surface">
+                            En Vyroba Wood solo utilizamos tableros hidrófugos de alta densidad, revestimientos técnicos (PET Supermate/Melaminas), herrajes de patente europea (Blum, Hettich) y pegado de cantos con tecnología PUR antihumedad.
+                        </div>
+                    </div>
                 </div>
-            </details>
+            </div>
 
             <!-- FAQ 4: Lead Time -->
-            <details class="bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] group open:shadow-none hover:shadow-none transition-all duration-300">
-                <summary class="flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm list-none select-none">
-                    ¿Cuál es el tiempo promedio de entrega (Lead Time)?     
-                    <span class="text-secondary group-open:rotate-45 transition-transform duration-300">+</span>
-                </summary>
-                <div class="p-6 pt-0 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-2 bg-surface">
-                    De 4 a 6 semanas operativas a partir de la firma de planos de taller (BIM/CAD), dependiendo totalmente del volumen. Para desarrollos grandes, entregamos de forma secuencial alineados a la obra.
-            </details>
+            <div class="faq-item bg-surface border border-primary/20 shadow-[4px_4px_0_0_#162839] transition-shadow duration-300">
+                <button type="button" class="faq-toggle w-full flex justify-between items-center cursor-pointer p-6 font-black uppercase tracking-wide text-primary text-sm text-left select-none" aria-expanded="false">
+                    ¿Cuál es el tiempo promedio de entrega (Lead Time)?
+                    <span class="faq-icon flex-shrink-0 ml-4 text-secondary transition-transform duration-300 text-lg leading-none">+</span>
+                </button>
+                <div class="faq-panel">
+                    <div class="overflow-hidden">
+                        <div class="px-6 pb-6 border-t border-primary/10 text-on-surface-variant text-sm leading-relaxed mt-0 pt-4 bg-surface">
+                            En Vyroba: de 4 a 6 semanas operativas a partir de la firma de planos de taller (BIM/CAD), según el volumen. Para desarrollos grandes, entregamos de forma secuencial alineados a la obra.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="mt-12 flex justify-center">
-            <a href="https://wa.me/message/vyroba" target="_blank" class="cursor-pointer bg-primary border text-surface px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-primary/90 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0_0_#8a501c] transition-all duration-150 inline-flex items-center">
+            <a href="https://wa.me/message/vyroba" target="_blank" class="cursor-pointer bg-primary border text-surface px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-primary/90 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0_0_#C17A2F] transition-all duration-150 inline-flex items-center">
                 Tengo una pregunta técnica <span class="ml-2 font-black text-secondary">→</span>  
             </a>
         </div>
@@ -735,16 +714,16 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
 </section>
 
 <!-- SEPTIMA SECCION: FINAL CTA (Brutalista Masivo) -->
-<section id="contacto" class="w-full bg-primary text-surface py-32 border-t border-secondary relative overflow-hidden">
+<section id="contacto" class="w-full bg-primary text-surface py-12 lg:py-24 border-t border-secondary relative overflow-hidden">
     <div class="absolute top-0 right-0 w-1/2 h-full bg-secondary/10 transform skew-x-[-15deg] origin-bottom-right z-0"></div>
     <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10 text-center flex flex-col items-center">
         
-        <h2 class="text-5xl md:text-[6vw] font-black uppercase tracking-tighter leading-[0.9] text-surface font-cabinet mb-8 max-w-4xl">
-            Inicia tu <span class="text-secondary">Producción</span>.
+        <h2 class="text-5xl md:text-[6vw] font-black uppercase tracking-tighter leading-[0.9] text-surface font-cabinet mb-6 lg:mb-8 max-w-4xl">
+            Produce con <span class="text-secondary">Vyroba Wood</span>.
         </h2>
         
-        <p class="text-lg text-surface/70 font-medium leading-[1.4] mb-12 max-w-xl">
-            Envía los requerimientos BIM/CAD de tu desarrollo o residencial. Evaluaremos las especificaciones y responderemos con un plan de maquinado exacto.
+        <p class="text-lg text-surface/70 font-medium leading-[1.4] mb-8 lg:mb-12 max-w-xl">
+            Envía a Vyroba los requerimientos BIM/CAD de tu desarrollo o residencial. Evaluamos especificaciones y respondemos con un plan de maquinado exacto.
         </p>
 
         <a href="mailto:info@vyroba.com.mx" class="cursor-pointer bg-secondary border border-secondary text-primary px-10 py-6 font-black uppercase tracking-[0.2em] text-[0.8rem] md:text-sm shadow-[8px_8px_0_0_#1a1c1c] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#1a1c1c] hover:bg-primary-container hover:text-surface hover:border-primary-container active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all duration-150 inline-flex items-center justify-center">
@@ -752,7 +731,7 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
         </a>
 
         <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/40 uppercase">
-            <span>+ INFO +52 55 3645 1199</span>
+            <span>+ INFO +52 56 2131 0456</span>
             <span>|</span>
             <span>INFO@VYROBA.COM.MX</span>
         </div>
@@ -762,6 +741,24 @@ import BlueprintGrid from '../components/grids/BlueprintGrid';
   </main>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+        // --- FAQ Smooth Accordion (CSS grid 0fr → 1fr) ---
+        document.querySelectorAll('.faq-item').forEach(item => {
+            const toggle = item.querySelector('.faq-toggle');
+
+            toggle.addEventListener('click', () => {
+                const isOpen = item.classList.toggle('is-open');
+                toggle.setAttribute('aria-expanded', String(isOpen));
+
+                if (isOpen) {
+                    item.classList.remove('shadow-[4px_4px_0_0_#162839]');
+                    item.classList.add('shadow-none');
+                } else {
+                    item.classList.remove('shadow-none');
+                    item.classList.add('shadow-[4px_4px_0_0_#162839]');
+                }
+            });
+        });
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting) {

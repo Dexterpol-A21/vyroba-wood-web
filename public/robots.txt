@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vyroba.com.mx/sitemap.xml
+Sitemap: https://vyroba.com.mx/sitemap-index.xml

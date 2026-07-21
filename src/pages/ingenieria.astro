@@ -4,26 +4,25 @@ import DraftingGrid from '../components/grids/DraftingGrid';
 ---
 
 <Layout 
-	title="Ingeniería y Manufactura Avanzada | Vyroba Wood" 
-	description="Descubre nuestra metodología BIM y cómo utilizamos maquinaria CNC automatizada para transformar madera e insumos arquitectónicos B2B con la máxima eficiencia."
-	keywords="planta industrial de muebles, ruteadora cnc, cantadora scm, tecnologia panel, optimizacion bim, madera ingenierizada, vyroba wood"
->
-    <!-- Usamos el fondo del index -->
-    <main class="min-h-screen pt-32 pb-24 border-b-[16px] border-primary relative">
+	title="Ingeniería y Manufactura | Vyroba Wood" 
+	description="Ingeniería Vyroba Wood: metodología BIM/CAD, CNC automatizado y manufactura just-in-time para cocinas, clósets y puertas en proyectos de alto volumen."
+	keywords="vyroba wood, ingeniería, manufactura cnc, bim cad, planta de muebles, carpintería b2b, fabricación en volumen"
+>    <!-- Usamos el fondo del index -->
+    <main class="min-h-screen pt-8 lg:pt-32 pb-24 border-b-[16px] border-primary relative">
 
         <DraftingGrid client:load />
 
         <!-- Hero con estilo Blueprint de Mando Control -->
-        <section class="max-w-[1600px] mx-auto px-6 md:px-12 mb-24 lg:flex justify-between items-end border-b border-primary/20 pb-16 relative z-10">
+        <section class="max-w-[1600px] mx-auto px-6 md:px-12 mb-12 lg:mb-24 lg:flex justify-between items-end border-b border-primary/20 pb-10 lg:pb-16 relative z-10">
             <div class="max-w-4xl">
-                <div class="inline-block px-3 py-1 bg-primary text-[0.65rem] font-bold text-surface tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#8a501c] mb-8">
+                <div class="inline-block px-3 py-1 bg-primary text-[0.65rem] font-bold text-surface tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#C17A2F] mb-8">
                     OPERACIONES B2B
                 </div>
                 <h1 class="text-5xl md:text-[6vw] font-black font-cabinet uppercase tracking-tighter text-primary leading-[0.85] mb-6">
                     MANU<br/><span class="text-secondary">FACTURA</span><br/>JUST-IN-TIME
                 </h1>
                 <p class="text-xl max-w-2xl font-satoshi text-on-surface-variant font-medium leading-relaxed">
-                    Sincronización total entre tu avance de obra civil y nuestra línea de producción. Capacidad industrial instalada de más de +500 unidades simultáneas.
+                    Sincronización total entre tu avance de obra civil y nuestra línea de producción. Capacidad industrial instalada de más de +200 unidades simultáneas.
                 </p>
             </div>
         </section>
@@ -32,7 +31,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
         <section class="px-6 md:px-12 max-w-[1600px] mx-auto relative z-10">
             
             <!-- PIPELINE HEADER -->
-            <div class="w-full bg-primary text-surface p-6 flex flex-col md:flex-row md:items-center justify-between shadow-[8px_8px_0_0_#8a501c]">
+            <div class="w-full bg-primary text-surface p-6 flex flex-col md:flex-row md:items-center justify-between shadow-[8px_8px_0_0_#C17A2F]">
                 <h2 class="text-3xl font-black font-cabinet uppercase tracking-tighter">EL PIPELINE (BIM ➔ SITIO)</h2>
                 <span class="font-mono text-[0.65rem] uppercase tracking-widest text-surface/50 mt-4 md:mt-0">Diagrama Operacional</span>
             </div>
@@ -43,12 +42,12 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 <!-- FASE 01 -->
                 <div class="lg:border-r-2 border-b-2 lg:border-b-0 border-primary/20 pt-8 lg:pr-12 relative group hover:-translate-y-2 transition-transform duration-300 px-6 lg:px-0 lg:pl-6 pb-6">
                     <span class="text-[5rem] font-black text-primary/10 absolute top-4 left-0 leading-none group-hover:text-primary/20 transition-colors">01</span>
-                    <h3 class="text-2xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4 relative z-10">Revisión de Proyecto</h3>
+                    <h3 class="text-2xl font-black font-cabinet uppercase text-primary tracking-tighter mb-4 relative z-10">Diseño y Renders 3D</h3>
                     <p class="text-sm font-satoshi text-on-surface-variant font-medium leading-relaxed relative z-10 mb-6">
-                        Analizamos la idea de tu desarrollo. Nuestro equipo toma tus referencias y requisitos para transformarlos en un proyecto de mobiliario costeable y listo para producirse sin complicaciones.
+                        Diseñamos desde cero o sobre tus ideas. Desarrollamos propuestas personalizadas y generamos <strong>renders 3D fotorrealistas</strong> para que previsualices cada espacio antes de pasar a la etapa de producción.
                     </p>
                     <div class="h-px w-16 bg-secondary mb-4"></div>
-                    <span class="font-mono text-[0.65rem] uppercase text-primary/60 tracking-widest font-bold">» DISEÑO Y ASESORÍA</span>
+                    <span class="font-mono text-[0.65rem] uppercase text-primary/60 tracking-widest font-bold">» PROPUESTA VISUAL</span>
                 </div>
 
                 <!-- FASE 02 -->
@@ -77,8 +76,8 @@ import DraftingGrid from '../components/grids/DraftingGrid';
         </section>
 
         <!-- SECCIÓN SEO: CAPACIDAD TÉCNICA Y MAQUINARIA -->
-        <section class="max-w-[1600px] mx-auto px-6 md:px-12 mt-32 relative z-10">
-            <div class="mb-12 border-b border-primary/20 pb-6">
+        <section class="max-w-[1600px] mx-auto px-6 md:px-12 mt-16 lg:mt-32 relative z-10">
+            <div class="mb-8 lg:mb-12 border-b border-primary/20 pb-6">
                 <div class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary tracking-[0.2em] uppercase mb-4 shadow-[4px_4px_0_0_#162839]">
                     CAPACIDADES B2B
                 </div>
@@ -88,9 +87,11 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Galería móvil / Grid desktop -->
+            <div class="flex overflow-x-auto snap-x snap-mandatory overscroll-x-contain md:grid md:grid-cols-3 gap-4 md:gap-8 w-[calc(100%+3rem)] -mx-6 px-6 md:w-full md:mx-0 md:px-0 pb-2 md:pb-0" style="scrollbar-width: none;">
                 <!-- Ruteo y Corte -->
-                <div class="bg-surface-dim border border-outline-variant/30 p-8 hover:shadow-[8px_8px_0_0_#162839] transition-all duration-300">
+                <div class="w-[85vw] sm:w-[70vw] md:w-full shrink-0 snap-center bg-surface-dim border border-outline-variant/30 p-6 lg:p-8 hover:shadow-[8px_8px_0_0_#162839] transition-all duration-300">
+                    <span class="font-mono text-[0.65rem] font-bold tracking-[0.2em] text-secondary uppercase mb-4 block">01 // CORTE</span>
                     <h3 class="text-xl font-black font-cabinet uppercase text-primary mb-3">Corte Automatizado de Tableros y Maderas</h3>
                     <p class="text-base text-on-surface-variant leading-relaxed">
                         Transformamos altos volúmenes de <strong>maderas de ingeniería y tableros recubiertos (melaminas, MDF, encinos, nogales)</strong> maximizando el rendimiento del material. Nuestra tecnología de seccionado asegura que cada veta y patrón cuadre perfectamente, entregando paneles de madera dimensionados milimétricamente listos para ensamblar.
@@ -98,7 +99,8 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 </div>
                 
                 <!-- Canteado -->
-                <div class="bg-surface-dim border border-outline-variant/30 p-8 hover:shadow-[8px_8px_0_0_#162839] transition-all duration-300">
+                <div class="w-[85vw] sm:w-[70vw] md:w-full shrink-0 snap-center bg-surface-dim border border-outline-variant/30 p-6 lg:p-8 hover:shadow-[8px_8px_0_0_#162839] transition-all duration-300">
+                    <span class="font-mono text-[0.65rem] font-bold tracking-[0.2em] text-secondary uppercase mb-4 block">02 // CANTEADO</span>
                     <h3 class="text-xl font-black font-cabinet uppercase text-primary mb-3">Enchapado de Cantos para Mobiliario</h3>
                     <p class="text-base text-on-surface-variant leading-relaxed">
                         Protegemos y damos acabado a la madera expuesta utilizando adhesivos de alta resistencia (PUR/EVA). Aplicamos cintillas perimetrales, chapas de madera natural o cantos encolados que fusionan estética y durabilidad, protegiendo <strong>módulos de cocinas</strong> o <strong>muebles residenciales</strong> de la humedad ambiental y el desgaste.
@@ -106,7 +108,8 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 </div>
 
                 <!-- Perforación Múltiple -->
-                <div class="bg-surface-dim border border-outline-variant/30 p-8 hover:shadow-[8px_8px_0_0_#162839] transition-all duration-300">
+                <div class="w-[85vw] sm:w-[70vw] md:w-full shrink-0 snap-center bg-surface-dim border border-outline-variant/30 p-6 lg:p-8 hover:shadow-[8px_8px_0_0_#162839] transition-all duration-300">
+                    <span class="font-mono text-[0.65rem] font-bold tracking-[0.2em] text-secondary uppercase mb-4 block">03 // ENSAMBLE</span>
                     <h3 class="text-xl font-black font-cabinet uppercase text-primary mb-3">Perforación y Ensambles Especializados</h3>
                     <p class="text-base text-on-surface-variant leading-relaxed">
                         Combinamos los principios de la buena carpintería con barrenado múltiple para la inserción perfecta de herrajes (bisagras ocultas de cierre lento, guías y taquetes de madera). Este mecanizado garantiza que cada una de tus <a href="/puertas" class="text-primary hover:text-secondary underline decoration-2 underline-offset-4">puertas de intercomunicación de madera</a> y cajoneras funcionen con una escuadra impecable a través de los años.
@@ -146,7 +149,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
         </section>
 
         <!-- SECCION: PROTOCOLO FAQ OPERATIVO -->
-        <section id="faq" class="w-full bg-surface-dim border-t border-primary mt-24 py-24 relative z-10">
+        <section id="faq" class="w-full bg-surface-dim border-t border-primary mt-12 lg:mt-24 py-12 lg:py-24 relative z-10">
             <div class="px-6 md:px-12 w-full max-w-[1000px] mx-auto">
                 <div class="mb-16 text-center">
                     <span class="inline-block px-3 py-1 bg-surface border border-primary/20 text-[0.65rem] font-bold text-primary mb-6 tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
@@ -184,7 +187,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
         </section>
 
         <!-- CTA FINAL -->
-        <section id="contacto" class="w-full bg-primary text-surface py-24 border-t border-secondary relative overflow-hidden z-10">
+        <section id="contacto" class="w-full bg-primary text-surface py-12 lg:py-24 border-t border-secondary relative overflow-hidden z-10">
             <div class="absolute top-0 right-0 w-1/2 h-full bg-secondary/10 transform skew-x-[-15deg] origin-bottom-right z-0"></div>
             <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10 text-center flex flex-col items-center">
 
@@ -201,7 +204,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 </a>
 
                 <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/40 uppercase">
-                    <span>+ INFO +52 55 3645 1199</span>
+                    <span>+ INFO +52 56 2131 0456</span>
                     <span>|</span>
                     <span>INFO@VYROBA.COM.MX</span>
                 </div>

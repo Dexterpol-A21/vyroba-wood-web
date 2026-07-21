@@ -1,18 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import DraftingGrid from '../components/grids/DraftingGrid';
+import CustomDesignBanner from '../components/CustomDesignBanner.astro';
 ---
 
 <Layout 
-	title="Puertas de Tambor y Alta Densidad | Vyroba Wood"
-	description="Ingeniería y producción de puertas interiores. Construcción semi-sólida, ensamblaje de alta tecnología y resistencia probada en proyectos a escala."
-	keywords="puertas de tambor, puertas de madera b2b, manufactura de puertas, tableros termoestructurados, proyectos inmobilirios, vyroba wood puertas"
->
-  <main class="relative">
+	title="Puertas de Alta Densidad | Vyroba Wood"
+	description="Puertas Vyroba Wood de alta densidad: fabricación precisa, marcos, chambranas y preparaciones listas para instalación en desarrollos y residenciales."
+	keywords="puertas de madera, puertas a medida, vyroba wood, puertas de alta densidad, manufactura de puertas, carpintería b2b"
+>  <main class="relative">
     <DraftingGrid client:load theme="puertas" />
 
     <!-- HERO SECTION: PUERTAS -->
-    <section class="relative z-10 min-h-[70vh] pt-[120px] pb-12 px-6 md:px-12 flex flex-col justify-end border-b border-outline-variant/20 bg-[#8B3A36]/5">
+    <section class="relative z-10 min-h-0 lg:min-h-[70vh] pt-8 lg:pt-[120px] pb-12 px-6 md:px-12 flex flex-col justify-start lg:justify-end border-b border-outline-variant/20 bg-[#8B3A36]/5">
       <div class="max-w-[1600px] mx-auto w-full relative z-10">
         <div class="mb-8">
             <span class="text-5xl font-black text-outline/30 block mb-4">03</span>
@@ -35,9 +35,9 @@ import DraftingGrid from '../components/grids/DraftingGrid';
     </section>
 
     <!-- SPECIFICATIONS / TECHNICAL DETAILS -->
-    <section class="py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full overflow-hidden bg-surface">
+    <section class="py-12 lg:py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full overflow-hidden bg-surface">
       <div class="max-w-[1600px] mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           
           <!-- Details Left -->
           <div>
@@ -64,12 +64,12 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           </div>
 
           <!-- Graphic / Tech Spec Visual -->
-          <div class="bg-surface-container border border-outline-variant/30 p-12 flex flex-col justify-center items-center relative group">
+          <div class="bg-surface-container border border-outline-variant/30 p-2 sm:p-4 lg:p-12 flex flex-col justify-center items-center relative group overflow-hidden min-h-[300px] sm:min-h-[360px] lg:min-h-0">
              <!-- Technical grid background (Crisp CSS layer) -->
              <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none z-0"></div>
 
              <!-- Center Technical SVG -->
-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -10 320 120" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="square" class="w-full max-w-[700px] h-auto overflow-visible text-primary/50 relative z-10 transition-colors duration-500 group-hover:text-[#8B3A36]">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-120 -10 320 120" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="square" class="w-[165%] max-w-none lg:w-full lg:max-w-[700px] h-auto overflow-visible text-primary/50 relative z-10 transition-colors duration-500 group-hover:text-[#8B3A36] -translate-x-[2%] lg:translate-x-0">
 
                 <!-- DOOR ELEVATION - MAIN -->
                 <rect x="15" y="10" width="30" height="80" stroke-width="1.5"></rect> <!-- Main Door -->
@@ -129,7 +129,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
 
               </svg>
               
-              <div class="absolute bottom-6 right-6 font-mono text-xs font-bold text-outline uppercase tracking-widest">
+              <div class="absolute bottom-3 right-3 lg:bottom-6 lg:right-6 font-mono text-[0.6rem] lg:text-xs font-bold text-outline uppercase tracking-widest z-20">
                 FIG. A-P / PUERTAS Y MARCOS
               </div>
           </div>
@@ -139,7 +139,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
     </section>
 
     <!-- IMPLEMENTATION GALLERY -->
-    <section class="py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full bg-transparent">
+    <section class="py-12 lg:py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full bg-transparent">
       <div class="max-w-[1600px] mx-auto">
         <!-- Section Header -->
         <div class="flex items-end justify-between mb-12">
@@ -152,110 +152,46 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           </div>
         </div>
 
-        <!-- Gallery Grid (Blueprint placeholders) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-l border-t border-outline-variant/20 auto-rows-fr">
-          
-          <!-- Image Placeholder 1 (BENTO LARGE - Middle Bottom) -->
-          <div class="md:col-span-2 md:row-span-2 relative group border-r border-b border-outline-variant/20 bg-white overflow-hidden cursor-crosshair min-h-[400px] md:min-h-0">
-            <!-- Default State: The Blueprint/Diagram -->
-            <picture class="contents">
-  <source srcset="/images/door/diagramDoor.avif" type="image/avif" />
-  <source srcset="/images/door/diagramDoor.webp" type="image/webp" />
-  <img src="/images/door/diagramDoor.png" alt="Puertas Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
-</picture>
-            <!-- Hover State: The Real Render -->
-            <picture class="contents">
-  <source srcset="/images/door/doorRender.avif" type="image/avif" />
-  <source srcset="/images/door/doorRender.webp" type="image/webp" />
-  <img src="/images/door/doorRender.png" alt="Puertas Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
-</picture>
-            <!-- Technical label -->
-            <div class="absolute top-4 left-4 font-mono text-xs text-primary/70 bg-white/80 px-2 py-1 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300">FIG 01 // ESQUEMA Y RENDER</div>
+        <!-- Diagrama principal arriba -->
+        <div class="relative group border border-outline-variant/20 bg-white overflow-hidden cursor-crosshair aspect-[16/10] md:aspect-[21/9] mb-0 w-full">
+          <img src="/images/door/diagramDoor.webp" alt="Puertas Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+          <img src="/images/door/doorRender.webp" alt="Puertas Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+          <div class="absolute top-4 left-4 font-mono text-xs text-primary/70 bg-white/80 px-2 py-1 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300">FIG 01 // ESQUEMA Y RENDER</div>
+        </div>
+
+        <!-- Resto de imágenes en galería -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-0 border-l border-b border-outline-variant/20">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
+            <img src="/images/door/renderDoor1.webp" alt="Nordic Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/door/doorRender1B.webp" alt="Nordic Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 1 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/renderDoor1.avif" type="image/avif" />
-  <source srcset="/images/door/renderDoor1.webp" type="image/webp" />
-  <img src="/images/door/renderDoor1.png" alt="Nordic Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/doorRender1B.avif" type="image/avif" />
-  <source srcset="/images/door/doorRender1B.webp" type="image/webp" />
-  <img src="/images/door/doorRender1B.png" alt="Nordic Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/door/doorRender2.webp" alt="Brutalism Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/door/renderDoor2B.webp" alt="Brutalism Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 2 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/doorRender2.avif" type="image/avif" />
-  <source srcset="/images/door/doorRender2.webp" type="image/webp" />
-  <img src="/images/door/doorRender2.png" alt="Brutalism Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/renderDoor2B.avif" type="image/avif" />
-  <source srcset="/images/door/renderDoor2B.webp" type="image/webp" />
-  <img src="/images/door/renderDoor2B.png" alt="Brutalism Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/door/renderDoor3.webp" alt="Monolith Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/door/renderDoor3B.webp" alt="Monolith Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 3 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/renderDoor3.avif" type="image/avif" />
-  <source srcset="/images/door/renderDoor3.webp" type="image/webp" />
-  <img src="/images/door/renderDoor3.png" alt="Monolith Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/renderDoor3B.avif" type="image/avif" />
-  <source srcset="/images/door/renderDoor3B.webp" type="image/webp" />
-  <img src="/images/door/renderDoor3B.png" alt="Monolith Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/door/renderDoor4.webp" alt="Warm Nat Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/door/renderDoor4B.webp" alt="Warm Nat Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 4 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair col-span-2 md:col-span-1">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/renderDoor4.avif" type="image/avif" />
-  <source srcset="/images/door/renderDoor4.webp" type="image/webp" />
-  <img src="/images/door/renderDoor4.png" alt="Warm Nat Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/renderDoor4B.avif" type="image/avif" />
-  <source srcset="/images/door/renderDoor4B.webp" type="image/webp" />
-  <img src="/images/door/renderDoor4B.png" alt="Warm Nat Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/door/renderDoor5.webp" alt="Gallery Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/door/renderDoor5B.webp" alt="Gallery Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
-
-          <!-- PROMPT 5 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
-            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/renderDoor5.avif" type="image/avif" />
-  <source srcset="/images/door/renderDoor5.webp" type="image/webp" />
-  <img src="/images/door/renderDoor5.png" alt="Gallery Door Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/door/renderDoor5B.avif" type="image/avif" />
-  <source srcset="/images/door/renderDoor5B.webp" type="image/webp" />
-  <img src="/images/door/renderDoor5B.png" alt="Gallery Door Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+        </div>
+      </div>
     </section>
 
     <script is:inline>
@@ -273,8 +209,12 @@ import DraftingGrid from '../components/grids/DraftingGrid';
         });
       });
     </script>
+
+    <!-- Custom Design Banner Custom (New request) -->
+    <CustomDesignBanner theme="puertas" />
+
     <!-- CTA Final -->
-    <section id="contacto" class="w-full bg-[#8B3A36] text-surface py-32 border-t border-[#162839] relative overflow-hidden">
+    <section id="contacto" class="w-full bg-[#8B3A36] text-surface py-16 lg:py-32 border-t border-[#162839] relative overflow-hidden">
         <div class="absolute top-0 right-0 w-1/2 h-full bg-[#162839]/20 transform skew-x-[-15deg] origin-bottom-right z-0"></div>
         <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10 text-center flex flex-col items-center">
             <h2 class="text-5xl md:text-[6vw] font-black uppercase tracking-tighter leading-[0.9] text-surface font-cabinet mb-8 max-w-4xl">
@@ -287,7 +227,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 <span>Enviar Planos y Requerimientos</span>
             </a>
             <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/60 uppercase">
-                <span>+ INFO +52 55 3645 1199</span>
+                <span>+ INFO +52 56 2131 0456</span>
                 <span>|</span>
                 <span>INFO@VYROBA.COM.MX</span>
             </div>

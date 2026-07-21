@@ -1,18 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import DraftingGrid from '../components/grids/DraftingGrid';
+import CustomDesignBanner from '../components/CustomDesignBanner.astro';
 ---
 
 <Layout 
 	title="Clósets y Vestidores | Vyroba Wood"
-	description="Producción y diseño de clósets y vestidores empotrados de grado industrial. Alta resistencia, ergonomía espacial y herrajes premium para B2B."
-	keywords="closets a medida, vestidores de madera, armarios industriales, carpinteria grandes proyectos, herrajes hettich, vyroba wood closets"
->
-  <main class="relative">
+	description="Clósets y vestidores Vyroba Wood: módulos a medida, herrajes premium y acabados de alta resistencia para desarrollos residenciales y proyectos B2B."
+	keywords="closets a medida, vestidores de madera, vyroba wood, armarios empotrados, herrajes hettich, carpintería b2b"
+>  <main class="relative">
     <DraftingGrid client:load theme="closets" />
 
     <!-- HERO SECTION: CLOSETS -->
-    <section class="relative z-10 min-h-[70vh] pt-[120px] pb-12 px-6 md:px-12 flex flex-col justify-end border-b border-outline-variant/20 bg-[#162839]/5">
+    <section class="relative z-10 min-h-0 lg:min-h-[70vh] pt-8 lg:pt-[120px] pb-12 px-6 md:px-12 flex flex-col justify-start lg:justify-end border-b border-outline-variant/20 bg-[#162839]/5">
       <div class="max-w-[1600px] mx-auto w-full relative z-10">
         <div class="mb-8">
             <span class="text-5xl font-black text-outline/30 block mb-4">02</span>
@@ -26,7 +26,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 Estructuras de almacenamiento vertical optimizadas geométricamente. Módulos que aprovechan la arquitectura subyacente para maximizar el uso espacial del desarrollo corporativo o residencial.
             </p>
             <div class="flex justify-start md:justify-end gap-4">
-                <a href="#contacto" class="inline-flex items-center justify-center bg-primary text-white font-bold border border-[#0f1c28] uppercase tracking-widest text-sm px-8 py-4 rounded-none transition-all duration-150 shadow-[8px_8px_0_0_#0f1c28] hover:bg-[#8a501c] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#0f1c28] active:translate-x-[8px] active:translate-y-[8px] active:shadow-none whitespace-nowrap">
+                <a href="#contacto" class="inline-flex items-center justify-center bg-primary text-white font-bold border border-[#0f1c28] uppercase tracking-widest text-sm px-8 py-4 rounded-none transition-all duration-150 shadow-[8px_8px_0_0_#0f1c28] hover:bg-[#C17A2F] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#0f1c28] active:translate-x-[8px] active:translate-y-[8px] active:shadow-none whitespace-nowrap">
                     Cotizar Proyecto
                 </a>
             </div>
@@ -35,9 +35,9 @@ import DraftingGrid from '../components/grids/DraftingGrid';
     </section>
 
     <!-- SPECIFICATIONS / TECHNICAL DETAILS -->
-    <section class="py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full overflow-hidden bg-surface">
+    <section class="py-12 lg:py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full overflow-hidden bg-surface">
       <div class="max-w-[1600px] mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           
           <!-- Details Left -->
           <div>
@@ -64,12 +64,12 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           </div>
 
           <!-- Graphic / Tech Spec Visual -->
-          <div class="bg-surface-container border border-outline-variant/30 p-12 flex flex-col justify-center items-center relative group">
+          <div class="bg-surface-container border border-outline-variant/30 p-2 sm:p-4 lg:p-12 flex flex-col justify-center items-center relative group overflow-hidden min-h-[300px] sm:min-h-[360px] lg:min-h-0">
              <!-- Technical grid background -->
              <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none z-0"></div>
              
              <!-- Center Technical SVG -->
-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -10 320 120" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="square" class="w-full max-w-[700px] h-auto overflow-visible text-primary/50 relative z-10 transition-colors duration-500 group-hover:text-[#162839]">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-100 -10 320 120" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="square" class="w-[165%] max-w-none lg:w-full lg:max-w-[700px] h-auto overflow-visible text-primary/50 relative z-10 transition-colors duration-500 group-hover:text-[#162839] -translate-x-[2%] lg:translate-x-0">
 
                 <!-- MAIN WARDROBE SYSTEM ELEVATION -->
                 <!-- Base Frame -->
@@ -160,7 +160,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
 
               </svg>
               
-              <div class="absolute bottom-6 right-6 font-mono text-xs font-bold text-outline uppercase tracking-widest">
+              <div class="absolute bottom-3 right-3 lg:bottom-6 lg:right-6 font-mono text-[0.6rem] lg:text-xs font-bold text-outline uppercase tracking-widest z-20">
                 FIG. A-V / VOLÚMENES DE VESTIDOR
               </div>
           </div>
@@ -170,7 +170,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
     </section>
 
     <!-- IMPLEMENTATION GALLERY -->
-    <section class="py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full bg-transparent">
+    <section class="py-12 lg:py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full bg-transparent">
       <div class="max-w-[1600px] mx-auto">
         <!-- Section Header -->
         <div class="flex items-end justify-between mb-12">
@@ -183,110 +183,44 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           </div>
         </div>
 
-        <!-- Gallery Grid (Blueprint placeholders) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-l border-t border-outline-variant/20 auto-rows-fr">
-          
-          <!-- Image Placeholder 1 (BENTO LARGE - Diagram to Render) -->
-          <div class="md:col-span-2 md:row-span-2 relative group border-r border-b border-outline-variant/20 bg-white overflow-hidden cursor-crosshair min-h-[400px] md:min-h-0">
-            <!-- Default State: The Blueprint/Diagram -->
-            <picture class="contents">
-  <source srcset="/images/closet/closetDiagram.avif" type="image/avif" />
-  <source srcset="/images/closet/closetDiagram.webp" type="image/webp" />
-  <img src="/images/closet/closetDiagram.png" alt="Closet Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
-</picture>
-            <!-- Hover State: The Real Render -->
-            <picture class="contents">
-  <source srcset="/images/closet/closetRender.avif" type="image/avif" />
-  <source srcset="/images/closet/closetRender.webp" type="image/webp" />
-  <img src="/images/closet/closetRender.png" alt="Closet Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
-</picture>
-            <!-- Technical label (disappears on hover) -->
-            <div class="absolute bottom-4 left-4 font-mono text-xs text-primary/70 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300">FIG 01 // ESQUEMA Y RENDER</div>
+        <!-- Diagrama principal arriba -->
+        <div class="relative group border border-outline-variant/20 bg-white overflow-hidden cursor-crosshair aspect-[16/10] md:aspect-[21/9] mb-0 w-full">
+          <img src="/images/closet/closetDiagram.webp" alt="Closet Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+          <img src="/images/closet/closetRender.webp" alt="Closet Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+          <div class="absolute bottom-4 left-4 font-mono text-xs text-primary/70 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300">FIG 01 // ESQUEMA Y RENDER</div>
+        </div>
+
+        <!-- Resto de imágenes en galería -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-0 border-l border-b border-outline-variant/20">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
+            <img src="/images/closet/renderCloset1.webp" alt="Nordic Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/closet/renderCloset1B.webp" alt="Nordic Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 1 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset1.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset1.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset1.png" alt="Nordic Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset1B.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset1B.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset1B.png" alt="Nordic Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/closet/renderCloset2.webp" alt="Brutalism Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/closet/renderCloset2B.webp" alt="Brutalism Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 2 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset2.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset2.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset2.png" alt="Brutalism Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset2B.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset2B.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset2B.png" alt="Brutalism Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/closet/renderCloset3.webp" alt="Monolith Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/closet/renderCloset3B.webp" alt="Monolith Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 3 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset3.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset3.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset3.png" alt="Monolith Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset3B.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset3B.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset3B.png" alt="Monolith Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/closet/renderCloset4.webp" alt="Warm Nat Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/closet/renderCloset4B.webp" alt="Warm Nat Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 4 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair col-span-2 md:col-span-1">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset4.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset4.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset4.png" alt="Warm Nat Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset4B.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset4B.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset4B.png" alt="Warm Nat Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/closet/renderCloset5.webp" alt="Gallery Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/closet/renderCloset5B.webp" alt="Gallery Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
-
-          <!-- PROMPT 5 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
-            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset5.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset5.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset5.png" alt="Gallery Closet Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/closet/renderCloset5B.avif" type="image/avif" />
-  <source srcset="/images/closet/renderCloset5B.webp" type="image/webp" />
-  <img src="/images/closet/renderCloset5B.png" alt="Gallery Closet Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
         </div>
       </div>
     </section>
@@ -306,8 +240,12 @@ import DraftingGrid from '../components/grids/DraftingGrid';
         });
       });
     </script>
+
+    <!-- Custom Design Banner Custom (New request) -->
+    <CustomDesignBanner theme="closets" />
+
     <!-- CTA Final -->
-    <section id="contacto" class="w-full bg-primary text-surface py-32 border-t border-secondary relative overflow-hidden">
+    <section id="contacto" class="w-full bg-primary text-surface py-16 lg:py-32 border-t border-secondary relative overflow-hidden">
         <div class="absolute top-0 right-0 w-1/2 h-full bg-secondary/10 transform skew-x-[-15deg] origin-bottom-right z-0"></div>
         <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10 text-center flex flex-col items-center">
             <h2 class="text-5xl md:text-[6vw] font-black uppercase tracking-tighter leading-[0.9] text-surface font-cabinet mb-8 max-w-4xl">
@@ -320,7 +258,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 <span>Enviar Planos y Requerimientos</span>
             </a>
             <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/40 uppercase">
-                <span>+ INFO +52 55 3645 1199</span>
+                <span>+ INFO +52 56 2131 0456</span>
                 <span>|</span>
                 <span>INFO@VYROBA.COM.MX</span>
             </div>

@@ -13,45 +13,132 @@ interface Props {
 
 const { 
   title, 
-  description = "Fabricación de mobiliario a escala industrial. Cocinas, clósets y puertas con precisión de ingeniería.",
-  keywords = "mobiliario industrial, cocinas, closets, puertas, carpintería b2b, manufactura en madera, vyroba wood",
-  image = "/images/brand/vyrobaWhite.png"
+  description = "Vyroba Wood fabrica cocinas, clósets y puertas a medida. Diseño, manufactura CNC y calidad para desarrollos residenciales y comerciales.",
+  keywords = "vyroba wood, vyroba, cocinas integrales, closets a medida, puertas, carpintería b2b, manufactura en madera",
+  image = "/images/kitchen/kitchenRender.webp"
 } = Astro.props;
+
+const siteURL = Astro.site ?? new URL('https://vyroba.com.mx');
+const canonicalURL = new URL(Astro.url.pathname, siteURL).href;
+const imageURL = new URL(image, siteURL).href;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://vyroba.com.mx/#organization",
+      "name": "Vyroba Wood",
+      "url": "https://vyroba.com.mx",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://vyroba.com.mx/images/brand/vyrobaLogoColor.webp"
+      },
+      "description": "Vyroba Wood fabrica cocinas, clósets y puertas a medida con precisión de ingeniería para desarrollos residenciales y comerciales.",
+      "email": "info@vyroba.com.mx",
+      "telephone": "+525621310456",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Valle del Sonora 50",
+        "addressRegion": "Estado de México",
+        "addressCountry": "MX"
+      },
+      "sameAs": [
+        "https://www.facebook.com/VyrobaComunicacionCreativa",
+        "https://www.instagram.com/agenciavyroba",
+        "https://www.linkedin.com/company/vyrobacomunicacioncreativa"
+      ],
+      "knowsAbout": [
+        "Cocinas integrales a medida",
+        "Clósets y vestidores",
+        "Puertas de alta densidad",
+        "Carpintería arquitectónica B2B",
+        "Manufactura CNC",
+        "Diseño de interiores"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://vyroba.com.mx/#website",
+      "url": "https://vyroba.com.mx",
+      "name": "Vyroba Wood",
+      "publisher": { "@id": "https://vyroba.com.mx/#organization" },
+      "inLanguage": "es-MX"
+    },
+    {
+      "@type": "WebPage",
+      "@id": `${canonicalURL}#webpage`,
+      "url": canonicalURL,
+      "name": title,
+      "description": description,
+      "isPartOf": { "@id": "https://vyroba.com.mx/#website" },
+      "about": { "@id": "https://vyroba.com.mx/#organization" },
+      "inLanguage": "es-MX"
+    }
+  ]
+};
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    
+    <!-- SEO Primary -->
+    <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Vyroba Wood" />
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={imageURL} />
+    <meta property="og:image:alt" content={title} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Vyroba Wood" />
+    <meta property="og:locale" content="es_MX" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={image} />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageURL} />
+    <meta name="twitter:image:alt" content={title} />
+
+    <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
     <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
     <link rel="manifest" href="/favicon/site.webmanifest" />
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@900,800,500,700,400&f[]=satoshi@900,700,500,400,300&display=swap" rel="stylesheet">
-    <title>{title}</title>
   </head>
   <body class="bg-surface text-on-surface antialiased font-satoshi">
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
     <SmoothScroll />
     <Header />
+
+    <!-- Logo Móvil: Recuadro flotante (aparece al hacer scroll, desaparece al llegar arriba) -->
+    <div id="mobileLogo" class="lg:hidden fixed top-4 left-4 z-[90] bg-primary px-4 py-3 shadow-[4px_4px_0_0_rgba(0,0,0,0.25)] transition-opacity duration-300 opacity-0 pointer-events-none">
+      <a href="/" aria-label="Vyroba Wood Inicio" class="flex items-center">
+        <img src="/images/brand/vyrobaWhite.webp" alt="Vyroba Wood" class="h-10 w-auto object-contain" />
+      </a>
+    </div>
+
     <div class="min-h-screen flex flex-col relative text-xl">
       <div class="flex-grow">
         <slot />
@@ -59,13 +146,30 @@ const {
       <Footer />
     </div>
 
+    <script>
+      const mobileLogo = document.getElementById('mobileLogo');
+      if (mobileLogo) {
+        const toggleLogo = () => {
+          if (window.scrollY > 10) {
+            mobileLogo.classList.add('opacity-100');
+            mobileLogo.classList.remove('opacity-0', 'pointer-events-none');
+          } else {
+            mobileLogo.classList.remove('opacity-100');
+            mobileLogo.classList.add('opacity-0', 'pointer-events-none');
+          }
+        };
+        window.addEventListener('scroll', toggleLogo, { passive: true });
+        toggleLogo();
+      }
+    </script>
+
     <!-- Floating Social Contact Links (Desktop only) -->
     <div class="fixed bottom-6 left-6 z-50 hidden lg:flex flex-col gap-4">
         <!-- WhatsApp (Principal) -->
-        <a href="https://wa.me/525536451199" target="_blank" rel="noopener noreferrer" 
+        <a href="https://wa.me/525621310456" target="_blank" rel="noopener noreferrer" 
            class="bg-[#25D366] text-white w-14 h-14 flex items-center justify-center border border-[#1a1c1c] shadow-[6px_6px_0_0_#1a1c1c] hover:translate-x-[6px] hover:translate-y-[6px] hover:shadow-none transition-all duration-150"
            aria-label="WhatsApp">
-            <svg xmlns="http://www.w3.org/-svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
         </a>
         <!-- Facebook -->
         <a href="https://www.facebook.com/VyrobaComunicacionCreativa?mibextid=LQQJ4d" target="_blank" rel="noopener noreferrer"

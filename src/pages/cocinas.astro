@@ -1,22 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import DraftingGrid from '../components/grids/DraftingGrid';
+import CustomDesignBanner from '../components/CustomDesignBanner.astro';
 ---
 
 <Layout 
 	title="Cocinas Integrales | Vyroba Wood"
-	description="Diseño y fabricación de cocinas integrales a escala industrial. Ergonomía y materiales de alta durabilidad para proyectos constructivos de gran volumen."
-	keywords="cocinas integrales, fabricación de cocinas, módulos de cocina b2b, tableros de alta densidad, vyroba wood cocinas"
->
-  <main class="relative">
+	description="Cocinas integrales Vyroba Wood: diseño y fabricación modular a medida. Gabinetes, alacenas y barras con herrajes premium para desarrollos y residenciales."
+	keywords="cocinas integrales, cocinas a medida, vyroba wood, fabricación de cocinas, módulos de cocina, carpintería b2b"
+>  <main class="relative">
     <DraftingGrid client:load theme="cocinas" />
 
     <!-- HERO SECTION: COCINAS -->
-    <section class="relative z-10 min-h-[70vh] pt-[120px] pb-12 px-6 md:px-12 flex flex-col justify-end border-b border-outline-variant/20 bg-[#8a501c]/5">
+    <section class="relative z-10 min-h-0 lg:min-h-[70vh] pt-8 lg:pt-[120px] pb-12 px-6 md:px-12 flex flex-col justify-start lg:justify-end border-b border-outline-variant/20 bg-[#4A7C59]/5">
       <div class="max-w-[1600px] mx-auto w-full relative z-10">
         <div class="mb-8">
             <span class="text-5xl font-black text-outline/30 block mb-4">01</span>
-            <h2 class="font-bold tracking-[0.2em] text-xs uppercase text-[#8a501c] mb-4 block">Líneas B2B</h2>   
+            <h2 class="font-bold tracking-[0.2em] text-xs uppercase text-[#4A7C59] mb-4 block">Líneas B2B</h2>   
             <h1 class="text-6xl md:text-[8vw] font-black uppercase tracking-tighter leading-[0.9] text-primary font-cabinet">
                 Cocinas<br/>Integrales
             </h1>
@@ -26,7 +26,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 Producción modular en serie preparada para altos volúmenes residenciales y comerciales. Arquitectura de ensamblaje diseñada para minimizar tiempos de instalación en obra.
             </p>
             <div class="flex justify-start md:justify-end gap-4">
-                <a href="#contacto" class="inline-flex items-center justify-center bg-[#8a501c] text-white font-bold border border-[#0f1c28] uppercase tracking-widest text-sm px-8 py-4 rounded-none transition-all duration-150 shadow-[8px_8px_0_0_#0f1c28] hover:bg-[#162839] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#0f1c28] active:translate-x-[8px] active:translate-y-[8px] active:shadow-none whitespace-nowrap">
+                <a href="#contacto" class="inline-flex items-center justify-center bg-[#4A7C59] text-white font-bold border border-[#0f1c28] uppercase tracking-widest text-sm px-8 py-4 rounded-none transition-all duration-150 shadow-[8px_8px_0_0_#0f1c28] hover:bg-[#162839] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#0f1c28] active:translate-x-[8px] active:translate-y-[8px] active:shadow-none whitespace-nowrap">
                     Cotizar Proyecto
                 </a>
             </div>
@@ -35,9 +35,9 @@ import DraftingGrid from '../components/grids/DraftingGrid';
     </section>
 
     <!-- SPECIFICATIONS / TECHNICAL DETAILS -->
-    <section class="py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full overflow-hidden bg-surface">
+    <section class="py-12 lg:py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full overflow-hidden bg-surface">
       <div class="max-w-[1600px] mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           
           <!-- Details Left -->
           <div>
@@ -48,15 +48,15 @@ import DraftingGrid from '../components/grids/DraftingGrid';
             
             <!-- Features List -->
             <div class="space-y-6">
-              <div class="border-l-2 border-[#8a501c] pl-6">
+              <div class="border-l-2 border-[#4A7C59] pl-6">
                 <h4 class="text-xl font-bold text-primary uppercase">Alta Densidad</h4>
                 <p class="text-on-surface-variant mt-2 text-sm">Resistencia estructural frente a la flexión en encimeras flotantes.</p>
               </div>
-              <div class="border-l-2 border-[#8a501c] pl-6">
+              <div class="border-l-2 border-[#4A7C59] pl-6">
                 <h4 class="text-xl font-bold text-primary uppercase">Acabado Industrial</h4>
                 <p class="text-on-surface-variant mt-2 text-sm">Sellado termoplástico perimetral antivapor y líquidos en toda la estructura.</p>
               </div>
-              <div class="border-l-2 border-[#8a501c] pl-6">
+              <div class="border-l-2 border-[#4A7C59] pl-6">
                 <h4 class="text-xl font-bold text-primary uppercase">Componentes Preensamblados</h4>
                 <p class="text-on-surface-variant mt-2 text-sm">Guías, bisagras y jaladeras pre-perforadas desde planta matriz.</p>
               </div>
@@ -64,12 +64,12 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           </div>
 
           <!-- Graphic / Tech Spec Visual -->
-          <div class="bg-surface-container border border-outline-variant/30 p-12 flex flex-col justify-center items-center relative group">
+          <div class="bg-surface-container border border-outline-variant/30 p-2 sm:p-4 lg:p-12 flex flex-col justify-center items-center relative group overflow-hidden min-h-[300px] sm:min-h-[360px] lg:min-h-0">
              <!-- Technical grid background -->
              <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none z-0"></div>
              
              <!-- Center Technical SVG -->
-             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -15 360 135" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="miter" class="w-full max-w-[700px] h-auto overflow-visible text-primary/50 relative z-10 transition-colors duration-500 group-hover:text-[#8a501c]">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -15 360 135" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="square" stroke-linejoin="miter" class="w-[165%] max-w-none lg:w-full lg:max-w-[700px] h-auto overflow-visible text-primary/50 relative z-10 transition-colors duration-500 group-hover:text-[#4A7C59] -translate-x-[2%] lg:translate-x-0">
                 
                 <!-- FRONT ELEVATION - PURE FRONTAL (FLAT) -->
                 <!-- Floor line -->
@@ -187,7 +187,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                             
               </svg>
               
-              <div class="absolute bottom-6 right-6 font-mono text-xs font-bold text-outline uppercase tracking-widest">
+              <div class="absolute bottom-3 right-3 lg:bottom-6 lg:right-6 font-mono text-[0.6rem] lg:text-xs font-bold text-outline uppercase tracking-widest z-20">
                 FIG. A-C / DIAGRAMA MODULAR
               </div>
           </div>
@@ -197,7 +197,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
     </section>
 
     <!-- IMPLEMENTATION GALLERY -->
-    <section class="py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full bg-transparent">
+    <section class="py-12 lg:py-24 px-6 md:px-12 border-b border-outline-variant/20 relative z-10 w-full bg-transparent">
       <div class="max-w-[1600px] mx-auto">
         <!-- Section Header -->
         <div class="flex items-end justify-between mb-12">
@@ -210,110 +210,46 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           </div>
         </div>
 
-        <!-- Gallery Grid (Blueprint placeholders) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-l border-t border-outline-variant/20 auto-rows-fr">
-          
-          <!-- Image Placeholder 1 (BENTO LARGE - Diagram to Render) -->
-          <div class="md:col-span-2 md:row-span-2 relative group border-r border-b border-outline-variant/20 bg-white overflow-hidden cursor-crosshair min-h-[400px] md:min-h-0">
-            <!-- Default State: The Blueprint/Diagram -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/diagramRender.avif" type="image/avif" />
-  <source srcset="/images/kitchen/diagramRender.webp" type="image/webp" />
-  <img src="/images/kitchen/diagramRender.png" alt="Cocina Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
-</picture>
-            <!-- Hover State: The Real Render -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/kitchenRender.avif" type="image/avif" />
-  <source srcset="/images/kitchen/kitchenRender.webp" type="image/webp" />
-  <img src="/images/kitchen/kitchenRender.png" alt="Cocina Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
-</picture>
-            <!-- Technical label (disappears on hover) -->
-            <div class="absolute bottom-4 right-4 font-mono text-xs text-primary/70 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300 bg-white/80 px-2 py-1">FIG 01 // ESQUEMA Y RENDER</div>
+        <!-- Diagrama principal arriba -->
+        <div class="relative group border border-outline-variant/20 bg-white overflow-hidden cursor-crosshair aspect-[16/10] md:aspect-[21/9] mb-0 w-full">
+          <img src="/images/kitchen/diagramRender.webp" alt="Cocina Plan" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0" />
+          <img src="/images/kitchen/kitchenRender.webp" alt="Cocina Render" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100" />
+          <div class="absolute bottom-4 right-4 font-mono text-xs text-primary/70 font-bold opacity-100 group-hover:opacity-0 transition-opacity duration-300 bg-white/80 px-2 py-1">FIG 01 // ESQUEMA Y RENDER</div>
+        </div>
+
+        <!-- Resto de imágenes en galería -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-0 border-l border-b border-outline-variant/20">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
+            <img src="/images/kitchen/renderkitchen1.webp" alt="Nordic Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/kitchen/renderkitchen1B.webp" alt="Nordic Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 1 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderkitchen1.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderkitchen1.webp" type="image/webp" />
-  <img src="/images/kitchen/renderkitchen1.png" alt="Nordic Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderkitchen1B.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderkitchen1B.webp" type="image/webp" />
-  <img src="/images/kitchen/renderkitchen1B.png" alt="Nordic Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/kitchen/renderKitchen2.webp" alt="Brutalism Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/kitchen/renderkitchen2B.webp" alt="Brutalism Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 2 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderKitchen2.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderKitchen2.webp" type="image/webp" />
-  <img src="/images/kitchen/renderKitchen2.png" alt="Brutalism Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderkitchen2B.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderkitchen2B.webp" type="image/webp" />
-  <img src="/images/kitchen/renderkitchen2B.png" alt="Brutalism Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/kitchen/renderKitchen3.webp" alt="Monolith Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/kitchen/renderKitchen3B.webp" alt="Monolith Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 3 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderKitchen3.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderKitchen3.webp" type="image/webp" />
-  <img src="/images/kitchen/renderKitchen3.png" alt="Monolith Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderKitchen3B.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderKitchen3B.webp" type="image/webp" />
-  <img src="/images/kitchen/renderKitchen3B.png" alt="Monolith Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/kitchen/renderKitchen4.webp" alt="Warm Nat Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/kitchen/renderKitchen4B.webp" alt="Warm Nat Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
 
-          <!-- PROMPT 4 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
+          <div class="aspect-square relative group border-r border-t border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair col-span-2 md:col-span-1">
             <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderKitchen4.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderKitchen4.webp" type="image/webp" />
-  <img src="/images/kitchen/renderKitchen4.png" alt="Warm Nat Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderKitchen4B.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderKitchen4B.webp" type="image/webp" />
-  <img src="/images/kitchen/renderKitchen4B.png" alt="Warm Nat Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+            <img src="/images/kitchen/renderKitchen5.webp" alt="Gallery Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
+            <img src="/images/kitchen/renderKitchen5B.webp" alt="Gallery Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
           </div>
-
-          <!-- PROMPT 5 -->
-          <div class="aspect-square relative group border-r border-b border-outline-variant/20 bg-surface-container overflow-hidden cursor-crosshair">
-            <div class="absolute inset-0 bg-[linear-gradient(rgba(22,40,57,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(22,40,57,0.05)_1px,transparent_1px)] bg-[size:10px_10px] opacity-100 z-0"></div>
-            <!-- BASE IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderKitchen5.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderKitchen5.webp" type="image/webp" />
-  <img src="/images/kitchen/renderKitchen5.png" alt="Gallery Kitchen Scene" class="absolute inset-0 w-full h-full object-cover object-center opacity-100 transition-opacity duration-700 ease-in-out group-hover:opacity-0 z-0" />
-</picture>
-            <!-- HOVER IMAGE -->
-            <picture class="contents">
-  <source srcset="/images/kitchen/renderKitchen5B.avif" type="image/avif" />
-  <source srcset="/images/kitchen/renderKitchen5B.webp" type="image/webp" />
-  <img src="/images/kitchen/renderKitchen5B.png" alt="Gallery Kitchen Hover" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100 z-0" />
-</picture>
+        </div>
+      </div>
     </section>
 
     <script is:inline>
@@ -330,9 +266,13 @@ import DraftingGrid from '../components/grids/DraftingGrid';
           }
         });
       });
-    </script>    
+    </script>
+
+    <!-- Custom Design Banner Custom (New request) -->
+    <CustomDesignBanner theme="cocinas" />
+
     <!-- CTA Final -->
-    <section id="contacto" class="w-full bg-[#8a501c] text-surface py-32 border-t border-[#162839] relative overflow-hidden">
+    <section id="contacto" class="w-full bg-[#4A7C59] text-surface py-16 lg:py-32 border-t border-[#162839] relative overflow-hidden">
         <div class="absolute top-0 right-0 w-1/2 h-full bg-[#162839]/20 transform skew-x-[-15deg] origin-bottom-right z-0"></div>
         <div class="px-6 md:px-12 w-full max-w-[1600px] mx-auto relative z-10 text-center flex flex-col items-center">
             <h2 class="text-5xl md:text-[6vw] font-black uppercase tracking-tighter leading-[0.9] text-surface font-cabinet mb-8 max-w-4xl">
@@ -345,7 +285,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 <span>Enviar Planos y Requerimientos</span>
             </a>
             <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/60 uppercase">
-                <span>+ INFO +52 55 3645 1199</span>
+                <span>+ INFO +52 56 2131 0456</span>
                 <span>|</span>
                 <span>INFO@VYROBA.COM.MX</span>
             </div>
