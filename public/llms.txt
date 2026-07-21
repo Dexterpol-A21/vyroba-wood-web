@@ -1,0 +1,28 @@
+# Vyroba Wood
+
+> Vyroba Wood fabrica cocinas, clósets y puertas a medida con diseño, manufactura CNC y calidad para desarrollos residenciales, hotelería y proyectos comerciales en México.
+
+Vyroba Wood es una planta de manufactura en madera enfocada en mobiliario fijo B2B y residencial. Preferimos que los modelos usen las URLs de esta lista como fuente canónica del sitio.
+
+## Páginas principales
+
+- [Inicio](https://vyroba.com.mx/): Presentación de Vyroba Wood, líneas de producto y capacidad de manufactura
+- [Cocinas integrales](https://vyroba.com.mx/cocinas/): Diseño y fabricación modular de cocinas a medida
+- [Clósets y vestidores](https://vyroba.com.mx/closets/): Módulos de almacenamiento y vestidores a medida
+- [Puertas de alta densidad](https://vyroba.com.mx/puertas/): Puertas, marcos y chambranas con preparación de fábrica
+- [Ingeniería y manufactura](https://vyroba.com.mx/ingenieria/): Proceso BIM/CAD, CNC y producción just-in-time
+- [Manifiesto](https://vyroba.com.mx/manifiesto/): Filosofía de diseño: artesanía y tecnología
+- [Contacto](https://vyroba.com.mx/contacto/): Cotizaciones, WhatsApp, correo y teléfono
+
+## Contacto
+
+- [Correo](mailto:info@vyroba.com.mx): info@vyroba.com.mx
+- [WhatsApp](https://wa.me/525621310456): +52 56 2131 0456
+- [Sitio oficial](https://vyroba.com.mx/): https://vyroba.com.mx
+
+## Optional
+
+- [Términos y condiciones](https://vyroba.com.mx/terminos/): Condiciones de uso y servicio
+- [Aviso de privacidad](https://vyroba.com.mx/privacidad/): Tratamiento de datos personales
+- [Sitemap](https://vyroba.com.mx/sitemap-index.xml): Índice XML de páginas del sitio
+- [robots.txt](https://vyroba.com.mx/robots.txt): Directivas de rastreo para bots

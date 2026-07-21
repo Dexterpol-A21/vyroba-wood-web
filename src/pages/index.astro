@@ -8,9 +8,19 @@ import DraftingGrid from '../components/grids/DraftingGrid';
 	description="Vyroba Wood fabrica cocinas, clósets y puertas a medida. Diseño, manufactura CNC y calidad para desarrollos residenciales, hotelería y proyectos comerciales."
 	keywords="vyroba wood, vyroba, cocinas integrales, closets a medida, puertas, carpintería b2b, manufactura en madera, mobiliario a medida"
 >
+  <Fragment slot="head">
+    <link
+      rel="preload"
+      as="image"
+      href="/images/opt/kitchen/Hero5full-kitchen-900.webp"
+      imagesrcset="/images/opt/kitchen/Hero5full-kitchen-450.webp 450w, /images/opt/kitchen/Hero5full-kitchen-900.webp 900w"
+      imagesizes="(max-width: 1024px) 90vw, 750px"
+      fetchpriority="high"
+    />
+  </Fragment>
   <main class="relative">
     <!-- Grid Global Fijo -->
-    <DraftingGrid client:load />
+    <DraftingGrid client:idle />
 
 
 <!-- Hero: THE ENGINEERED ORGANIC -->
@@ -121,11 +131,71 @@ import DraftingGrid from '../components/grids/DraftingGrid';
 
                     <!-- Draggable / Scrollable Gallery Images -->
                     <div class="gallery-slider w-full h-full" id="hero-slider">
-                        <div class="gallery-card"><img src="/images/kitchen/Hero5full%20kitchen%20.webp" alt="Cocina Residencial Final" class="gallery-img-sw" /></div>
-                        <div class="gallery-card"><img src="/images/Hero1Madera.webp" alt="Detalle Arquitectónico Madera" class="gallery-img-sw" /></div>
-                        <div class="gallery-card"><img src="/images/Hero2CNC%20.webp" alt="Maquinaria Industrial" class="gallery-img-sw" /></div>
-                        <div class="gallery-card"><img src="/images/Hero3VOLUMEN%20.webp" alt="Escala de Producción Arquitectónica" class="gallery-img-sw" /></div>
-                        <div class="gallery-card"><img src="/images/Hero4Cocinacost.webp" alt="Control de Costos Producción" class="gallery-img-sw" /></div>
+                        <div class="gallery-card">
+                          <img
+                            src="/images/opt/kitchen/Hero5full-kitchen-900.webp"
+                            srcset="/images/opt/kitchen/Hero5full-kitchen-450.webp 450w, /images/opt/kitchen/Hero5full-kitchen-900.webp 900w"
+                            sizes="(max-width: 1024px) 90vw, 750px"
+                            width="900"
+                            height="502"
+                            alt="Cocina Residencial Final"
+                            class="gallery-img-sw"
+                            fetchpriority="high"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="gallery-card">
+                          <img
+                            src="/images/opt/Hero1Madera-900.webp"
+                            srcset="/images/opt/Hero1Madera-450.webp 450w, /images/opt/Hero1Madera-900.webp 900w"
+                            sizes="(max-width: 1024px) 90vw, 750px"
+                            width="900"
+                            height="502"
+                            alt="Detalle Arquitectónico Madera"
+                            class="gallery-img-sw"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="gallery-card">
+                          <img
+                            src="/images/opt/Hero2CNC-900.webp"
+                            srcset="/images/opt/Hero2CNC-450.webp 450w, /images/opt/Hero2CNC-900.webp 900w"
+                            sizes="(max-width: 1024px) 90vw, 750px"
+                            width="900"
+                            height="502"
+                            alt="Maquinaria Industrial"
+                            class="gallery-img-sw"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="gallery-card">
+                          <img
+                            src="/images/opt/Hero3VOLUMEN-900.webp"
+                            srcset="/images/opt/Hero3VOLUMEN-450.webp 450w, /images/opt/Hero3VOLUMEN-900.webp 900w"
+                            sizes="(max-width: 1024px) 90vw, 750px"
+                            width="900"
+                            height="502"
+                            alt="Escala de Producción Arquitectónica"
+                            class="gallery-img-sw"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <div class="gallery-card">
+                          <img
+                            src="/images/opt/Hero4Cocinacost-900.webp"
+                            srcset="/images/opt/Hero4Cocinacost-450.webp 450w, /images/opt/Hero4Cocinacost-900.webp 900w"
+                            sizes="(max-width: 1024px) 90vw, 750px"
+                            width="900"
+                            height="502"
+                            alt="Control de Costos Producción"
+                            class="gallery-img-sw"
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
                     </div>
                 </div>
 
@@ -492,7 +562,17 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 </div>
 
                 <div class="border border-primary shadow-[4px_4px_0_0_#162839] relative group hover:-translate-y-1 hover:shadow-[8px_8px_0_0_#162839] md:hover:shadow-[10px_10px_0_0_#162839] transition-all duration-300 overflow-hidden flex flex-col justify-center min-h-[140px] md:min-h-[160px] p-4 md:p-6 bg-primary">
-                    <img src="/images/Hero2CNC%20.webp" alt="Control Numérico" class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125 opacity-40 group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-60 transition-all duration-700 z-0" />
+                    <img
+                      src="/images/opt/Hero2CNC-900.webp"
+                      srcset="/images/opt/Hero2CNC-450.webp 450w, /images/opt/Hero2CNC-900.webp 900w"
+                      sizes="(max-width: 768px) 45vw, 400px"
+                      width="900"
+                      height="502"
+                      alt="Control Numérico"
+                      class="absolute inset-0 w-full h-full object-cover filter grayscale contrast-125 opacity-40 group-hover:grayscale-0 group-hover:scale-110 group-hover:opacity-60 transition-all duration-700 z-0"
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <div class="absolute inset-0 bg-primary/80 group-hover:bg-primary/40 transition-colors duration-700 z-10 mix-blend-multiply"></div>
 
                     <span class="absolute top-3 right-3 md:top-4 md:right-4 text-[0.65rem] md:text-xs font-bold text-surface/40 group-hover:text-surface transition-colors duration-300 z-30">M04</span>
