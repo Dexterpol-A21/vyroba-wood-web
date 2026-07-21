@@ -35,12 +35,12 @@ export default function DraftingGrid({ theme = 'default' }) {
       ];
     } else if (theme === 'cocinas') {
       palette = [
-        'rgba(138, 80, 28, 0.65)',   // Naranja/Roble de Cocinas
-        'rgba(253, 176, 116, 0.45)', // Naranja claro
-        'rgba(100, 55, 15, 0.7)',    // Roble oscuro
-        'rgba(180, 100, 40, 0.5)',   // Naranja medio
-        'rgba(160, 90, 30, 0.55)',
-        'rgba(138, 80, 28, 0.45)'
+        'rgba(74, 124, 89, 0.65)',   // Verde bosque de Cocinas
+        'rgba(47, 90, 61, 0.7)',     // Verde oscuro
+        'rgba(184, 212, 190, 0.45)', // Verde claro
+        'rgba(90, 140, 105, 0.5)',   // Verde medio
+        'rgba(74, 124, 89, 0.45)',
+        'rgba(35, 70, 48, 0.6)'
       ];
     } else {
       palette = [
