@@ -55,6 +55,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 .gallery-slider {
                     display: block;
                     position: relative;
+                    touch-action: pan-y;
                 }
                 
                 .gallery-card {
@@ -62,40 +63,47 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                     top: 0; left: 0;
                     width: 100%; height: 100%;
                     user-select: none;
+                    -webkit-user-select: none;
                     transform-origin: bottom center;
                     backface-visibility: hidden;
                     box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
                     will-change: transform, opacity;
+                    touch-action: pan-y;
                 }
 
                 .gallery-img-sw {
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                    filter: grayscale(1) contrast(1.25);
+                    /* Móvil: a color. Desktop: gris hasta hover */
+                    filter: none;
                     transition: transform 0.8s ease-out, filter 0.8s ease-out;  
-                    pointer-events: none; /* Helps with dragging */
+                    pointer-events: none;
+                    -webkit-user-drag: none;
+                }
+
+                @media (min-width: 1024px) {
+                    .gallery-img-sw {
+                        filter: grayscale(1) contrast(1.25);
+                    }
+                    .hero-image-box:hover .gallery-img-sw {
+                        filter: grayscale(0) contrast(1.1);
+                        transform: scale(1.05);
+                    }
+                    .hero-image-box:hover {
+                        transform: translate(-4px, -4px);
+                        box-shadow: 16px 16px 0 0 #162839 !important;
+                    }
+                    .hero-image-box:active {
+                        transform: translate(12px, 12px);
+                        box-shadow: 0px 0px 0 0 #162839 !important;
+                    }
                 }
 
                 .hero-image-box {
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
-                }
-
-                .hero-image-box:hover {
-                    /* Sale un poco (levanta) antes de hacer click */
-                    transform: translate(-4px, -4px);
-                    box-shadow: 16px 16px 0 0 #162839 !important;
-                }
-
-                .hero-image-box:active {
-                    /* Se hunde completamente como interruptor pesado */
-                    transform: translate(12px, 12px);
-                    box-shadow: 0px 0px 0 0 #162839 !important;
-                }
-
-                .hero-image-box:hover .gallery-img-sw {
-                    filter: grayscale(0) contrast(1.1);
-                    transform: scale(1.05);
+                    touch-action: pan-y;
+                    -webkit-tap-highlight-color: transparent;
                 }
 
                 .gallery-label {
@@ -111,18 +119,35 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                     opacity: 1;
                 }
 
-                /* Active Grabbing state cursor */
                 .gallery-slider.grabbing {
                     cursor: grabbing;
-                    scroll-snap-type: none; /* Remove snap behavior while dragging */
-                    scroll-behavior: auto; /* Remove smooth scroll while dragging */
                 }
                 .gallery-slider.grabbing .gallery-img-sw {
-                    transform: scale(1); /* remove scale when dragging */
+                    transform: scale(1);
+                }
+
+                .hero-swipe-hint {
+                    position: absolute;
+                    bottom: 0.75rem;
+                    right: 0.75rem;
+                    z-index: 40;
+                    pointer-events: none;
+                    font-size: 0.6rem;
+                    font-weight: 700;
+                    letter-spacing: 0.15em;
+                    text-transform: uppercase;
+                    color: #162839;
+                    background: rgba(255,255,255,0.9);
+                    border: 1px solid #162839;
+                    padding: 0.35rem 0.55rem;
+                    box-shadow: 3px 3px 0 0 #162839;
+                }
+                @media (min-width: 1024px) {
+                    .hero-swipe-hint { display: none; }
                 }
             </style>
 
-            <div class="w-full max-w-[550px] xl:max-w-[750px] aspect-[4/3] xl:aspect-[16/9] border border-primary relative shadow-[12px_12px_0_0_#162839] bg-primary mb-4 lg:mb-8 hero-image-box cursor-grab overflow-visible" id="hero-slider-wrap" style="perspective: 1200px;">
+            <div class="w-full max-w-[550px] xl:max-w-[750px] aspect-[4/3] xl:aspect-[16/9] border border-primary relative shadow-[12px_12px_0_0_#162839] bg-primary mb-4 lg:mb-8 hero-image-box cursor-grab overflow-visible select-none" id="hero-slider-wrap" style="perspective: 1200px;" role="region" aria-label="Galería de proyectos. Desliza para cambiar.">
 
                 <!-- Inner container to mask overflowing gallery images -->     
                 <div class="absolute inset-0 w-full h-full" style="transform-style: preserve-3d;">    
@@ -215,12 +240,13 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 <div class="gallery-label label-track bg-surface border border-primary px-4 py-2 text-primary text-[0.65rem] font-bold tracking-[0.2em] uppercase shadow-[4px_4px_0_0_#162839]">
                     FIG. 05 // CONTROL DE COSTOS
                 </div>
+                <div class="hero-swipe-hint" id="hero-swipe-hint">Desliza ← →</div>
             </div>
 
             <!-- CTA Buttons Box -->
             <div class="w-full max-w-[550px] xl:max-w-[750px] flex flex-col sm:flex-row gap-4 mt-4 lg:mt-6">
                 <!-- Action Button 1 -->
-                <a href="#contacto" class="cursor-pointer bg-secondary border border-secondary text-surface px-6 py-5 font-black uppercase tracking-widest text-[0.70rem] shadow-[4px_4px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#1a1c1c] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 inline-flex items-center justify-center w-full whitespace-nowrap truncate">
+                <a href="https://wa.me/5215536451199?text=Hola%20Vyroba%20Wood%2C%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="cursor-pointer bg-secondary border border-secondary text-surface px-6 py-5 font-black uppercase tracking-widest text-[0.70rem] shadow-[4px_4px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#1a1c1c] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 inline-flex items-center justify-center w-full whitespace-nowrap truncate">
                     Cotizar Desarrollo
                 </a>
                 <!-- Action Button 2 -->
@@ -232,10 +258,21 @@ import DraftingGrid from '../components/grids/DraftingGrid';
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const stackWrap = document.getElementById('hero-slider-wrap');
+                    if (!stackWrap) return;
+
                     let cards = Array.from(document.querySelectorAll('.gallery-card'));
                     const labels = document.querySelectorAll('.label-track');
+                    const swipeHint = document.getElementById('hero-swipe-hint');
                     
                     let currentIndex = 0;
+                    let startX = 0;
+                    let startY = 0;
+                    let isDragging = false;
+                    let lockAxis = null; // 'x' | 'y' | null
+                    let topCardNode = null;
+                    let autoPlayTimer;
+                    const AUTO_PLAY_INTERVAL = 8000;
+                    const SWIPE_THRESHOLD = 50;
                     
                     function updateStack() {
                         cards.forEach((card, index) => {
@@ -245,19 +282,24 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                                 card.style.opacity = 1;
                             } else {
                                 card.style.zIndex = 50 - index;
-                                // Brutalist corner offset
                                 card.style.transform = `translate(${index * 8}px, ${index * 8}px)`;
                                 card.style.opacity = 1;
                             }
                         });
                         
                         labels.forEach((l, i) => {
-                            if(i === currentIndex) l.classList.add('active');
+                            if (i === currentIndex) l.classList.add('active');
                             else l.classList.remove('active');
                         });
                     }
 
+                    function hideSwipeHint() {
+                        if (swipeHint) swipeHint.style.opacity = '0';
+                    }
+
                     function swipeOutTopCard(direction) {
+                        if (!cards.length) return;
+                        hideSwipeHint();
                         const topCard = cards.shift();
                         const dirMult = direction === 'right' ? 1 : -1;
                         
@@ -279,73 +321,103 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                         updateStack();
                     }
 
-                    function swipeInBottomCard() {
-                        const bottomCard = cards.pop();
-                        bottomCard.style.transition = 'none';
-                        bottomCard.style.transform = 'translateX(-120%) rotate(-15deg)';
-                        bottomCard.style.opacity = 0;
-                        cards.unshift(bottomCard);
-                        
-                        currentIndex = (currentIndex - 1 + labels.length) % labels.length;
-                        
-                        // Force reflow
-                        void bottomCard.offsetWidth;
-                        
-                        bottomCard.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
-                        updateStack();
-                    }
-
-                    // Drag Logic
-                    let startX = 0;
-                    let isDragging = false;
-                    let topCardNode = null;
-
-                    stackWrap.addEventListener('mousedown', (e) => {
-                        isDragging = true;
-                        startX = e.pageX;
-                        topCardNode = cards[0];
-                        topCardNode.style.transition = 'none';
-                        stackWrap.style.cursor = 'grabbing';
-                    });
-                    
-                    window.addEventListener('mousemove', (e) => {
-                        if(!isDragging || !topCardNode) return;
-                        e.preventDefault();
-                        const x = e.pageX - startX;
-                        const rotate = x * 0.05;
-                        topCardNode.style.transform = `translateX(${x}px) rotate(${rotate}deg)`;
-                    });
-
-                    window.addEventListener('mouseup', (e) => {
-                        if(!isDragging || !topCardNode) return;
+                    function finishDrag(clientX) {
+                        if (!isDragging || !topCardNode) return;
                         isDragging = false;
+                        lockAxis = null;
                         stackWrap.style.cursor = 'grab';
                         
-                        const diffX = e.pageX - startX;
-                        if(diffX < -60) {
+                        const diffX = clientX - startX;
+                        if (diffX < -SWIPE_THRESHOLD) {
                             swipeOutTopCard('left');
-                        } else if(diffX > 60) {
+                        } else if (diffX > SWIPE_THRESHOLD) {
                             swipeOutTopCard('right');
                         } else {
                             topCardNode.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
                             updateStack();
                         }
                         topCardNode = null;
+                        startAutoPlay();
+                    }
+
+                    function startDrag(clientX, clientY) {
+                        isDragging = true;
+                        lockAxis = null;
+                        startX = clientX;
+                        startY = clientY;
+                        topCardNode = cards[0];
+                        if (!topCardNode) return;
+                        topCardNode.style.transition = 'none';
+                        stackWrap.style.cursor = 'grabbing';
+                        stopAutoPlay();
+                    }
+
+                    function moveDrag(clientX, clientY, event) {
+                        if (!isDragging || !topCardNode) return;
+
+                        const x = clientX - startX;
+                        const y = clientY - startY;
+
+                        if (!lockAxis) {
+                            if (Math.abs(x) < 8 && Math.abs(y) < 8) return;
+                            lockAxis = Math.abs(x) > Math.abs(y) ? 'x' : 'y';
+                        }
+
+                        // Si el gesto es vertical, deja scrollear la página
+                        if (lockAxis === 'y') {
+                            isDragging = false;
+                            lockAxis = null;
+                            topCardNode.style.transition = 'transform 0.3s ease-out';
+                            updateStack();
+                            topCardNode = null;
+                            startAutoPlay();
+                            return;
+                        }
+
+                        if (event && event.cancelable) event.preventDefault();
+                        const rotate = x * 0.05;
+                        topCardNode.style.transform = `translateX(${x}px) rotate(${rotate}deg)`;
+                    }
+
+                    // Mouse
+                    stackWrap.addEventListener('mousedown', (e) => {
+                        e.preventDefault();
+                        startDrag(e.pageX, e.pageY);
+                    });
+                    
+                    window.addEventListener('mousemove', (e) => {
+                        moveDrag(e.pageX, e.pageY, e);
+                    });
+
+                    window.addEventListener('mouseup', (e) => {
+                        finishDrag(e.pageX);
                     });
                     
                     window.addEventListener('mouseleave', () => {
-                        if(isDragging && topCardNode) {
-                            isDragging = false;
-                            stackWrap.style.cursor = 'grab';
-                            topCardNode.style.transition = 'transform 0.5s ease-out, opacity 0.5s ease-out';
-                            updateStack();
-                            topCardNode = null;
+                        if (isDragging && topCardNode) {
+                            finishDrag(startX);
                         }
                     });
 
-                    // Auto-play Logic
-                    let autoPlayTimer;
-                    const AUTO_PLAY_INTERVAL = 8000; // 8 segundos para que cambien más lento
+                    // Touch (móvil)
+                    stackWrap.addEventListener('touchstart', (e) => {
+                        if (!e.touches[0]) return;
+                        startDrag(e.touches[0].clientX, e.touches[0].clientY);
+                    }, { passive: true });
+
+                    stackWrap.addEventListener('touchmove', (e) => {
+                        if (!e.touches[0]) return;
+                        moveDrag(e.touches[0].clientX, e.touches[0].clientY, e);
+                    }, { passive: false });
+
+                    stackWrap.addEventListener('touchend', (e) => {
+                        const t = e.changedTouches[0];
+                        finishDrag(t ? t.clientX : startX);
+                    }, { passive: true });
+
+                    stackWrap.addEventListener('touchcancel', () => {
+                        finishDrag(startX);
+                    }, { passive: true });
 
                     function startAutoPlay() {
                         stopAutoPlay();
@@ -360,14 +432,15 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                         if (autoPlayTimer) clearInterval(autoPlayTimer);
                     }
 
-                    // Pausar automático si el usuario pone el mouse encima
                     stackWrap.addEventListener('mouseenter', stopAutoPlay);
-                    stackWrap.addEventListener('mouseleave', startAutoPlay);
+                    stackWrap.addEventListener('mouseleave', () => {
+                        if (!isDragging) startAutoPlay();
+                    });
 
-                    // Initialize
                     updateStack();
                     startAutoPlay();
-                });                </script>
+                });
+            </script>
             </div>
         </div>
     </div>
@@ -527,7 +600,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                         La planta de Vyroba Wood está equipada con maquinado europeo, canteadoras en línea y sierras automatizadas de alta velocidad. Capacidad Vyroba para manufacturar cientos de unidades modulares con tolerancia sub-milimétrica.
                     </p>
                     <div class="mt-4 mb-6 lg:mb-12">
-                        <a href="#contacto" class="cursor-pointer bg-primary border border-primary text-surface px-8 py-4 font-black uppercase tracking-[0.15em] text-[0.75rem] shadow-[6px_6px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_0_#1a1c1c] active:shadow-none active:translate-y-[6px] active:translate-x-[6px] transition-all duration-150 inline-flex items-center justify-center w-auto whitespace-nowrap">
+                        <a href="https://wa.me/5215536451199?text=Hola%20Vyroba%20Wood%2C%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="cursor-pointer bg-primary border border-primary text-surface px-8 py-4 font-black uppercase tracking-[0.15em] text-[0.75rem] shadow-[6px_6px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[4px_4px_0_0_#1a1c1c] active:shadow-none active:translate-y-[6px] active:translate-x-[6px] transition-all duration-150 inline-flex items-center justify-center w-auto whitespace-nowrap">
                             Programar Recorrido Técnico
                         </a>
                     </div>
@@ -604,7 +677,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
                 <p class="max-w-md text-xl md:text-2xl text-on-surface-variant font-medium leading-[1.3]">
                     En Vyroba no interpretamos bosquejos: traducimos geometría arquitectónica en vectores ejecutables para manufactura automatizada. Menos margen de error, ensambles perfectos en sitio.
                 </p>
-                <a href="#contacto" class="cursor-pointer bg-primary border text-surface px-6 py-4 font-black uppercase tracking-[0.2em] text-[0.65rem] shadow-[4px_4px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#1a1c1c] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 inline-flex items-center justify-center">
+                <a href="https://wa.me/5215536451199?text=Hola%20Vyroba%20Wood%2C%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="cursor-pointer bg-primary border text-surface px-6 py-4 font-black uppercase tracking-[0.2em] text-[0.65rem] shadow-[4px_4px_0_0_#1a1c1c] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0_0_#1a1c1c] active:shadow-none active:translate-y-[4px] active:translate-x-[4px] transition-all duration-150 inline-flex items-center justify-center">
                     Cargar Planos (BIM/CAD)
                 </a>
             </div>
@@ -786,7 +859,7 @@ import DraftingGrid from '../components/grids/DraftingGrid';
         </div>
 
         <div class="mt-12 flex justify-center">
-            <a href="https://wa.me/message/vyroba" target="_blank" class="cursor-pointer bg-primary border text-surface px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-primary/90 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0_0_#C17A2F] transition-all duration-150 inline-flex items-center">
+            <a href="https://wa.me/5215536451199?text=Hola%20Vyroba%20Wood%2C%20quiero%20cotizar%20un%20proyecto." target="_blank" class="cursor-pointer bg-primary border text-surface px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-primary/90 hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none shadow-[4px_4px_0_0_#C17A2F] transition-all duration-150 inline-flex items-center">
                 Tengo una pregunta técnica <span class="ml-2 font-black text-secondary">→</span>  
             </a>
         </div>
@@ -806,12 +879,12 @@ import DraftingGrid from '../components/grids/DraftingGrid';
             Envía a Vyroba los requerimientos BIM/CAD de tu desarrollo o residencial. Evaluamos especificaciones y respondemos con un plan de maquinado exacto.
         </p>
 
-        <a href="mailto:info@vyroba.com.mx" class="cursor-pointer bg-secondary border border-secondary text-primary px-10 py-6 font-black uppercase tracking-[0.2em] text-[0.8rem] md:text-sm shadow-[8px_8px_0_0_#1a1c1c] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#1a1c1c] hover:bg-primary-container hover:text-surface hover:border-primary-container active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all duration-150 inline-flex items-center justify-center">
+        <a href="https://wa.me/5215536451199?text=Hola%20Vyroba%20Wood%2C%20quiero%20cotizar%20un%20proyecto." target="_blank" rel="noopener noreferrer" class="cursor-pointer bg-secondary border border-secondary text-primary px-10 py-6 font-black uppercase tracking-[0.2em] text-[0.8rem] md:text-sm shadow-[8px_8px_0_0_#1a1c1c] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-[4px_4px_0_0_#1a1c1c] hover:bg-primary-container hover:text-surface hover:border-primary-container active:translate-x-[8px] active:translate-y-[8px] active:shadow-none transition-all duration-150 inline-flex items-center justify-center">
             <span>Enviar Planos y Requerimientos</span>
         </a>
 
         <div class="mt-8 flex gap-6 text-[0.65rem] font-bold tracking-[0.1em] text-surface/40 uppercase">
-            <span>+ INFO +52 56 2131 0456</span>
+            <span>+ INFO +52 1 55 3645 1199</span>
             <span>|</span>
             <span>INFO@VYROBA.COM.MX</span>
         </div>
