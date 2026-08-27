@@ -18,7 +18,7 @@ const {
   image = "/images/kitchen/kitchenRender.webp"
 } = Astro.props;
 
-const siteURL = Astro.site ?? new URL('https://vyroba.com.mx');
+const siteURL = Astro.site ?? new URL('https://vyrobawood.com');
 const canonicalURL = new URL(Astro.url.pathname, siteURL).href;
 const imageURL = new URL(image, siteURL).href;
 
@@ -27,15 +27,15 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://vyroba.com.mx/#organization",
+      "@id": "https://vyrobawood.com/#organization",
       "name": "Vyroba Wood",
-      "url": "https://vyroba.com.mx",
+      "url": "https://vyrobawood.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://vyroba.com.mx/images/brand/vyrobaLogoColor.webp"
+        "url": "https://vyrobawood.com/images/brand/vyrobaLogoColor.webp"
       },
       "description": "Vyroba Wood fabrica cocinas, clósets y puertas a medida con precisión de ingeniería para desarrollos residenciales y comerciales.",
-      "email": "info@vyroba.com.mx",
+      "email": "info@vyrobawood.com",
       "telephone": "+5215536451199",
       "address": {
         "@type": "PostalAddress",
@@ -59,10 +59,10 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://vyroba.com.mx/#website",
-      "url": "https://vyroba.com.mx",
+      "@id": "https://vyrobawood.com/#website",
+      "url": "https://vyrobawood.com",
       "name": "Vyroba Wood",
-      "publisher": { "@id": "https://vyroba.com.mx/#organization" },
+      "publisher": { "@id": "https://vyrobawood.com/#organization" },
       "inLanguage": "es-MX"
     },
     {
@@ -71,8 +71,8 @@ const jsonLd = {
       "url": canonicalURL,
       "name": title,
       "description": description,
-      "isPartOf": { "@id": "https://vyroba.com.mx/#website" },
-      "about": { "@id": "https://vyroba.com.mx/#organization" },
+      "isPartOf": { "@id": "https://vyrobawood.com/#website" },
+      "about": { "@id": "https://vyrobawood.com/#organization" },
       "inLanguage": "es-MX"
     }
   ]
@@ -192,7 +192,7 @@ const jsonLd = {
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
         </a>
         <!-- Email -->
-        <a href="mailto:info@vyroba.com.mx"
+        <a href="mailto:info@vyrobawood.com"
            class="bg-surface text-primary w-12 h-12 flex items-center justify-center border border-primary shadow-[4px_4px_0_0_#162839] hover:translate-x-[4px] hover:translate-y-[4px] hover:shadow-none transition-all duration-150"
            aria-label="Email">
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>

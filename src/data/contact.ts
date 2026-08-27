@@ -8,7 +8,7 @@
  */
 
 // ─── CORREO ───────────────────────────────────────────────────────────
-export const EMAIL = "info@vyroba.com.mx"
+export const EMAIL = "info@vyrobawood.com"
 
 // ─── TELÉFONO / WHATSAPP OFICIAL ──────────────────────────────────────
 // +52 1 55 3645 1199 — canal principal de contacto y cotización

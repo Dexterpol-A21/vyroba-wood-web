@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://vyroba.com.mx',
+  site: 'https://vyrobawood.com',
   vite: {
     plugins: [tailwindcss()]
   },
@@ -18,7 +18,7 @@ export default defineConfig({
       lastmod: new Date(),
       serialize(item) {
         // Homepage gets highest priority
-        if (item.url === 'https://vyroba.com.mx/') {
+        if (item.url === 'https://vyrobawood.com/') {
           return { ...item, priority: 1.0, changefreq: 'daily' };
         }
         // Legal pages get lower priority
