@@ -13,6 +13,7 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
+      filter: (page) => !page.includes('/presentacion'),
       changefreq: 'weekly',
       priority: 0.8,
       lastmod: new Date(),
